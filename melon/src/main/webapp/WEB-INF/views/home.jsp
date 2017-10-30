@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ include file="/WEB-INF/views/template/header.jsp"%>
 <html>
 <head>
 	<title>Home</title>
@@ -11,3 +11,4 @@
 	<a href="hi">hi</a>
 </body>
 </html>
+<%@ include file="/WEB-INF/views/template/footer.jsp"%>
