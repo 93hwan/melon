@@ -27,6 +27,15 @@ body, html {
 .w3-bar .w3-button {
     padding: 16px;
 }
+.w3-bottom{
+                height: 60px;
+                bottom: 0;
+}
+.bottom-shadow{
+	height: 60px;
+	box-shadow:  0 -2px 5px 0 rgba(0,0,0,0.16), 0 -2px 10px 0 rgba(0,0,0,0.12);
+}
+
 </style>
 <body>
 
