@@ -31,7 +31,7 @@
 					<input type="submit" value="로그인" class="input-btn area-80">
 				</div>
 				<!-- 네이버아이디로로그인 버튼 노출 영역 -->
-				<div id="naver_id_login"></div>
+				<div class="w3-center" id="naver_id_login" style="margin-top: 5px"></div>
 				<div>
 					<hr>
 					<a href="">비밀번호가 생각나지 않으세요?</a>
