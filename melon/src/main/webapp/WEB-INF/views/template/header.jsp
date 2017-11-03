@@ -39,9 +39,6 @@ body, html {
 </style>
 <body>
 
-<%@ include file="/WEB-INF/views/popup/layerpop.jsp"%>
-
-
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">

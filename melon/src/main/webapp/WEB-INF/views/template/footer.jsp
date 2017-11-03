@@ -29,6 +29,8 @@
 	</div>
 </div>
 
+<%@ include file="/WEB-INF/views/popup/layerpop.jsp"%>
+
 <!-- Add Google Maps -->
 <script>
 	// Modal Image Gallery
