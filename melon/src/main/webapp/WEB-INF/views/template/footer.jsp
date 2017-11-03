@@ -56,7 +56,7 @@
 	}
 	
 	<!-- 네이버아디디로로그인 초기화 Script -->
-	var naver_id_login = new naver_id_login("l70Zz3DfzAG0wOjEVYPV", "http://127.0.0.1:8080/melon/");
+	var naver_id_login = new naver_id_login("l70Zz3DfzAG0wOjEVYPV", "http://localhost:8080/melon/");
 	var state = naver_id_login.getUniqState();
 	naver_id_login.setButton("green", 3,40);
 	naver_id_login.setDomain(".service.com");
