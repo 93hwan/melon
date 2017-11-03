@@ -75,11 +75,19 @@
 // 		alert(naver_id_login.getProfileData('nickname'));
 // 		alert(naver_id_login.getProfileData('age'));
 		window.close();
-		location.href="http://localhost:8080/melon/";
+		$.ajax({
+			type : "GET",
+			url : "/melon/",
+			data : naver_id_login.getAccessToken(),
+			success : function(data) {
+				alert("data = " + data)
+				}
+		});
 	}
 
 	// 네이버 사용자 프로필 조회
 	naver_id_login.get_naver_userprofile("naverSignInCallback()");
+	console.log("접근토큰 = "+naver_id_login.getAccessToken());
 </script>
 
 
