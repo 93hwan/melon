@@ -23,11 +23,6 @@ function wrapWindowByMask() {
 		'top' : top,
 		'position' : 'absolute'
 	});
-	$('.rsv_class').css({
-		'left' : left,
-		'top' : top,
-		'position' : 'absolute'
-	});
 }
 
 $(document).ready(
@@ -48,28 +43,16 @@ $(document).ready(
 				e.preventDefault();
 				wrapWindowByMask();
 			});
-			$('.cancel_btn').click(function(e) {
-				$("#rsv_btn").prev().val($(this).prev().val());
-				// preventDefault는 href의 링크 기본 행동을 막는 기능입니다.
-				$("#rsv_id").show();
-				e.preventDefault();
-				wrapWindowByMask();
-			});
-
 			// 닫기(close)를 눌렀을 때 작동합니다.
 			$('.window .close').click(function(e) {
 				e.preventDefault();
 				$('.mask, .window').hide();
 			});
-			$('.rsv_class .close').click(function(e) {
-				e.preventDefault();
-				$('.mask, .rsv_class').hide();
-			});
 
-			// 회원가입 팝업창 close 누를시 리셋
-			$(".close").on("click", function() {
-				$(".resource").val(null);
-				$("#a_email").removeClass("cant");
-			});
+//			// 회원가입 팝업창 close 누를시 리셋
+//			$(".close").on("click", function() {
+//				$(".resource").val(null);
+//				$("#a_email").removeClass("cant");
+//			});
 
 		});

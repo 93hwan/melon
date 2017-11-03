@@ -8,8 +8,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/layer_popup.css"/>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/cancel_rsv.css"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/layer_popup.css"/>
+<link rel="stylesheet" type="text/css" href="css/cancel_rsv.css"/>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 body, html {
@@ -26,8 +27,20 @@ body, html {
 .w3-bar .w3-button {
     padding: 16px;
 }
+.w3-bottom{
+                height: 60px;
+                bottom: 0;
+}
+.bottom-shadow{
+	height: 60px;
+	box-shadow:  0 -2px 5px 0 rgba(0,0,0,0.16), 0 -2px 10px 0 rgba(0,0,0,0.12);
+}
+
 </style>
 <body>
+
+<%@ include file="/WEB-INF/views/popup/layerpop.jsp"%>
+
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -40,6 +53,7 @@ body, html {
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="javaScript:void(0);" class="loginbtn w3-bar-item w3-button">로그인</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -61,7 +75,7 @@ body, html {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
+  <div class="w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
     <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
