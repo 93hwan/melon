@@ -96,6 +96,7 @@ $(document).ready(function(){
 </script>-->
 </head>
 <body>
+<<<<<<< HEAD
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
 	<div class="jp-type-playlist">
@@ -139,6 +140,13 @@ $(document).ready(function(){
 	</div>
 </div>
 <br><br><br>
+=======
+<h1>
+	Hello world!
+</h1>
+	<a href="hi">hi</a>
+>>>>>>> branch 'master' of https://github.com/93hwan/melon.git
 </body>
 </html>
+
 <%@ include file="/WEB-INF/views/template/footer.jsp"%>

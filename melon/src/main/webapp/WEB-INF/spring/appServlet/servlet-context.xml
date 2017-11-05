@@ -18,10 +18,10 @@
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	
-	<mvc:resources location="/resources/css/" mapping="/css/**"></mvc:resources>
-    <mvc:resources location="/resources/img/" mapping="/img/**"></mvc:resources>
-    <mvc:resources location="/resources/js/" mapping="/js/**"></mvc:resources>
-    <mvc:resources location="/resources/html/" mapping="/html/**"></mvc:resources>
+	<mvc:resources location="/resource/css/" mapping="/css/**"></mvc:resources>
+    <mvc:resources location="/resource/img/" mapping="/img/**"></mvc:resources>
+    <mvc:resources location="/resource/js/" mapping="/js/**"></mvc:resources>
+    <mvc:resources location="/resource/html/" mapping="/html/**"></mvc:resources>
 	
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
