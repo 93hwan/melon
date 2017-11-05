@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
-<!-- 음악 플레이어 -->
 
-	
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
 	<a href="#home" class="w3-button w3-light-grey"><i
@@ -15,7 +13,9 @@
 </footer>
 
 <!-- 네이버 로그인 js -->
-<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8">
+<script type="text/javascript"
+	src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
+	charset="utf-8">
 </script>
 <script src="${pageContext.request.contextPath}/js/layer_popup.js"></script>
 <script>
@@ -38,6 +38,9 @@
 <!--  하단 고정바 -->
 <div class="w3-bottom">
 	<div class="w3-bar w3-white bottom-shadow">
+
+	<!-- jplayer 오디오 -->
+	
 
 	</div>
 </div>
