@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
-<!-- 음악 플레이어 -->
 
 	
 <!-- Footer -->
@@ -21,10 +19,12 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 
-
 <!--  하단 고정바 -->
 <div class="w3-bottom">
 	<div class="w3-bar w3-white bottom-shadow">
+
+	<!-- jplayer 오디오 -->
+	
 
 	</div>
 </div>
