@@ -11,11 +11,13 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="css/layer_popup.css"/>
 <link rel="stylesheet" type="text/css" href="css/cancel_rsv.css"/>
+
 <!-- 음악 플레이어 -->
-<%-- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/jplayer.blue.monday.min.css"/> --%>
-<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.jplayer.min.js"></script> --%>
-<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script> --%>
-<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.playlist.min.js"></script> --%>
+<link href="${pageContext.request.contextPath}/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js//jplayer.playlist.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js//playlist.js"></script>
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
