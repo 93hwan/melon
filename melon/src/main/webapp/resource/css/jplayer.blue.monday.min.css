@@ -76,7 +76,7 @@
 }
 
 .jp-audio .jp-interface, .jp-audio-stream .jp-interface {
-	height: 76px
+	height: 60px
 }
 
 .jp-video .jp-interface {
@@ -100,7 +100,7 @@
 
 .jp-audio .jp-controls {
 	width: 380px;
-	padding: 20px 20px 0
+	padding: 10px 20px 0;
 }
 
 .jp-audio-stream .jp-controls {
@@ -189,7 +189,7 @@
 
 .jp-audio .jp-progress {
 	position: absolute;
-	top: 32px;
+	top: 22px;
 	height: 15px
 }
 
@@ -233,7 +233,7 @@
 
 .jp-volume-controls {
 	position: absolute;
-	top: 32px;
+	top: 23px;
 	left: 308px;
 	width: 200px
 }
@@ -308,7 +308,7 @@
 
 .jp-audio .jp-time-holder {
 	position: absolute;
-	top: 50px
+	top: 40px
 }
 
 .jp-audio .jp-type-single .jp-time-holder {
@@ -506,7 +506,7 @@ span.jp-artist {
 	margin: 0;
 	position: absolute;
 	left: 325px;
-	top: 50px
+	top: 38px
 }
 
 .jp-video .jp-toggles {
