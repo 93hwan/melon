@@ -11,9 +11,10 @@
     width:500px;
     display: none;
     background-color: #ffffff;
-    height: 500px;
+    height: 600px;
     z-index:99999;
 }
+
 #popup_area .rsv_class {
     width:500px;
     display: none;
