@@ -4,9 +4,9 @@ $(document).ready(function(){
 		cssSelectorAncestor: "#jp_container_1"
 	}, [
 		{
-			title:"Cro Magnon Man",
-			mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3",
-			oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
+			title:"sik",
+			mp3:"http://192.168.0.5/music/sik-k-xyz.mp3",
+			oga:"http://192.168.0.5/music/sik-k-xyz.ogg"
 		},
 		{
 			title:"Your Face",
