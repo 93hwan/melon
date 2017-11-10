@@ -60,6 +60,7 @@ body, html {
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
       <a href="javaScript:void(0);" class="loginbtn w3-bar-item w3-button">로그인</a>
+      <a href="${pageContext.request.contextPath}" class="w3-bar-item w3-button">로그아웃</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 

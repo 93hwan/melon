@@ -43,6 +43,7 @@ $(document).ready(
 				e.preventDefault();
 				wrapWindowByMask();
 			});
+			
 			// 닫기(close)를 눌렀을 때 작동합니다.
 			$('.window .close').click(function(e) {
 				e.preventDefault();
