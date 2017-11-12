@@ -26,7 +26,12 @@ public class HomeController {
 		return "home";
 	}
 	
-	
+	@RequestMapping("/logout")
+	public String logout() {
+		
+		return "redirect:/";
+	}
+
 	@RequestMapping("/hi")
 	public String hi() {
 		

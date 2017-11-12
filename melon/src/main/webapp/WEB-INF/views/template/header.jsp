@@ -11,6 +11,15 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="css/layer_popup.css"/>
 <link rel="stylesheet" type="text/css" href="css/cancel_rsv.css"/>
+
+<!-- 음악 플레이어 -->
+<link href="${pageContext.request.contextPath}/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.jplayer.min.js"></script>
+<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/js/jplayer.playlist.min.js"></script> --%>
+
+<!-- 스트리밍 -->
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 body, html {
@@ -39,9 +48,6 @@ body, html {
 </style>
 <body>
 
-<%@ include file="/WEB-INF/views/popup/layerpop.jsp"%>
-
-
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
@@ -54,6 +60,7 @@ body, html {
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
       <a href="javaScript:void(0);" class="loginbtn w3-bar-item w3-button">로그인</a>
+      <a href="${pageContext.request.contextPath}" class="w3-bar-item w3-button">로그아웃</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 

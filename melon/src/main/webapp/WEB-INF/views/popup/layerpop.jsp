@@ -31,7 +31,7 @@
 					<input type="submit" value="로그인" class="input-btn area-80">
 				</div>
 				<!-- 네이버아이디로로그인 버튼 노출 영역 -->
-				<div id="naver_id_login"></div>
+				<div class="w3-center" id="naver_id_login" style="margin-top: 5px"></div>
 				<div>
 					<hr>
 					<a href="">비밀번호가 생각나지 않으세요?</a>
@@ -56,7 +56,7 @@
 				method="post">
 				<sec:csrfInput />
 				<div>
-					<input type="email" id="a_email" name="email" placeholder="Email"
+					<input type="text" name="member_id" placeholder="id"
 						class="w3-input resource" required>
 				</div>
 				<div>
@@ -65,6 +65,14 @@
 				</div>
 				<div>
 					<input type="text" name="name" placeholder="이름"
+						class="w3-input resource" required>
+				</div>
+				<div>
+					<input type="date" name="birth"
+						class="w3-input resource" required>
+				</div>
+				<div>
+					<input type="email" id="a_email" name="email" placeholder="Email"
 						class="w3-input resource" required>
 				</div>
 				<div>

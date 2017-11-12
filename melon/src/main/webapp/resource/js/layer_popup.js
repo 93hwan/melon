@@ -43,11 +43,17 @@ $(document).ready(
 				e.preventDefault();
 				wrapWindowByMask();
 			});
+			
 			// 닫기(close)를 눌렀을 때 작동합니다.
 			$('.window .close').click(function(e) {
 				e.preventDefault();
 				$('.mask, .window').hide();
 			});
+			//네이버 로그인 버튼을 눌렀을떄 작동
+			$('#naver_id_login').click(function(e) {
+				$('.mask, .window').hide();
+			});
+			
 
 //			// 회원가입 팝업창 close 누를시 리셋
 //			$(".close").on("click", function() {
