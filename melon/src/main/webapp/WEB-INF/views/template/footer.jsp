@@ -98,7 +98,7 @@ Add Google Maps
 		mySidebar.style.display = "none";
 	}
 	
-	네이버아디디로로그인 초기화 Script
+	//네이버아디디로로그인 초기화 Script
 	var naver_id_login = new naver_id_login("l70Zz3DfzAG0wOjEVYPV", "http://localhost:8080/melon/");
 	var state = naver_id_login.getUniqState();
 	naver_id_login.setButton("green", 3,40);
@@ -107,14 +107,14 @@ Add Google Maps
 	naver_id_login.setPopup();
 	naver_id_login.init_naver_id_login();
 	
-	네이버아디디로로그인 Callback페이지 처리 Script
+	//네이버아디디로로그인 Callback페이지 처리 Script
 	// 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
 	function naverSignInCallback() {
-		// naver_id_login.getProfileData('프로필항목명');
-		// 프로필 항목은 개발가이드를 참고하시기 바랍니다.
-// 		alert(naver_id_login.getProfileData('email'));
-// 		alert(naver_id_login.getProfileData('nickname'));
-// 		alert(naver_id_login.getProfileData('age'));
+		naver_id_login.getProfileData('프로필항목명');
+		//프로필 항목은 개발가이드를 참고하시기 바랍니다.
+		alert(naver_id_login.getProfileData('email'));
+		alert(naver_id_login.getProfileData('nickname'));
+		alert(naver_id_login.getProfileData('age'));
 		window.close();
 		$.ajax({
 			type : "GET",
