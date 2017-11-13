@@ -5,8 +5,8 @@ $(document).ready(function(){
 	}, [
 		{
 			title:"sik",
-			mp3:"http://192.168.0.5/music/sik-k-xyz.mp3",
-			oga:"http://192.168.0.5/music/sik-k-xyz.ogg"
+			mp3:"http://192.168.0.13/music/sik-k-xyz.mp3",
+			oga:"http://192.168.0.13/music/sik-k-xyz.ogg"
 		},
 		{
 			title:"Your Face",
