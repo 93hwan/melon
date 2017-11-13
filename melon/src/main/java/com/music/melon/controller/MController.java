@@ -1,21 +1,16 @@
 package com.music.melon.controller;
 
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
-import javax.servlet.http.HttpServletRequest;
-
+import org.apache.ibatis.session.SqlSession;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.music.melon.dao.IDAO;
 import com.music.melon.temp.test01;
@@ -48,8 +43,7 @@ public class MController   {
 				Elements artistNo = doc1.select(".checkEllipsis:has(a[href])");
 				Elements albumImg = doc1.select("img[src$= optimize]");
 
-				String artist_get,title_get, albumName_get, artist_No, album_Img, SongNum_get;
-			
+				String artist_get,title_get, albumName_get, album_Img,artist_No,SongNum_get;
 				FileWriter fw=null;
 				
 				for(int i= 0; i< titles.size(); i++){
@@ -125,7 +119,10 @@ public class MController   {
 //				//SNS정보
 //				Elements detail_FanPage = doc2.select(".section_atistinfo05 dl.list_define.clfix:has(a[href]) dd:eq(1)");
 		//
-					System.out.println("수상경력"+"\n"+detail_AwardRecord.text()+"\n");
+					String Award_record = detail_AwardRecord.text();
+					System.out.println("수상경력"+"\n"+Award_record+"\n");
+					
+					
 					int cnt=0;
 					ArrayList<String> list_title = new ArrayList<>();
 					ArrayList<String> list_content = new ArrayList<>();
@@ -177,18 +174,29 @@ public class MController   {
 					
 					System.out.println("가사"+"\n"+ lyric_get);
 					System.out.println("--------------------------------4단계크롤링 완료");
-					
+
+								System.out.println("---------------------------------------------youtube크롤링 시작");
+								System.out.println(singer_list.get(i));
+								System.out.println(title_list.get(i));
+								String YoutubeUrl = "https://www.youtube.com/results";
+								String query = singer_list.get(i).trim()+"+"+title_list.get(i).trim();
+								Document youtube_doc = Jsoup.connect(YoutubeUrl.replaceAll(" ", "%20"))
+										.data("search_query", query)
+										.userAgent("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2")
+										.get();
+								
+								Element VideoLink = youtube_doc.select(".yt-lockup-title > a[title]").first();
+								String strLink = (String)VideoLink.attr("href").toString();
+								if(VideoLink!=null){
+									System.out.println(strLink);
+									System.out.println("youtube크롤링완료----------------------------------------");
+										}
 					
 						IDAO dao = sqlSession.getMapper(IDAO.class);
-//						dao.album(albumName_get, title_get, artist_get,album_albumImgVar);
-						dao.artist(artist_get, artist_img, "대한민국", "20171112");
-//						dao.music(artist_get, artist_img, "대한민국", "20171112");
+						dao.album(AlbumNum_list.get(i), al, arti_, album_albumImgVar, rel);
+						dao.artist(singerNum_list.get(i), arti_, artist_img, "", Award_record);
+						dao.music(singNum_list.get(i), al, song_Name_get, arti_, genr, strLink, lyric_get, rel);
 					
 				}		//첫번째 for
 			}
-			
-	
-	
-	
-
 }
