@@ -30,5 +30,28 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.music.melon" />
+	<context:component-scan base-package="com.music.melon.controller" />
+	<context:component-scan base-package="com.music.melon.dto" />
+	<context:component-scan base-package="com.music.melon.dao" />
+	<context:component-scan base-package="com.music.melon.mybatis" />
+	<context:component-scan base-package="com.music.melon.temp" />
+	
+	<!-- oracleDB연결부분 -->
+	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+		<beans:property name="username" value="rosie"/>
+		<beans:property name="password" value="0611"/>
+	</beans:bean>
+	
+	<!-- Mybatis사용 OracleDB reference -->
+	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource"/>
+		<beans:property name="mapperLocations" value="classpath:com/music/melon/mybatis/**/*mapper.xml"/>
+	</beans:bean>
+
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+ 		 <beans:constructor-arg index="0" ref="sqlSessionFactory" />
+	</beans:bean>
 	
 </beans:beans>
