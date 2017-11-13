@@ -3,7 +3,7 @@ package com.music.melon.dao;
 public interface IDAO {
 
 	
-	public void album(String Alb_title,String Arti_name,String genre,String img,String release);
+//	public void album(String album_title,String song_title,String singer,String album_img);
 	public void artist(String Arti_name,String img,String country,String debute);
-//	public void music();
+	public void music();
 }

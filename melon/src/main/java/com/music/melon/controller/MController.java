@@ -29,7 +29,7 @@ public class MController   {
 			@Autowired
 			private SqlSession sqlSession;
 			
-			@RequestMapping("/album")
+			@RequestMapping("/artist")
 			public void crawling() throws Exception {
 				String chartUrl = "http://www.melon.com/chart/index.htm";		
 				ArrayList<String> singer_list = new ArrayList<>();
@@ -133,12 +133,12 @@ public class MController   {
 							list_title.add(el.text().toString());
 						}
 						for(Element el2 : detail_Debut02){
-							list_content.add(el2.text().toString());
+							list_content.add(el2.text().toString());		
 								cnt++;
 						}
 						for(int k=1;k<list_title.size();k++){
 							String str_get = list_title.get(k);
-							String str_get02 = list_content.get(k);
+							String str_get02 = list_content.get(k);			// artist 테이블 -etc 컬럼
 							System.out.println(str_get+"\n" + str_get02+"\n");
 						}
 						String artist_img=detail_Img.attr("src");
@@ -164,15 +164,25 @@ public class MController   {
 					for(int k=0;k<4;k++){
 						String list[] = {"아티스트","앨범","발매일","장르"};
 						System.out.println(list[k]);
-						System.out.println(song_info.get(k).text().toString()+"\n");
-							}
+						System.out.println(song_info.get(0).text().toString()+"\n");
+						System.out.println(song_info.get(1).text().toString()+"\n");
+						System.out.println(song_info.get(2).text().toString()+"\n");
+						System.out.println(song_info.get(3).text().toString()+"\n");
+					
+					}
+					String arti_=song_info.get(0).text().toString();
+					String al=	song_info.get(1).text().toString();
+					String rel=	song_info.get(2).text().toString();
+					String genr=song_info.get(3).text().toString();
+					
 					System.out.println("가사"+"\n"+ lyric_get);
 					System.out.println("--------------------------------4단계크롤링 완료");
 					
 					
 						IDAO dao = sqlSession.getMapper(IDAO.class);
-						dao.album(album_TitleVar, title_get, artist_get, album_albumImgVar, album_relDateVar);
+//						dao.album(albumName_get, title_get, artist_get,album_albumImgVar);
 						dao.artist(artist_get, artist_img, "대한민국", "20171112");
+//						dao.music(artist_get, artist_img, "대한민국", "20171112");
 					
 				}		//첫번째 for
 			}
