@@ -1,0 +1,32 @@
+
+#player{
+	padding-left: 20%;
+	padding-right: 20%;
+}
+#player #jp_container_1 {
+	float:left;
+	display: inline-block;
+}
+#player  .b_outside {
+	display: inline-block;
+	border: 2px solid red;
+	height:100%;
+	width: 400px;
+	padding: 15px;
+	
+}
+.b_outside .b_inside{
+	height:100%;
+	border: 2px solid blue;
+}
+.window{
+	border: 2px solid green;
+	width: 300px;
+	height: 300px;
+	position:absolute;
+	bottom:70px;
+	right: 8px;
+}
+.b_inside:hover  .jp-playlist{
+	display: block;
+}

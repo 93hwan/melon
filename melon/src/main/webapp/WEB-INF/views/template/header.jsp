@@ -12,11 +12,16 @@
 <link rel="stylesheet" type="text/css" href="css/layer_popup.css"/>
 <link rel="stylesheet" type="text/css" href="css/cancel_rsv.css"/>
 
+
 <!-- 음악 플레이어 -->
-<link href="${pageContext.request.contextPath}/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+<link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.jplayer.min.js"></script>
-<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/js/jplayer.playlist.min.js"></script> --%>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jplayer.playlist.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/playlist.js"></script>
+<link rel="stylesheet" type="text/css" href="css/playlist.css"/>
+
+
 
 <!-- 스트리밍 -->
 
@@ -39,12 +44,12 @@ body, html {
 .w3-bottom{
                 height: 60px;
                 bottom: 0;
+                display: inline-block;
 }
 .bottom-shadow{
 	height: 60px;
 	box-shadow:  0 -2px 5px 0 rgba(0,0,0,0.16), 0 -2px 10px 0 rgba(0,0,0,0.12);
 }
-
 </style>
 <body>
 
