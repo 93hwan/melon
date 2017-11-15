@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+ pageEncoding="UTF-8"%>
 
-
-
-
+	
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
 	<a href="#home" class="w3-button w3-light-grey"><i
@@ -18,6 +16,7 @@
 
 <!--  하단 고정바 -->
 <div class="w3-bottom">
+	<div class="w3-bar w3-white bottom-shadow">
 
 	<div class="show"></div>
 	<div class="jp-playlist">
