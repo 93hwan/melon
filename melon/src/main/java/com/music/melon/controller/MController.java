@@ -24,7 +24,7 @@ public class MController   {
 			@Autowired
 			private SqlSession sqlSession;
 			
-			@RequestMapping("/artist")
+			@RequestMapping("/album")
 			public void crawling() throws Exception {
 				String chartUrl = "http://www.melon.com/chart/index.htm";		
 				ArrayList<String> singer_list = new ArrayList<>();
@@ -47,6 +47,9 @@ public class MController   {
 				FileWriter fw=null;
 				
 				for(int i= 0; i< titles.size(); i++){
+					if(i==15){
+						
+					}else{
 					String trimed_singerNo= artistNo.get(i).html().split("<a href=\"javascript:melon.link.goArtistDetail")[1].substring(2).split("'")[0];
 					String trimed_albumNum= albumName.get(i).html().split("\"javascript:melon.link.goAlbumDetail")[1].substring(2).split("'")[0];  //trimed_albumNum
 					artist_get = artist.get(i).text();
@@ -83,7 +86,7 @@ public class MController   {
 					//앨범제목
 					Elements album_Title = docAlbum.select(".albumname");
 					//타이틀곡 & 타이틀곡번호
-					Elements title_Music = docAlbum.select(".ellipsis:has(span[class$=title]) a:eq(2)");//.tagName("a");
+					Elements title_Music = docAlbum.select(".ellipsis:has(span[class$=title]) a:eq(2)");
 					//출시일
 					Elements album_relDate = docAlbum.select("dl[class~=song_info] dd:eq(3)");
 					//곡목록 ->pending
@@ -193,10 +196,15 @@ public class MController   {
 										}
 					
 						IDAO dao = sqlSession.getMapper(IDAO.class);
-						dao.album(AlbumNum_list.get(i), al, arti_, album_albumImgVar, rel);
-						dao.artist(singerNum_list.get(i), arti_, artist_img, "", Award_record);
-						dao.music(singNum_list.get(i), al, song_Name_get, arti_, genr, strLink, lyric_get, rel);
+						System.out.println("sql세션연결완료");
+						dao.album(trimed_albumNum, al, arti_, album_albumImgVar, rel);
+						System.out.println("album db저장 완료");
+						dao.artist(artist_No, arti_, artist_img, "", Award_record);
+						System.out.println("artist db저장 완료");
+						dao.music(SongNum_get, al, song_Name_get, arti_, genr, strLink, lyric_get, rel);
+						System.out.println("music db저장 완료");
 					
-				}		//첫번째 for
+				}
+				}//첫번째 for
 			}
 }
