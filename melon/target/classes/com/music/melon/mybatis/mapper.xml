@@ -6,12 +6,5 @@
 
 <insert id="album">
 	INSERT INTO M_ALBUM (ALBUM_NO,ALBUM_TITLE,ARTIST_NAME,IMG,RELEASE) VALUES(M_ALBUM_SEQ.NEXTVAL, #{param1},#{param2},#{param3},#{param4})
-
 </insert>
-
-
-
-
-
-
 </mapper>
