@@ -1,20 +1,16 @@
 package com.music.bee.controller;
 
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
-import javax.servlet.http.HttpServletRequest;
-
+import org.apache.ibatis.session.SqlSession;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 import com.music.bee.dao.IDAO;
@@ -27,9 +23,10 @@ public class MController   {
 			@Autowired
 			private SqlSession sqlSession;
 			
-			@RequestMapping("/artist")
+			@RequestMapping("/album")
 			public void crawling() throws Exception {
-				String chartUrl = "http://www.melon.com/chart/index.htm";		
+				String chartUrl = "http://www.melon.com/chart/day/index.htm";		
+//				String chartUrl = "http://www.melon.com/chart/index.htm";		
 				ArrayList<String> singer_list = new ArrayList<>();
 				ArrayList<String> title_list = new ArrayList<>();
 				ArrayList<String> singerNum_list = new ArrayList<>();
@@ -46,11 +43,12 @@ public class MController   {
 				Elements artistNo = doc1.select(".checkEllipsis:has(a[href])");
 				Elements albumImg = doc1.select("img[src$= optimize]");
 
-				String artist_get,title_get, albumName_get, artist_No, album_Img, SongNum_get;
-			
+				String artist_get,title_get, albumName_get, album_Img,artist_No,SongNum_get;
 				FileWriter fw=null;
 				
 				for(int i= 0; i< titles.size(); i++){
+					if(i == 26)
+						i = 27;
 					String trimed_singerNo= artistNo.get(i).html().split("<a href=\"javascript:melon.link.goArtistDetail")[1].substring(2).split("'")[0];
 					String trimed_albumNum= albumName.get(i).html().split("\"javascript:melon.link.goAlbumDetail")[1].substring(2).split("'")[0];  //trimed_albumNum
 					artist_get = artist.get(i).text();
@@ -87,7 +85,7 @@ public class MController   {
 					//앨범제목
 					Elements album_Title = docAlbum.select(".albumname");
 					//타이틀곡 & 타이틀곡번호
-					Elements title_Music = docAlbum.select(".ellipsis:has(span[class$=title]) a:eq(2)");//.tagName("a");
+					Elements title_Music = docAlbum.select(".ellipsis:has(span[class$=title]) a:eq(2)");
 					//출시일
 					Elements album_relDate = docAlbum.select("dl[class~=song_info] dd:eq(3)");
 					//곡목록 ->pending
@@ -123,7 +121,10 @@ public class MController   {
 //				//SNS정보
 //				Elements detail_FanPage = doc2.select(".section_atistinfo05 dl.list_define.clfix:has(a[href]) dd:eq(1)");
 		//
-					System.out.println("수상경력"+"\n"+detail_AwardRecord.text()+"\n");
+					String Award_record = detail_AwardRecord.text();
+					System.out.println("수상경력"+"\n"+Award_record+"\n");
+					
+					
 					int cnt=0;
 					ArrayList<String> list_title = new ArrayList<>();
 					ArrayList<String> list_content = new ArrayList<>();
@@ -175,18 +176,33 @@ public class MController   {
 					
 					System.out.println("가사"+"\n"+ lyric_get);
 					System.out.println("--------------------------------4단계크롤링 완료");
-					
+
+								System.out.println("---------------------------------------------youtube크롤링 시작");
+								System.out.println(singer_list.get(i));
+								System.out.println(title_list.get(i));
+								String YoutubeUrl = "https://www.youtube.com/results";
+								String query = singer_list.get(i).trim()+"+"+title_list.get(i).trim();
+								Document youtube_doc = Jsoup.connect(YoutubeUrl.replaceAll(" ", "%20"))
+										.data("search_query", query)
+										.userAgent("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2")
+										.get();
+								
+								Element VideoLink = youtube_doc.select(".yt-lockup-title > a[title]").first();
+								String strLink = (String)VideoLink.attr("href").toString();
+								if(VideoLink!=null){
+									System.out.println(strLink);
+									System.out.println("youtube크롤링완료----------------------------------------");
+										}
 					
 						IDAO dao = sqlSession.getMapper(IDAO.class);
-//						dao.album(albumName_get, title_get, artist_get,album_albumImgVar);
-						dao.artist(artist_get, artist_img, "대한민국", "20171112");
-//						dao.music(artist_get, artist_img, "대한민국", "20171112");
+						System.out.println("sql세션연결완료");
+						dao.album(trimed_albumNum, al, arti_, album_albumImgVar, rel);
+						System.out.println("album db저장 완료");
+						dao.artist(artist_No, arti_, artist_img, "", Award_record);
+						System.out.println("artist db저장 완료");
+						dao.music(SongNum_get, al, song_Name_get, arti_, genr, strLink, lyric_get, rel);
+						System.out.println("music db저장 완료");
 					
-				}		//첫번째 for
-			}
-			
-	
-	
-	
-
+					}
+				}//첫번째 for
 }
