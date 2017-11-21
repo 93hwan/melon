@@ -4,21 +4,6 @@
 <head>
 <title>Home</title>
 
-
-<!-- 음악 플레이어 -->
-<link
-	href="${pageContext.request.contextPath}/css/jplayer.blue.monday.min.css"
-	rel="stylesheet" type="text/css" />
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jquery.jplayer.min.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jplayer.playlist.min.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/playlist.js"></script>
-
-
 </head>
 <body>
 

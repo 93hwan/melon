@@ -1,4 +1,4 @@
-package com.music.melon.controller;
+package com.music.bee.controller;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,20 +16,21 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-
 import com.music.bee.dao.IDAO;
+import com.music.bee.temp.test01;
 
 @Controller
 public class MController   {
 
 			IDAO idao;
+			test01 test = new test01();
 			
 			@Autowired
 			private SqlSession sqlSession;
 			
 			@RequestMapping("/artist")
 			public void crawling() throws Exception {
-				String chartUrl = "http://www.melon.com/chart/index.htm";		
+				String chartUrl = "http://www.bee.com/chart/index.htm";		
 				ArrayList<String> singer_list = new ArrayList<>();
 				ArrayList<String> title_list = new ArrayList<>();
 				ArrayList<String> singerNum_list = new ArrayList<>();
@@ -51,11 +52,11 @@ public class MController   {
 				FileWriter fw=null;
 				
 				for(int i= 0; i< titles.size(); i++){
-					String trimed_singerNo= artistNo.get(i).html().split("<a href=\"javascript:melon.link.goArtistDetail")[1].substring(2).split("'")[0];
-					String trimed_albumNum= albumName.get(i).html().split("\"javascript:melon.link.goAlbumDetail")[1].substring(2).split("'")[0];  //trimed_albumNum
+					String trimed_singerNo= artistNo.get(i).html().split("<a href=\"javascript:bee.link.goArtistDetail")[1].substring(2).split("'")[0];
+					String trimed_albumNum= albumName.get(i).html().split("\"javascript:bee.link.goAlbumDetail")[1].substring(2).split("'")[0];  //trimed_albumNum
 					artist_get = artist.get(i).text();
 					title_get = titles.get(i).text();
-					SongNum_get = songNum.get(i).attr("href").split("javascript:melon.link.goSongDetail")[1].substring(2).split("'")[0];;
+					SongNum_get = songNum.get(i).attr("href").split("javascript:bee.link.goSongDetail")[1].substring(2).split("'")[0];;
 					artist_No = trimed_singerNo;
 					album_Img = albumImg.get(i).attr("src");
 					albumName_get=albumName.get(i).text();
@@ -79,7 +80,7 @@ public class MController   {
 //				chart page에서 받아온 albumNum을 통해 url 생성 ->접속 후 앨범정보 (앨범제목,출시일,곡목록,타이틀 크롤링)
 				String album_albumImgVar, album_TitleVar, album_titleMuVar, album_relDateVar,musicNum_trimed;
 				
-					String AlbumUrl = "http://www.melon.com/album/detail.htm?albumId="+AlbumNum_list.get(i);
+					String AlbumUrl = "http://www.bee.com/album/detail.htm?albumId="+AlbumNum_list.get(i);
 					Document docAlbum = Jsoup.connect(AlbumUrl).get();
 					
 					//앨범사진
@@ -96,7 +97,7 @@ public class MController   {
 					Elements music_Num = docAlbum.select("a[href*=goSongDetail]");
 
 				
-					musicNum_trimed  = music_Num.attr("href").split("javascript:melon.link.goSongDetail")[1].substring(2).split("'")[0];  //곡번호
+					musicNum_trimed  = music_Num.attr("href").split("javascript:bee.link.goSongDetail")[1].substring(2).split("'")[0];  //곡번호
 					album_titleMuVar =title_Music.get(0).attr("title").toString();	//타이틀명 출력	
 					album_albumImgVar = album_AlbumImg.attr("src");
 					album_TitleVar = album_Title.text(); 	//앨범명
@@ -109,7 +110,7 @@ public class MController   {
 					System.out.println("앨범출시일 : "+album_relDateVar);
 					System.out.println("--------------------------------2단계크롤링 완료");
 					
-				String url= "http://www.melon.com/artist/detail.htm?artistId="+singerNum_list.get(i);
+				String url= "http://www.bee.com/artist/detail.htm?artistId="+singerNum_list.get(i);
 				Document doc2 = Jsoup.connect(url).get();
 //				
 //				//가수이미지
@@ -147,7 +148,7 @@ public class MController   {
 					System.out.println("--------------------------------3단계크롤링 완료");
 					
 					//곡정보 - (m_music table)
-					String url04= "http://www.melon.com/song/detail.htm?songId="+singNum_list.get(i);
+					String url04= "http://www.bee.com/song/detail.htm?songId="+singNum_list.get(i);
 					Document doc3 = Jsoup.connect(url04).get();
 					Elements lyrics = doc3.select(".lyric");
 					Elements song_info = doc3.select("dl[class~=song_info] dd");

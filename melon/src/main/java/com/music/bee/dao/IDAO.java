@@ -1,4 +1,4 @@
-package com.music.melon.dao;
+package com.music.bee.dao;
 
 public interface IDAO {
 

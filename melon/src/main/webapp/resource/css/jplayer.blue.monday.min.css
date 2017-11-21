@@ -357,11 +357,12 @@
 	background-color: white;
 	border: 1px solid darkgray;
 
+	display:none;
 	width: 400px;
 	height: 300px;
 	position:absolute;
 	bottom:70px;
-	margin-left: 50%
+	right: 380px;
 }
 
 .jp-type-playlist .jp-details, .jp-type-single .jp-details {
