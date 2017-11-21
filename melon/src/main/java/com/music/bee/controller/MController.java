@@ -20,7 +20,7 @@ public class MController   {
 
 			IDAO idao;
 			
-//			@Autowired
+			@Autowired
 			private SqlSession sqlSession;
 			
 			@RequestMapping("/album")
