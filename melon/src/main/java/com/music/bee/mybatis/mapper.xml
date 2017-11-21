@@ -4,13 +4,35 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.music.bee.dao.IDAO">
 
-<insert id="album">
-	INSERT INTO M_ALBUM (ALBUM_NO,ALBUM_TITLE,ARTIST_NAME,IMG,RELEASE) VALUES(M_ALBUM_SEQ.NEXTVAL, #{param1},#{param2},#{param3},#{param4})
+<!-- INSERT -->
 
+<insert id="album">
+	INSERT INTO M_ALBUM (ALBUM_NO,ALBUM_TITLE,ARTIST_NAME,IMG,RELEASE,NO) VALUES(#{param1},#{param2},#{param3},#{param4},#{param5},M_ALBUM_SEQ.NEXTVAL)
+</insert>
+<insert id="artist">
+	INSERT INTO M_ARTIST (artist_no,artist_name ,img ,etc,award_record,NO) VALUES(#{param1},#{param2},#{param3},#{param4},#{param5},M_ARTIST_SEQ.NEXTVAL)
+</insert>
+<insert id="music">
+	INSERT INTO M_MUSIC (music_no,album_title,title,artist_name,genre,video,lyrics,reg,play_count,NO) VALUES(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},0,M_MUSIC_SEQ.NEXTVAL)
 </insert>
 
 
 
+
+<!-- SELECT -->
+
+
+
+
+
+<!-- UPDATE -->
+
+
+
+
+
+
+<!-- DELETE -->
 
 
 

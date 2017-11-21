@@ -1,4 +1,4 @@
-package com.music.melon.controller;
+package com.music.bee.controller;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
