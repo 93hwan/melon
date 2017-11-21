@@ -12,14 +12,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 import com.music.bee.dao.IDAO;
-import com.music.bee.temp.test01;
 
 @Controller
 public class MController   {
 
 			IDAO idao;
-			test01 test = new test01();
 			
 			@Autowired
 			private SqlSession sqlSession;
@@ -27,6 +26,7 @@ public class MController   {
 			@RequestMapping("/album")
 			public void crawling() throws Exception {
 				String chartUrl = "http://www.melon.com/chart/day/index.htm";		
+//				String chartUrl = "http://www.melon.com/chart/index.htm";		
 				ArrayList<String> singer_list = new ArrayList<>();
 				ArrayList<String> title_list = new ArrayList<>();
 				ArrayList<String> singerNum_list = new ArrayList<>();
