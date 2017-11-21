@@ -18,13 +18,11 @@ import org.jsoup.select.Elements;
 
 
 import com.music.melon.dao.IDAO;
-import com.music.melon.temp.test01;
 
 @Controller
 public class MController   {
 
 			IDAO idao;
-			test01 test = new test01();
 			
 			@Autowired
 			private SqlSession sqlSession;

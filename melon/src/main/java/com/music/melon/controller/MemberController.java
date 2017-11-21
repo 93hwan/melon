@@ -22,6 +22,7 @@ import com.music.melon.dto.Member_dto;
 public class MemberController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
 	private MemberDAO memberDAO;
 
 	@Autowired
@@ -33,7 +34,7 @@ public class MemberController {
 	String join(Member_dto member_dto, 
 			@RequestHeader(required = false, value = "referer", defaultValue = "/") String referer) throws Exception {
 		if (member_dto != null)
-			memberDAO.insert(member_dto);
+			memberDAO.join(member_dto);
 		return referer;
 	}
 	
