@@ -9,6 +9,7 @@
 
 	<h1>Hello world!</h1>
 	<a href="hi">hi</a>
+	<a href="artist/main">artist page</a>
 </body>
 </html>
 
