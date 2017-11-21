@@ -1,6 +1,6 @@
-package com.music.melon.dao;
+package com.music.bee.dao;
 
-import com.music.melon.dto.Member_dto;
+import com.music.bee.dto.Member_dto;
 
 public interface MemberDAO {
 	public void insert(Member_dto member_dto);

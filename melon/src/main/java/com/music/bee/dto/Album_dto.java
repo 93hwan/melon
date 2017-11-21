@@ -1,4 +1,4 @@
-package com.music.melon.dto;
+package com.music.bee.dto;
 
 public class Album_dto {
 

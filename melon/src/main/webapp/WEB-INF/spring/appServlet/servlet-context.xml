@@ -29,12 +29,12 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.music.melon" />
-	<context:component-scan base-package="com.music.melon.controller" />
-	<context:component-scan base-package="com.music.melon.dto" />
-	<context:component-scan base-package="com.music.melon.dao" />
-	<context:component-scan base-package="com.music.melon.mybatis" />
-	<context:component-scan base-package="com.music.melon.temp" />
+	<context:component-scan base-package="com.music.bee" />
+	<context:component-scan base-package="com.music.bee.controller" />
+	<context:component-scan base-package="com.music.bee.dto" />
+	<context:component-scan base-package="com.music.bee.dao" />
+	<context:component-scan base-package="com.music.bee.mybatis" />
+	<context:component-scan base-package="com.music.bee.temp" />
 	
 	<!-- oracleDB연결부분 -->
 	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -47,7 +47,7 @@
 	<!-- Mybatis사용 OracleDB reference -->
 	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource"/>
-		<beans:property name="mapperLocations" value="classpath:com/music/melon/mybatis/**/*mapper.xml"/>
+		<beans:property name="mapperLocations" value="classpath:com/music/bee/mybatis/**/*mapper.xml"/>
 	</beans:bean>
 
 	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">

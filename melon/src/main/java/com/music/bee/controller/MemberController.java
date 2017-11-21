@@ -1,4 +1,4 @@
-package com.music.melon.controller;
+package com.music.bee.controller;
 
 import java.util.Locale;
 
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.music.melon.HomeController;
-import com.music.melon.dao.MemberDAO;
-import com.music.melon.dto.Member_dto;
+import com.music.bee.HomeController;
+import com.music.bee.dao.MemberDAO;
+import com.music.bee.dto.Member_dto;
 
 @Controller
 @RequestMapping("/member")

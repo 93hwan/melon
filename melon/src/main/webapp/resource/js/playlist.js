@@ -1,4 +1,16 @@
 $(document).ready(function(){
+	
+	var flag;
+	$(".ala").on("click",function(){
+		if(flag){
+			$(".jp-playlist").hide();
+			flag = false;
+		}else{
+			$(".jp-playlist").show();
+			flag=true;
+		}
+	});
+	
 	new jPlayerPlaylist({
 		jPlayer: "#jquery_jplayer_1",
 		cssSelectorAncestor: ".w3-bottom"
@@ -48,4 +60,7 @@ $(document).ready(function(){
 		smoothPlayBar: true,
 		keyEnabled: true
 	});
+	
+
+	
 });

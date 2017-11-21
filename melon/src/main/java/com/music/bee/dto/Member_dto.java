@@ -1,4 +1,4 @@
-package com.music.melon.dto;
+package com.music.bee.dto;
 
 public class Member_dto {
 	 private int member_no;
