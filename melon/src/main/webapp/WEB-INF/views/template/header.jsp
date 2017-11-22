@@ -90,7 +90,6 @@ body, html {
 
 
 
-<<<<<<< HEAD
 <%@ include file="/WEB-INF/views/popup/layerpop.jsp"%>
 <!-- Contact Section -->
 <!-- <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
@@ -116,8 +115,6 @@ body, html {
     </div>
   </div>
 </div> -->
-
-=======
 				<!-- Right-sided navbar links -->
 				<div class="w3-right w3-hide-small">
 					
@@ -132,4 +129,3 @@ body, html {
 			</div>
 		</div>
 	</div>
->>>>>>> branch 'master' of https://github.com/93hwan/melon.git
