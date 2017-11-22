@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/artist")
 public class ArtistController {
 	
+	
 	@Autowired
 	private SqlSession sqlSession;
+
 
 	@RequestMapping("/main")
 	public String artist_main(){

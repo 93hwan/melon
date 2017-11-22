@@ -1,0 +1,28 @@
+.w3-right{
+	margin:10px;
+}
+.top_header{
+	margin-left: 5%;
+    margin-right: 5%;
+}
+.top_logo{
+	display: inline-block;
+	float: left;
+	margin: 15px;
+}
+
+.top_search{
+	margin:20px;
+	margin-top:25px;
+	display: inline-block;
+}
+
+.top_search select{
+	height: 32.5px;
+	float:left;
+	margin-right:10px;
+}
+.top_search > [type=search]{
+	float: left;
+	margin-right: 5px;
+}
