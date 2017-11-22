@@ -12,10 +12,11 @@
 </head>
 <body>
 
-	<h2>아티스트 채널</h2>
-		<table>		<!-- 아티스트페이지에서 고정시킬 테이블 -->
+		<h2 align="center">아티스트 채널</h2>
+		<div class="container">
+		<table align="center" class="table table-hover">	
 			<tr>
-				<td rowspan="5"><img src="https://www.google.co.kr/imgres?imgurl=http%3A%2F%2Ffile2.nocutnews.co.kr%2Fnewsroom%2Fimage%2F2017%2F06%2F16%2F20170616121543807355.jpg&imgrefurl=http%3A%2F%2Fwww.nocutnews.co.kr%2Fnews%2F4800533&docid=Hm6Twn_8p15UDM&tbnid=IwqjVQ-TdG76oM%3A&vet=10ahUKEwiZiurQxMfXAhVBq5QKHbCCAuEQMwg0KBAwEA..i&w=550&h=704&bih=816&biw=1707&q=%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4&ved=0ahUKEwiZiurQxMfXAhVBq5QKHbCCAuEQMwg0KBAwEA&iact=mrc&uact=8" title="가수이미지"></img></td>
+				<td rowspan="5"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="가수이미지"></img></td>
 				<td><h3>트와이스</h3></td>
 			</tr>
 			<tr>
@@ -28,7 +29,6 @@
 			</tr>	
 		</table>
 		
-<div class="container">
   <h3>곡정보</h3>
   <ul class="nav nav-tabs">
     <li ><a href="artist_main">상세정보</a></li>
@@ -44,7 +44,7 @@
   		<tr>	
   			<td align="center"><input type="checkbox"></td>
   			<td align="center">NO</td>
-  			<td colspan="2"></td>
+  			<td colspan="3"></td>
   			<td align="center">곡명</td>
   			<td align="center">아티스트</td>
   			<td align="center">앨범</td>
@@ -56,14 +56,14 @@
   				<td><input type="checkbox" value=""></td>
   				<td>${i}</td>
   				<td>
-  					<img alt="재생" title="재생" src="/melon/src/main/webapp/resource/img/ic_play_circle_outline_black_48dp.png" onclick="">
-  					<img alt="재생목록 담기" title="재생목록 담기" src="/melon/src/main/webapp/resource/img/ic_add_circle_outline_black_48dp.png" onclick="">
-  					<img alt="가사보기" src="/melon/src/main/webapp/resource/img/ic_format_align_justify_black_48dp.png" onclick="">
+  					<img alt="재생" title="재생" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" onclick="">
+  					<img alt="재생목록 담기" title="재생목록 담기" src="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_outline_black_48dp.png" onclick="">
+  					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" onclick="">
   				</td>
   				<td>곡명</td>
   				<td>아티스트</td>
   				<td>앨범</td>
-  				<td><img alt="좋아요" src="/melon/src/main/webapp/resource/img/ic_favorite_border_black_48dp (1).png"></td>	<!--  이후에 추가 할지 안할지 결정해야 -->
+  				<td><img alt="좋아요" src="https://www.google.co.kr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiqvpDX7dHXAhWBUZQKHXQMBc8QjRwIBw&url=https%3A%2F%2Fwww.clker.com%2Fclipart-yellow-heart-3.html&psig=AOvVaw2XIfT8Ieq3CS5LWJiTFnok&ust=1511428924691123"></td>	<!--  이후에 추가 할지 안할지 결정해야 -->
   		</tr>
   		
   		</c:forEach>

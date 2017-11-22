@@ -17,6 +17,13 @@ public class Artist_dto {
 	
 	public Artist_dto(HttpServletRequest request ){
 		
+		setArtist_no(request.getParameter("artist_name"));
+		setArtist_name(request.getParameter("artist_name"));
+		setImg(request.getParameter("artist_name"));
+		setEtc(request.getParameter("artist_name"));
+		setAward_record(request.getParameter("artist_name"));
+		setNo(Integer.parseInt(request.getParameter("artist_name")));
+		
 	}
 	
 	
