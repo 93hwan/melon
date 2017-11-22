@@ -25,8 +25,14 @@ public class MController   {
 			
 			@RequestMapping("/album")
 			public void crawling() throws Exception {
-				String chartUrl = "http://www.melon.com/chart/day/index.htm";		
-//				String chartUrl = "http://www.melon.com/chart/index.htm";		
+				
+//				String chartUrl = "http://www.melon.com/chart/month/index.htm#params%5Bidx%5D=1&params%5BrankMonth%5D=201710&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
+//				String chartUrl = "http://www.melon.com/genre/song_list.htm?gnrCode=GN0200";
+//				String chartUrl = "http://www.melon.com/chart/day/index.htm";		
+//				String chartUrl = "http://www.melon.com/chart/index.htm";
+				String chartUrl = "http://www.melon.com/new/index.htm";
+//				String chartUrl = "http://www.melon.com/chart/day/index.htm";
+				
 				ArrayList<String> singer_list = new ArrayList<>();
 				ArrayList<String> title_list = new ArrayList<>();
 				ArrayList<String> singerNum_list = new ArrayList<>();
@@ -47,8 +53,7 @@ public class MController   {
 				FileWriter fw=null;
 				
 				for(int i= 0; i< titles.size(); i++){
-					if(i == 26)
-						i = 27;
+
 					String trimed_singerNo= artistNo.get(i).html().split("<a href=\"javascript:melon.link.goArtistDetail")[1].substring(2).split("'")[0];
 					String trimed_albumNum= albumName.get(i).html().split("\"javascript:melon.link.goAlbumDetail")[1].substring(2).split("'")[0];  //trimed_albumNum
 					artist_get = artist.get(i).text();
