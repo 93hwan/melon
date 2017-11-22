@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.music.bee.dao.MemberDAO">
+
+<insert id="join">
+	INSERT INTO M_MEMBER (member_no,member_id,password,name,birth,email,phone,status,authority,enabled,reg) VALUES(m_member_seq.nextval, #{member_id},#{password},#{name},#{birth},#{email},#{phone},'false','회원','true',sysdate)
+</insert>
+</mapper>
