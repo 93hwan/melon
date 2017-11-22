@@ -1,5 +1,7 @@
 package com.music.bee.dto;
 
+import javax.servlet.http.HttpServletRequest;
+
 public class Member_dto {
 	 private int member_no;
 	 private String member_id;
@@ -17,6 +19,25 @@ public class Member_dto {
 		super();
 	}
 	
+	
+	public Member_dto(HttpServletRequest request) {
+		setMember_id(request.getParameter("member_id"));
+		setPassword(request.getParameter("password"));
+		setName(request.getParameter("name"));
+		setBirth(request.getParameter("birth"));
+		setEmail(request.getParameter("email"));
+		setPhone(request.getParameter("phone"));
+	}
+
+
+	@Override
+	public String toString() {
+		return "Member_dto [member_no=" + member_no + ", member_id=" + member_id + ", password=" + password + ", name="
+				+ name + ", birth=" + birth + ", email=" + email + ", phone=" + phone + ", status=" + status
+				+ ", authority=" + authority + ", enabled=" + enabled + ", reg=" + reg + "]";
+	}
+
+
 	public int getMember_no() {
 		return member_no;
 	}

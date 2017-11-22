@@ -5,6 +5,6 @@
 <mapper namespace="com.music.bee.dao.MemberDAO">
 
 <insert id="join">
-	INSERT INTO M_member (ALBUM_NO,ALBUM_TITLE,ARTIST_NAME,IMG,RELEASE) VALUES(M_ALBUM_SEQ.NEXTVAL, #{param1},#{param2},#{param3},#{param4})
+	INSERT INTO M_MEMBER (member_no,member_id,password,name,birth,email,phone,status,authority,enabled,reg) VALUES(m_member_seq.nextval, #{member_id},#{password},#{name},#{birth},#{email},#{phone},'false','회원','true',sysdate)
 </insert>
 </mapper>

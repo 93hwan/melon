@@ -86,7 +86,6 @@
 	</div>
 </div>
 
-<%@ include file="/WEB-INF/views/popup/layerpop.jsp"%>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/layer_popup.js"></script>

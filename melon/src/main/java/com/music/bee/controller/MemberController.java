@@ -33,9 +33,11 @@ public class MemberController {
 	@RequestMapping("/join")
 	String join(Member_dto member_dto, 
 			@RequestHeader(required = false, value = "referer", defaultValue = "/") String referer) throws Exception {
-		if (member_dto != null)
-			memberDAO.join(member_dto);
-		return referer;
+		logger.debug("member_dto = " + member_dto.toString());
+		
+		memberDAO = sqlSession.getMapper(MemberDAO.class);
+		memberDAO.join(member_dto);
+		return "/";
 	}
 	
 }

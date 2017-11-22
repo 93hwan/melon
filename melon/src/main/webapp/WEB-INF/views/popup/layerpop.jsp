@@ -60,7 +60,7 @@
 						class="w3-input resource" required>
 				</div>
 				<div>
-					<input type="password" name="pw" placeholder="Password"
+					<input type="password" name="password" placeholder="Password"
 						class="w3-input resource" required>
 				</div>
 				<div>

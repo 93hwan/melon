@@ -101,7 +101,7 @@ body, html {
   </div>
 </div>
 
-
+<%@ include file="/WEB-INF/views/popup/layerpop.jsp"%>
 <!-- Contact Section -->
 <!-- <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
   <h3 class="w3-center">CONTACT</h3>
