@@ -13,7 +13,10 @@
 	<div class="main">
 		<div class="content1">
 			<center><h1>비디오</h1>	</center>
-			<a href="/artist/main">테스트 하시오</a>
+			<a href="/artist/main">테스트 메인</a>
+			<a href="/artist/music">테스트 뮤직</a>
+			<a href="/artist/album">테스트 앨범</a>
+			<a href="/artist/video">테스트 비디오</a>
 		</div>
 		<div class="content2">
 			<center><h1>차트 순위</h1></center>

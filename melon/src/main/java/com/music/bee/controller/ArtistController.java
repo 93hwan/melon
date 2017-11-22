@@ -21,18 +21,21 @@ public class ArtistController {
 	}
 	
 	@RequestMapping("/music")
-	public void artist_music(){
+	public String artist_music(){
 		
+	return "artist_music";
 	}
 	
 	@RequestMapping("/album")
-	public void artist_album(){
+	public String artist_album(){
 		
+	return "artist_album";
 	}
 	
 	@RequestMapping("/video")
-	public void artist_video(){
-		
+	public String artist_video(){
+	
+	return "artist_video";
 	}
 	
 	
