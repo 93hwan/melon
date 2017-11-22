@@ -15,11 +15,7 @@
 			<center><h1>비디오</h1>	</center>
 			<a href="${pageContext.request.contextPath}/artist/main">테스트 메인</a>
 			<br><br>
-			<a href="${pageContext.request.contextPath}/artist/music">테스트 뮤직</a>
-			<br><br>
-			<a href="${pageContext.request.contextPath}/artist/album">테스트 앨범</a>
-			<br><br>
-			<a href="${pageContext.request.contextPath}/artist/video">테스트 비디오</a>
+
 		</div>
 		<div class="content2">
 			<center><h1>차트 순위</h1></center>
