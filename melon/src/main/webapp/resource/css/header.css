@@ -25,4 +25,5 @@
 .top_search > [type=search]{
 	float: left;
 	margin-right: 5px;
+	width: 300px;
 }
