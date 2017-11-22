@@ -20,22 +20,22 @@ public class ArtistController {
 	return "artist_main";
 	}
 	
-	@RequestMapping("/artist_music")
+	@RequestMapping("/music")
 	public String artist_music(){
-	
-		return "artist_music";
+		
+	return "artist_music";
 	}
 	
-	@RequestMapping("/artist_album")
+	@RequestMapping("/album")
 	public String artist_album(){
 		
-		return "artist_album";
+	return "artist_album";
 	}
 	
-	@RequestMapping("/artist_video")
+	@RequestMapping("/video")
 	public String artist_video(){
-		
-		return "artist_video";
+	
+	return "artist_video";
 	}
 	
 	
