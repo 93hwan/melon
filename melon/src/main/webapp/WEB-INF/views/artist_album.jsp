@@ -40,12 +40,27 @@
   <table  class="table table-hover" align="center">
   	<c:forEach var="i" begin="1" end="1" step="1">
   		<tr>
-  			<td><img src="" alt=""></img></td>
-  			<td></td>
-  			<td></td>
-  			<td></td>
-  			<td></td>
-  			<td></td>
+  			<td><img src="" alt="앨범사진"></img></td>
+  			<td>
+  			앨범명<br>
+  			가수명<br>
+  			앨범재생<br>
+  			앨범출시일 | 곡수 <br>
+  			</td>
+  			
+  			<td><img src="" alt="앨범사진"></img></td>
+  			<td>
+  			앨범명<br>
+  			가수명<br>
+  			앨범재생<br>
+  			앨범출시일 | 곡수 <br>
+  			</td>
+  			<td><img src="" alt="앨범사진"></img></td>
+  			<td>
+  			앨범명<br>
+  			가수명<br>
+  			앨범재생<br>
+  			앨범출시일 | 곡수 <br></td>
   		</tr>
   	</c:forEach>
   	</table>

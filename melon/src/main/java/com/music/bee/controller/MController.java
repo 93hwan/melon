@@ -123,6 +123,7 @@ public class MController   {
 //				//활동정보
 				Elements detail_Debut01 = doc2.select("dl[class~=atist_info] dt");
 				Elements detail_Debut02 = doc2.select("dl[class~=atist_info] dd");
+				Elements detail_Debut03 = doc2.select("#d_artist_intro");
 //				Elements detail_Nation = doc2.select(".section_atistinfo04 dl.list_define.clfix dd");		//국적 -> 대부분 첫번째에 국적표시, 몇몇 가수는 본명, 별명 등이 입력되어있음
 //				//SNS정보
 //				Elements detail_FanPage = doc2.select(".section_atistinfo05 dl.list_define.clfix:has(a[href]) dd:eq(1)");
@@ -130,7 +131,7 @@ public class MController   {
 					String Award_record = detail_AwardRecord.text();
 					System.out.println("수상경력"+"\n"+Award_record+"\n");
 					
-					
+					String arti_intro = detail_Debut03.text();
 					int cnt=0;
 					ArrayList<String> list_title = new ArrayList<>();
 					ArrayList<String> list_content = new ArrayList<>();
@@ -204,7 +205,7 @@ public class MController   {
 						System.out.println("sql세션연결완료");
 						dao.album(trimed_albumNum, al, arti_, album_albumImgVar, rel);
 						System.out.println("album db저장 완료");
-						dao.artist(artist_No, arti_, artist_img, "", Award_record);
+						dao.artist(artist_No, arti_, artist_img, arti_intro, Award_record);
 						System.out.println("artist db저장 완료");
 						dao.music(SongNum_get, al, song_Name_get, arti_, genr, strLink, lyric_get, rel);
 						System.out.println("music db저장 완료");
