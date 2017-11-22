@@ -31,7 +31,7 @@
 		
   <h3>뮤직비디오</h3>
   <ul class="nav nav-tabs">
-    <li ><a href="artist">상세정보</a></li>
+    <li ><a href="main">상세정보</a></li>
     <li><a href="artist_music">곡</a></li>
     <li><a href="artist_album">앨범</a></li>
     <li class="active"><a href="artist_video">뮤직비디오</a></li>

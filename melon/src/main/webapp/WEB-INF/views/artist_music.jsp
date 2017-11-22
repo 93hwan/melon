@@ -31,8 +31,8 @@
 		
   <h3>곡정보</h3>
   <ul class="nav nav-tabs">
-    <li ><a href="artist">상세정보</a></li>
-    <li class="active"><a href="artist_music">곡</a></li>
+    <li ><a href="main">상세정보</a></li>
+    <li class="artist_music"><a href="artist_music">곡</a></li>
     <li><a href="artist_album">앨범</a></li>
     <li><a href="artist_video">뮤직비디오</a></li>
   </ul>	
@@ -55,15 +55,15 @@
   			<tr>	
   				<td align="center"><input type="checkbox" value=""></td>
   				<td align="center">${i}</td>
-  				<td align="center"> 
-  					<img alt="재생" title="재생" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="10px" height="10px" onclick="">
-  					<img alt="재생목록 담기" title="재생목록 담기" src="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_outline_black_48dp.png" width="10px" height="10px" onclick="">
-  					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="10px" height="10px" onclick="">
+  				<td width="120px"> 
+  					<img alt="재생" title="재생" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
+  					<img alt="재생목록 담기" title="재생목록 담기" src="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
+  					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="">
   				</td>
   				<td>곡명</td>
   				<td align="center">아티스트</td>
   				<td align="center">앨범</td>
-  				<td><img alt="좋아요" src="https://www.google.co.kr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiqvpDX7dHXAhWBUZQKHXQMBc8QjRwIBw&url=https%3A%2F%2Fwww.clker.com%2Fclipart-yellow-heart-3.html&psig=AOvVaw2XIfT8Ieq3CS5LWJiTFnok&ust=1511428924691123"></td>	<!--  이후에 추가 할지 안할지 결정해야 -->
+  				<td align="center"><img alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_black_48dp.png" width="20px" height="20px" onclick=""></td>	<!--  이후에 추가 할지 안할지 결정해야 -->
   		</tr>
   		
   		</c:forEach>
