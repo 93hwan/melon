@@ -20,17 +20,17 @@ public class ArtistController {
 	return "artist_main";
 	}
 	
-	@RequestMapping("/artist_music")
+	@RequestMapping("/music")
 	public void artist_music(){
 		
 	}
 	
-	@RequestMapping("/artist_album")
+	@RequestMapping("/album")
 	public void artist_album(){
 		
 	}
 	
-	@RequestMapping("/artist_video")
+	@RequestMapping("/video")
 	public void artist_video(){
 		
 	}
