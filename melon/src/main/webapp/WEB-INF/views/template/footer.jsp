@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
- pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
-	
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
 	<a href="#home" class="w3-button w3-light-grey"><i
@@ -15,74 +15,76 @@
 
 
 <!--  하단 고정바 -->
+
 <div class="w3-bottom">
 	<div class="w3-bar w3-white bottom-shadow">
 
-	<div class="show"></div>
-	<div class="jp-playlist">
-		<ul>
-			<li>&nbsp;</li>
-		</ul>
-	</div>
-
-
-	<div class="w3-bar w3-white bottom-shadow" id="player">
-
-
-		<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-		<div id="jp_container_1" class="jp-audio" role="application"
-			aria-label="media player">
-			<div class="jp-type-playlist">
-				<div class="jp-gui jp-interface">
-					<div class="jp-controls">
-						<button class="jp-previous" role="button" tabindex="0">previous</button>
-						<button class="jp-play" role="button" tabindex="0">play</button>
-						<button class="jp-next" role="button" tabindex="0">next</button>
-						<button class="jp-stop" role="button" tabindex="0">stop</button>
-					</div>
-					<div class="jp-progress">
-						<div class="jp-seek-bar">
-							<div class="jp-play-bar"></div>
-						</div>
-					</div>
-					<div class="jp-volume-controls">
-						<button class="jp-mute" role="button" tabindex="0">mute</button>
-						<button class="jp-volume-max" role="button" tabindex="0">max
-							volume</button>
-						<div class="jp-volume-bar">
-							<div class="jp-volume-bar-value"></div>
-						</div>
-					</div>
-					<div class="jp-time-holder">
-						<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-						<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-					</div>
-					<div class="jp-toggles">
-						<button class="jp-repeat" role="button" tabindex="0">repeat</button>
-						<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
-					</div>
-				</div>
-
-				<div class="jp-no-solution">
-					<span>Update Required</span> To play the media you will need to
-					either update your browser to a recent version or update your <a
-						href="http://get.adobe.com/flashplayer/" target="_blank">Flash
-						plugin</a>.
-				</div>
-			</div>
-		</div>
-		<div class="b_outside">
-			<div class="b_inside">
-
-				<img class="ala"
-					src="https://image.freepik.com/free-icon/list-square-button-symbol-for-interface_318-56151.jpg"
-					height="30" width="30">
-			</div>
-
-
+		<div class="show"></div>
+		<div class="jp-playlist">
+			<ul>
+				<li>&nbsp;</li>
+			</ul>
 		</div>
 
 
+		<div class="w3-bar w3-white bottom-shadow" id="player">
+
+
+			<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+			<div id="jp_container_1" class="jp-audio" role="application"
+				aria-label="media player">
+				<div class="jp-type-playlist">
+					<div class="jp-gui jp-interface">
+						<div class="jp-controls">
+							<button class="jp-previous" role="button" tabindex="0">previous</button>
+							<button class="jp-play" role="button" tabindex="0">play</button>
+							<button class="jp-next" role="button" tabindex="0">next</button>
+							<button class="jp-stop" role="button" tabindex="0">stop</button>
+						</div>
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-volume-controls">
+							<button class="jp-mute" role="button" tabindex="0">mute</button>
+							<button class="jp-volume-max" role="button" tabindex="0">max
+								volume</button>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+						</div>
+						<div class="jp-time-holder">
+							<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+							<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+						</div>
+						<div class="jp-toggles">
+							<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+							<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+						</div>
+					</div>
+
+					<div class="jp-no-solution">
+						<span>Update Required</span> To play the media you will need to
+						either update your browser to a recent version or update your <a
+							href="http://get.adobe.com/flashplayer/" target="_blank">Flash
+							plugin</a>.
+					</div>
+				</div>
+			</div>
+			<div class="b_outside">
+				<div class="b_inside">
+
+					<img class="ala"
+						src="${pageContext.request.contextPath}/img/list_button.jpg"
+						height="25" width="25">
+				</div>
+
+
+			</div>
+
+
+		</div>
 	</div>
 </div>
 
