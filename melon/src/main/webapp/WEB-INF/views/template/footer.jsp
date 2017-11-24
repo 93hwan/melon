@@ -3,8 +3,8 @@
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-	<a href="#home" class="w3-button w3-light-grey"><i
+<footer class="w3-center f-gray w3-padding-64">
+	<a href="${pageContext.request.contextPath}" class="w3-button w3-light-grey"><i
 		class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
 	<p>
 		Powered by <a href="https://www.w3schools.com/w3css/default.asp"
