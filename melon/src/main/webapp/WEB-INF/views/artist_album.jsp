@@ -13,19 +13,18 @@
 </head>
 <body>
 
-		<h2 align="center">아티스트 채널</h2>
+		<br><h2 align="center">아티스트 채널</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
-				<td rowspan="5"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="가수이미지"></img></td>
-				<td><h3>볼빨간사춘기</h3></td>
+				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="가수이미지"/></td>
+				<td><font style="font-weight: bold; font-size: xx-large;" >볼빨간사춘기</font><br></td>
 			</tr>
 			<tr>
-				<td>etc 출력</td>
+				<td >가수소개</td>
 			</tr>		
 			<tr>
 				<td>수상경력	<br>
-				
 				</td>
 			</tr>	
 		</table>
@@ -38,26 +37,32 @@
     <li><a href="artist_video">뮤직비디오</a></li>
   </ul>	
   <table  class="table table-hover" align="center">
-  	<c:forEach var="i" begin="1" end="1" step="1">
+ 	 <tr>
+  			<td colspan="7"></td>
+  	</tr>
+  	<c:forEach var="i" begin="1" end="3" step="1">
   		<tr>
-  			<td><img src="" alt="앨범사진"></img></td>
+  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/101/00/191/10100191_500.jpg/melon/resize/130/quality/80/optimize" alt="앨범사진"></img></td>
   			<td>
-  			앨범명<br>
+  			<br>
+  			<strong>앨범명</strong><br>
   			가수명<br>
   			앨범재생<br>
   			앨범출시일 | 곡수 <br>
   			</td>
   			
-  			<td><img src="" alt="앨범사진"></img></td>
+  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/100/70/846/10070846_500.jpg/melon/resize/130/quality/80/optimize" alt="앨범사진"></img></td>
   			<td>
-  			앨범명<br>
+  			<br>
+  			<strong>앨범명</strong><br>
   			가수명<br>
   			앨범재생<br>
   			앨범출시일 | 곡수 <br>
   			</td>
-  			<td><img src="" alt="앨범사진"></img></td>
+  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/027/07/131/2707131_500.jpg/melon/resize/130/quality/80/optimize" alt="앨범사진"></img></td>
   			<td>
-  			앨범명<br>
+  			<br>
+  			<strong>앨범명</strong><br>
   			가수명<br>
   			앨범재생<br>
   			앨범출시일 | 곡수 <br></td>
