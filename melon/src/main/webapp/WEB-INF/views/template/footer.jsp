@@ -3,7 +3,7 @@
 
 
 <!-- Footer -->
-<footer class="w3-center f-gray w3-padding-64">
+<footer class="w3-center f-gray w3-padding-32">
 	<a href="${pageContext.request.contextPath}" class="w3-button w3-light-grey"><i
 		class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
 	<p>
