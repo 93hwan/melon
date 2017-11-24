@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ include file="/WEB-INF/views/template/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,49 +14,49 @@
 <body>
 	<div>
 	<input >
-		<br><h2 align="center">¾ÆÆ¼½ºÆ® Ã¤³Î</h2><br>
+		<br><h2 align="center">ì•„í‹°ìŠ¤íŠ¸ ì±„ë„</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="°¡¼öÀÌ¹ÌÁö"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >º¼»¡°£»çÃá±â</font></td>
+				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="ê°€ìˆ˜ì´ë¯¸ì§€"/></td>
+				<td><font style="font-weight: bold; font-size: xx-large;" >ë³¼ë¹¨ê°„ì‚¬ì¶˜ê¸°</font></td>
 			</tr>
 			<tr>
 				<td>
-				°¡¼ö¼Ò°³</td>
+				ê°€ìˆ˜ì†Œê°œ</td>
 			</tr>		
 			<tr>
-				<td>¼ö»ó°æ·Â	<br>
+				<td>ìˆ˜ìƒê²½ë ¥	<br>
 				
 				</td>
 			</tr>	
 		</table>
 		
 
-  <h3>»ó¼¼Á¤º¸</h3>
+  <h3>ìƒì„¸ì •ë³´</h3>
   <ul class="nav nav-tabs">
-    <li class="active"><a href="main">»ó¼¼Á¤º¸</a></li>
-    <li><a href="artist_music">°î</a></li>
-    <li><a href="artist_album">¾Ù¹ü</a></li>
-    <li><a href="artist_video">¹ÂÁ÷ºñµð¿À</a></li>
+    <li class="active"><a href="main">ìƒì„¸ì •ë³´</a></li>
+    <li><a href="artist_music">ê³¡</a></li>
+    <li><a href="artist_album">ì•¨ë²”</a></li>
+    <li><a href="artist_video">ë®¤ì§ë¹„ë””ì˜¤</a></li>
   </ul>	
-		<table align="center" class="table table-hover"> <!--  »ó¼¼Á¤º¸ Å×ÀÌºí -->
+		<table align="center" class="table table-hover"> <!--  ìƒì„¸ì •ë³´ í…Œì´ë¸” -->
 		<tr>
   			<td colspan="7"></td>
   		</tr>
 			<tr>
-				<td><h3>¼ö»ó°æ·Â</h3> <br>
+				<td><h3>ìˆ˜ìƒê²½ë ¥</h3> <br>
 				
 				
 				</td>
 			</tr>
 			<tr>
-				<td><h3>°¡¼ö¼Ò°³</h3><br>
-				¼­Åø°í ¹Ì¼÷ÇÑ ½Ã±â, »çÃá±â¶ó´Â ÀÌÀ¯¸¸À¸·Îµµ Æ÷¿ëÇÒ ¼ö ÀÖ´Â ±×·± ¶§°¡ ÀÖ´Ù.
-				¼ø¼öÇÏ°í ¼ÖÁ÷ÇÑ, ¶§ Å¸Áö ¾ÊÀº ¸»°£ °¨¼ºµéÀ» ´ã¾Æ ³ë·¡ÇÏ°íÇÂ º¼»¡°£»çÃá±â.
-				±×´ëµéÀÇ ½Ì±×·¯¿ü´ø »çÃá±â ÀÜ»óÀ» ÅåÅå Æ¢´Â À½¾ÇÀ¸·Î ÀüÇÏ°íÀÚ ÇÑ´Ù.
+				<td><h3>ê°€ìˆ˜ì†Œê°œ</h3><br>
+				ì„œíˆ´ê³  ë¯¸ìˆ™í•œ ì‹œê¸°, ì‚¬ì¶˜ê¸°ë¼ëŠ” ì´ìœ ë§Œìœ¼ë¡œë„ í¬ìš©í•  ìˆ˜ ìžˆëŠ” ê·¸ëŸ° ë•Œê°€ ìžˆë‹¤.
+				ìˆœìˆ˜í•˜ê³  ì†”ì§í•œ, ë•Œ íƒ€ì§€ ì•Šì€ ë§ê°„ ê°ì„±ë“¤ì„ ë‹´ì•„ ë…¸ëž˜í•˜ê³ í”ˆ ë³¼ë¹¨ê°„ì‚¬ì¶˜ê¸°.
+				ê·¸ëŒ€ë“¤ì˜ ì‹±ê·¸ëŸ¬ì› ë˜ ì‚¬ì¶˜ê¸° ìž”ìƒì„ í†¡í†¡ íŠ€ëŠ” ìŒì•…ìœ¼ë¡œ ì „í•˜ê³ ìž í•œë‹¤.
 
-				¾ÈÁö¿µ(º¸ÄÃ), ¿ìÁöÀ±(º£ÀÌ½º, ±âÅ¸, ¼­ºêº¸ÄÃ, ·¦)À¸·Î ±¸¼ºµÈ º¼»¡°£»çÃá±â´Â 2016³â 4¿ù 22ÀÏ Half Album 'RED ICKLE'·Î µ¥ºß, ÀÛ»ç/ÀÛ°î/¿¬ÁÖ ±îÁö ¸ðµç ÀÛ¾÷À» Á÷Á¢ ÇÏ´Â ½Ç·ÂÆÄ ¿©¼º µà¿ÀÀÌ´Ù.
+				ì•ˆì§€ì˜(ë³´ì»¬), ìš°ì§€ìœ¤(ë² ì´ìŠ¤, ê¸°íƒ€, ì„œë¸Œë³´ì»¬, ëž©)ìœ¼ë¡œ êµ¬ì„±ëœ ë³¼ë¹¨ê°„ì‚¬ì¶˜ê¸°ëŠ” 2016ë…„ 4ì›” 22ì¼ Half Album 'RED ICKLE'ë¡œ ë°ë·”, ìž‘ì‚¬/ìž‘ê³¡/ì—°ì£¼ ê¹Œì§€ ëª¨ë“  ìž‘ì—…ì„ ì§ì ‘ í•˜ëŠ” ì‹¤ë ¥íŒŒ ì—¬ì„± ë“€ì˜¤ì´ë‹¤.
 				
 				</td>
 			</tr>		

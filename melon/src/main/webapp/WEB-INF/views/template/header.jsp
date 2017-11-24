@@ -20,13 +20,13 @@
 <link href="css/jplayer.blue.monday.min.css" rel="stylesheet"
 	type="text/css" />
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+	src="/js/jquery.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jquery.jplayer.min.js"></script>
+	src="/js/jquery.jplayer.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jplayer.playlist.min.js"></script>
+	src="/js/jplayer.playlist.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/playlist.js"></script>
+	src="/js/playlist.js"></script>
 <link rel="stylesheet" type="text/css" href="css/playlist.css" />
 
 <!-- 검색 헤더 -->
@@ -40,7 +40,7 @@ font-family: 'binggrae;
 src: url('/font/binggrae.ttf');
 }
 body, h1, h2, h3, h4, h5, h6 {
-	font-family: 'binggrae'
+	font-family: 'binggrae';
 }
 
 body, html {

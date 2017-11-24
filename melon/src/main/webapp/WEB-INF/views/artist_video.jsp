@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%@ include file="/WEB-INF/views/template/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Melon/Artist/Video</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,29 +14,29 @@
 </head>
 <body>
 	<div>
-		<br><h2 align="center">¾ÆÆ¼½ºÆ® Ã¤³Î</h2><br>
+		<br><h2 align="center">ì•„í‹°ìŠ¤íŠ¸ ì±„ë„</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="°¡¼öÀÌ¹ÌÁö"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >º¼»¡°£»çÃá±â</font></td>
+				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="ê°€ìˆ˜ì´ë¯¸ì§€"/></td>
+				<td><font style="font-weight: bold; font-size: xx-large;" >ë³¼ë¹¨ê°„ì‚¬ì¶˜ê¸°</font></td>
 			</tr>
 			<tr>
-				<td>°¡¼ö¼Ò°³</td>
+				<td>ê°€ìˆ˜ì†Œê°œ</td>
 			</tr>		
 			<tr>
-				<td>¼ö»ó°æ·Â	<br>
+				<td>ìˆ˜ìƒê²½ë ¥	<br>
 				
 				</td>
 			</tr>	
 		</table>
 		
-  <h3>¹ÂÁ÷ºñµð¿À</h3>
+  <h3>ë®¤ì§ë¹„ë””ì˜¤</h3>
   <ul class="nav nav-tabs">
-    <li ><a href="main">»ó¼¼Á¤º¸</a></li>
-    <li><a href="artist_music">°î</a></li>
-    <li><a href="artist_album">¾Ù¹ü</a></li>
-    <li class="active"><a href="artist_video">¹ÂÁ÷ºñµð¿À</a></li>
+    <li ><a href="main">ìƒì„¸ì •ë³´</a></li>
+    <li><a href="artist_music">ê³¡</a></li>
+    <li><a href="artist_album">ì•¨ë²”</a></li>
+    <li class="active"><a href="artist_video">ë®¤ì§ë¹„ë””ì˜¤</a></li>
   </ul>	
 </div>
 
@@ -53,27 +53,27 @@
 			<tr>
 				<td><img  height="180dp" width="300dp" src="http://cdnimg.melon.co.kr/cm/album/images/101/00/191/10100191_500.jpg/melon/resize/130/quality/80/optimize" onclick=""><br>
 					<br>
-					<strong>¹ÂÁ÷ºñµð¿À Å¸ÀÌÆ²</strong><br>
-					°¡¼ö<br>
-					Á¶È¸¼ö &nbsp; <img alt="ÁÁ¾Æ¿ä" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
+					<strong>ë®¤ì§ë¹„ë””ì˜¤ íƒ€ì´í‹€</strong><br>
+					ê°€ìˆ˜<br>
+					ì¡°íšŒìˆ˜ &nbsp; <img alt="ì¢‹ì•„ìš”" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
 				</td>
 				<td><img height="180dp" width="300dp" src="http://cdnimg.melon.co.kr/cm/album/images/100/70/846/10070846_500.jpg/melon/resize/130/quality/80/optimize" onclick=""><br>
 					<br>
-					<strong>¹ÂÁ÷ºñµð¿À Å¸ÀÌÆ²</strong><br>
-					°¡¼ö<br>
-					Á¶È¸¼ö &nbsp;<img alt="ÁÁ¾Æ¿ä" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
+					<strong>ë®¤ì§ë¹„ë””ì˜¤ íƒ€ì´í‹€</strong><br>
+					ê°€ìˆ˜<br>
+					ì¡°íšŒìˆ˜ &nbsp;<img alt="ì¢‹ì•„ìš”" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
 				</td>
 				<td><img height="180dp" width="300dp" src="http://cdnimg.melon.co.kr/cm/album/images/027/07/131/2707131_500.jpg/melon/resize/130/quality/80/optimize" onclick=""><br>
 					<br>
-					<strong>¹ÂÁ÷ºñµð¿À Å¸ÀÌÆ²</strong><br>
-					°¡¼ö<br>
-					Á¶È¸¼ö &nbsp; <img alt="ÁÁ¾Æ¿ä" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
+					<strong>ë®¤ì§ë¹„ë””ì˜¤ íƒ€ì´í‹€</strong><br>
+					ê°€ìˆ˜<br>
+					ì¡°íšŒìˆ˜ &nbsp; <img alt="ì¢‹ì•„ìš”" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
 				</td>
 				<td><img height="180dp" width="300dp" src="http://cdnimg.melon.co.kr/cm/album/images/100/24/816/10024816_500.jpg/melon/resize/130/quality/80/optimize" onclick=""><br>
 					<br>
-					<strong>¹ÂÁ÷ºñµð¿À Å¸ÀÌÆ²</strong><br>
-					°¡¼ö<br>
-					Á¶È¸¼ö &nbsp; <img alt="ÁÁ¾Æ¿ä" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
+					<strong>ë®¤ì§ë¹„ë””ì˜¤ íƒ€ì´í‹€</strong><br>
+					ê°€ìˆ˜<br>
+					ì¡°íšŒìˆ˜ &nbsp; <img alt="ì¢‹ì•„ìš”" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
 				</td>
 			</tr>
 		</c:forEach>

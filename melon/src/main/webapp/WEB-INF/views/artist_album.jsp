@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="/WEB-INF/views/template/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Melon/Artist/Album</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,28 +14,28 @@
 </head>
 <body>
 	<div>
-		<br><h2 align="center">¾ÆÆ¼½ºÆ® Ã¤³Î</h2><br>
+		<br><h2 align="center">ì•„í‹°ìŠ¤íŠ¸ ì±„ë„</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="°¡¼öÀÌ¹ÌÁö"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >º¼»¡°£»çÃá±â</font><br></td>
+				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="ê°€ìˆ˜ì´ë¯¸ì§€"/></td>
+				<td><font style="font-weight: bold; font-size: xx-large;" >ë³¼ë¹¨ê°„ì‚¬ì¶˜ê¸°</font><br></td>
 			</tr>
 			<tr>
-				<td >°¡¼ö¼Ò°³</td>
+				<td >ê°€ìˆ˜ì†Œê°œ</td>
 			</tr>		
 			<tr>
-				<td>¼ö»ó°æ·Â	<br>
+				<td>ìˆ˜ìƒê²½ë ¥	<br>
 				</td>
 			</tr>	
 		</table>
 		
-  <h3>¾Ù¹üÁ¤º¸</h3>
+  <h3>ì•¨ë²”ì •ë³´</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main">»ó¼¼Á¤º¸</a></li>
-    <li><a href="artist_music">°î</a></li>
-    <li class="active"><a href="artist_album">¾Ù¹ü</a></li>
-    <li><a href="artist_video">¹ÂÁ÷ºñµð¿À</a></li>
+    <li><a href="main">ìƒì„¸ì •ë³´</a></li>
+    <li><a href="artist_music">ê³¡</a></li>
+    <li class="active"><a href="artist_album">ì•¨ë²”</a></li>
+    <li><a href="artist_video">ë®¤ì§ë¹„ë””ì˜¤</a></li>
   </ul>	
   <table  class="table table-hover" align="center">
  	 <tr>
@@ -43,30 +43,30 @@
   	</tr>
   	<c:forEach var="i" begin="1" end="3" step="1">
   		<tr>
-  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/101/00/191/10100191_500.jpg/melon/resize/130/quality/80/optimize" alt="¾Ù¹ü»çÁø"></img></td>
+  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/101/00/191/10100191_500.jpg/melon/resize/130/quality/80/optimize" alt="ì•¨ë²”ì‚¬ì§„"></img></td>
   			<td>
   			<br>
-  			<strong>¾Ù¹ü¸í</strong><br>
-  			°¡¼ö¸í<br>
-  			¾Ù¹üÀç»ý<br>
-  			¾Ù¹üÃâ½ÃÀÏ | °î¼ö <br>
+  			<strong>ì•¨ë²”ëª…</strong><br>
+  			ê°€ìˆ˜ëª…<br>
+  			ì•¨ë²”ìž¬ìƒ<br>
+  			ì•¨ë²”ì¶œì‹œì¼ | ê³¡ìˆ˜ <br>
   			</td>
   			
-  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/100/70/846/10070846_500.jpg/melon/resize/130/quality/80/optimize" alt="¾Ù¹ü»çÁø"></img></td>
+  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/100/70/846/10070846_500.jpg/melon/resize/130/quality/80/optimize" alt="ì•¨ë²”ì‚¬ì§„"></img></td>
   			<td>
   			<br>
-  			<strong>¾Ù¹ü¸í</strong><br>
-  			°¡¼ö¸í<br>
-  			¾Ù¹üÀç»ý<br>
-  			¾Ù¹üÃâ½ÃÀÏ | °î¼ö <br>
+  			<strong>ì•¨ë²”ëª…</strong><br>
+  			ê°€ìˆ˜ëª…<br>
+  			ì•¨ë²”ìž¬ìƒ<br>
+  			ì•¨ë²”ì¶œì‹œì¼ | ê³¡ìˆ˜ <br>
   			</td>
-  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/027/07/131/2707131_500.jpg/melon/resize/130/quality/80/optimize" alt="¾Ù¹ü»çÁø"></img></td>
+  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/027/07/131/2707131_500.jpg/melon/resize/130/quality/80/optimize" alt="ì•¨ë²”ì‚¬ì§„"></img></td>
   			<td>
   			<br>
-  			<strong>¾Ù¹ü¸í</strong><br>
-  			°¡¼ö¸í<br>
-  			¾Ù¹üÀç»ý<br>
-  			¾Ù¹üÃâ½ÃÀÏ | °î¼ö <br></td>
+  			<strong>ì•¨ë²”ëª…</strong><br>
+  			ê°€ìˆ˜ëª…<br>
+  			ì•¨ë²”ìž¬ìƒ<br>
+  			ì•¨ë²”ì¶œì‹œì¼ | ê³¡ìˆ˜ <br></td>
   		</tr>
   	</c:forEach>
   	</table>

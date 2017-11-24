@@ -15,28 +15,28 @@
 			<div class="genre">
 				<a href="${pageContext.request.contextPath}"> <img
 					src="${pageContext.request.contextPath}/img/rnb.png" width="80"
-					height="80""></a>
+					height="80"></a>
 				<a href="${pageContext.request.contextPath}">
 					<img src="${pageContext.request.contextPath}/img/hiphop.png"
-					width="80" height="80""></a>
+					width="80" height="80"></a>
 				<a href="${pageContext.request.contextPath}"> <img
 					src="${pageContext.request.contextPath}/img/ballad.png" width="80"
-					height="80""></a>
+					height="80"></a>
 				<a href="${pageContext.request.contextPath}">
 					<img src="${pageContext.request.contextPath}/img/dance.png"
-					width="80" height="80""></a>
+					width="80" height="80"></a>
 				<a href="${pageContext.request.contextPath}"> <img
 					src="${pageContext.request.contextPath}/img/folk.png" width="80"
-					height="80""></a>
+					height="80"></a>
 				<a href="${pageContext.request.contextPath}">
 					<img src="${pageContext.request.contextPath}/img/rock.png"
-					width="80" height="80""></a>
+					width="80" height="80"></a>
 				<a href="${pageContext.request.contextPath}"> <img
 					src="${pageContext.request.contextPath}/img/indie.png" width="80"
-					height="80""></a>
+					height="80"></a>
 				<a href="${pageContext.request.contextPath}">
 					<img src="${pageContext.request.contextPath}/img/etc.png"
-					width="80" height="80"">
+					width="80" height="80">
 				</a>
 			</div>
 		</div>
