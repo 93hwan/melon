@@ -59,7 +59,10 @@ body, html {
 	bottom: 0;
 	display: inline-block;
 }
-
+.w3-button:hover {
+    color: white !important;
+    background-color: #333333 !important;
+}
 .bottom-shadow {
 	height: 60px;
 	box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.16), 0 -2px 10px 0
