@@ -22,12 +22,6 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		return "home";
 	}
-	
-	@RequestMapping("/logout")
-	public String logout() {
-		
-		return "redirect:/";
-	}
 
 	@RequestMapping("/hi")
 	public String hi() {

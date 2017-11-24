@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- 보안 설정에서 제외할 path 설정 -->
+    <sec:http pattern="/css**" security="none"/>
+    <sec:http pattern="/js**" security="none"/>
+    <sec:http pattern="/img**" security="none"/>
+    <sec:http pattern="/music**" security="none"/>
+    
+    <!-- http 보안 설정 -->
+    <sec:http use-expressions="true">
+    	
+    	<!-- request에 대한 접근 제어 설정 -->
+    	<sec:intercept-url pattern="/member/join*" access="isAnonymous()"/>
+    	<sec:intercept-url pattern="/member/loginProc*" access="isAnonymous()"/>
+    	<sec:intercept-url pattern="/member/logout*" access="isAuthenticated()"/>
+    	<sec:intercept-url pattern="/member**" access="hasAuthority('회원')"/>
+    	<sec:intercept-url pattern="/**" access="permitAll"/>
+    	
+    	<sec:form-login login-page="/loginProc"
+    							username-parameter="member_id"
+    							password-parameter="password"
+    							authentication-failure-url="/login?error"/>
+    	<sec:remember-me remember-me-cookie="remember"
+    								remember-me-parameter="remember"
+    								use-secure-cookie="true"
+    								token-validity-seconds="2419200"/>
+    	<sec:logout logout-success-url="/"
+    						invalidate-session="true"/>
+    	
+    	<sec:session-management>
+    		<sec:concurrency-control max-sessions="1"/>
+    	</sec:session-management>
+    </sec:http>
+    
+    <!-- BCrypt 암호화에 사용할 인코더를 등록 -->
+<!--     <bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/> -->
+    
+    <sec:authentication-manager>
+    	<sec:authentication-provider>
+    		<sec:jdbc-user-service data-source-ref="dataSource"
+    			users-by-username-query="
+     			select member_id as username, password as password, enabled
+     			from m_member where member_id=?"
+    			authorities-by-username-query="
+    			select member_id as username, authority from m_member 
+    			where member_id=?"/>
+    	</sec:authentication-provider>
+    </sec:authentication-manager>
+	
+</beans>

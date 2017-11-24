@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- <%@taglib prefix="sec"
-	uri="http://www.springframework.org/security/tags"%> --%>
+<%@taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>
 
 <div class="mask"></div>
 <div id="popup_area">
@@ -15,11 +15,11 @@
 				method="post">
 				<sec:csrfInput />
 				<div>
-					<input type="email" name="email" placeholder="Email"
+					<input type="text" name="member_id" placeholder="ID"
 						class="w3-input" required>
 				</div>
 				<div>
-					<input type="password" name="pw" placeholder="Password"
+					<input type="password" name="password" placeholder="Password"
 						class="w3-input" required>
 				</div>
 				<div class="remember">
