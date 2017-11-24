@@ -34,8 +34,13 @@
 
 
 <style>
+
+@font-face{
+font-family: 'binggrae;
+src: url('/font/binggrae.ttf');
+}
 body, h1, h2, h3, h4, h5, h6 {
-	font-family: "Raleway", sans-serif
+	font-family: 'binggrae'
 }
 
 body, html {
@@ -63,6 +68,11 @@ body, html {
     color: white !important;
     background-color: #333333 !important;
 }
+#gold:hover{
+    color: white !important;
+    background-color: #ffc300 !important;
+}
+
 .bottom-shadow {
 	height: 60px;
 	box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.16), 0 -2px 10px 0
@@ -97,6 +107,7 @@ body, html {
 				<div class="w3-right w3-hide-small">
 					
 					<a href="#" class="loginbtn w3-bar-item w3-button">마이페이지</a>
+					<a href="#" class="loginbtn w3-bar-item w3-button" id="gold">이용권</a>
 					
 					<a href="javaScript:void(0);"
 						class="loginbtn w3-bar-item w3-button">로그인</a> 

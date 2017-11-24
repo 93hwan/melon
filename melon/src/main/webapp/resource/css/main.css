@@ -29,11 +29,46 @@
 }
 
 .content2 .album {
-    float: left;
-    border: 3px solid gray;
-    width: 60%;
+	float: left;
+	border: 3px solid gray;
+	width: 60%;
+	height: 100%;
+}
+.album > a{
+    font-size: 20px;
+    margin-left: 18px;
+    text-decoration: none;
+}
+
+.album_contents {
+	border: 3px solid red;
+	width: 100%;
+	height: 93%;
+}
+
+.album_contents ul {
+	list-style: none;
+	font-size: 0px;
+	padding: 0;
+	width: 100%;
     height: 100%;
 }
+
+.album_contents ul li {
+	float: left;
+	border: 1px solid black;
+	list-style: none;
+	height:48%;
+	width: 23%;
+	margin-bottom: 10px;
+	margin-left: 13px;
+}
+
+.album_contents a {
+	text-decoration: none;
+	font-size: 15px;
+}
+
 
 .content2 .chart {
 	float: right;
