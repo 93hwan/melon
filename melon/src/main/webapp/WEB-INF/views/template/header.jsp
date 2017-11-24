@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
 <title>Bee</title>
@@ -108,11 +109,15 @@ body, html {
 					
 					<a href="#" class="loginbtn w3-bar-item w3-button">마이페이지</a>
 					<a href="#" class="loginbtn w3-bar-item w3-button" id="gold">이용권</a>
-					
-					<a href="javaScript:void(0);"
-						class="loginbtn w3-bar-item w3-button">로그인</a> 
-					<a	href="${pageContext.request.contextPath}"
-						class="w3-bar-item w3-button">로그아웃</a>
+					<sec:authorize access="!isAuthenticated()">
+						<a href="javaScript:void(0);"
+							class="loginbtn w3-bar-item w3-button">로그인</a>
+					</sec:authorize>
+					<sec:authorize access="isAuthenticated()">
+						<a	href="${pageContext.request.contextPath}"
+							class="w3-bar-item w3-button">로그아웃</a>
+					</sec:authorize>
+
 				</div>
 				
 			</div>
