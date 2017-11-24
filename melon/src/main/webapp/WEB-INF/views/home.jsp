@@ -11,7 +11,20 @@
 </head>
 <body>
 	<div class="main">
+<<<<<<< HEAD
 			<div class="content1">
+=======
+		<div class="content1">
+			<center><h1>비디오</h1>	</center>
+			<a href="${pageContext.request.contextPath}/artist/main">테스트 메인</a>
+			<br><br>
+
+		</div>
+		<div class="content2">
+			<center><h1>차트 순위</h1></center>
+		</div>
+		<div class="content3">
+>>>>>>> branch 'master' of https://github.com/93hwan/melon.git
 			<div class="genre">
 				<a href="${pageContext.request.contextPath}">
 				<img src="${pageContext.request.contextPath}/img/rnb.png" width="80" height="80""></a>
