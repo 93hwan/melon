@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+    <%@ include file="/WEB-INF/views/template/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +12,8 @@
 <title>Melon/Artist/Main</title>
 </head>
 <body>
-
+	<div>
+	<input >
 		<br><h2 align="center">아티스트 채널</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
@@ -60,7 +62,7 @@
 			</tr>		
 		</table>
 </div>
-
-
+</div>
 </body>
 </html>
+<%@ include file="/WEB-INF/views/template/footer.jsp"%>

@@ -1,6 +1,6 @@
 package com.music.bee.dao;
 
-public interface IDAO {
+public interface CrolDAO {
 
 	//크롤링
 	public void album(String album_num,String album_title,String artist_name,String album_img,String relDate);

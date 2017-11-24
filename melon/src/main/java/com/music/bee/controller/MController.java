@@ -13,12 +13,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-import com.music.bee.dao.IDAO;
+import com.music.bee.dao.CrolDAO;
 
 @Controller
 public class MController   {
 
-			IDAO idao;
+			CrolDAO idao;
 			
 			@Autowired
 			private SqlSession sqlSession;
@@ -201,7 +201,7 @@ public class MController   {
 									System.out.println("youtube크롤링완료----------------------------------------");
 										}
 					
-						IDAO dao = sqlSession.getMapper(IDAO.class);
+						CrolDAO dao = sqlSession.getMapper(CrolDAO.class);
 						System.out.println("sql세션연결완료");
 						dao.album(trimed_albumNum, al, arti_, album_albumImgVar, rel);
 						System.out.println("album db저장 완료");

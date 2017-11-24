@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="/WEB-INF/views/template/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,7 +13,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+	<div>
 		<br><h2 align="center">아티스트 채널</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
@@ -70,6 +71,8 @@
   	</c:forEach>
   	</table>
   
+	</div>
 </div>
 </body>
 </html>
+<%@ include file="/WEB-INF/views/template/footer.jsp"%>
