@@ -37,11 +37,11 @@
 <style>
 
 @font-face{
-font-family: 'binggrae;
-src: url('/font/binggrae.ttf');
+font-family: 'binggrae';
+src: url('/font/binggrae.ttf') format("truetype");
 }
 body, h1, h2, h3, h4, h5, h6 {
-	font-family: 'binggrae'
+	font-family: 'binggrae';
 }
 
 body, html {
