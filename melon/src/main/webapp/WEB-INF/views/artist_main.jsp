@@ -12,15 +12,16 @@
 </head>
 <body>
 
-		<h2 align="center">아티스트 채널</h2>
+		<br><h2 align="center">아티스트 채널</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
-				<td rowspan="5"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="가수이미지"></img></td>
-				<td><h3>볼빨간사춘기</h3></td>
+				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="가수이미지"/></td>
+				<td><font style="font-weight: bold; font-size: xx-large;" >볼빨간사춘기</font></td>
 			</tr>
 			<tr>
-				<td>etc 출력</td>
+				<td>
+				가수소개</td>
 			</tr>		
 			<tr>
 				<td>수상경력	<br>
@@ -38,6 +39,9 @@
     <li><a href="artist_video">뮤직비디오</a></li>
   </ul>	
 		<table align="center" class="table table-hover"> <!--  상세정보 테이블 -->
+		<tr>
+  			<td colspan="7"></td>
+  		</tr>
 			<tr>
 				<td><h3>수상경력</h3> <br>
 				
@@ -45,9 +49,12 @@
 				</td>
 			</tr>
 			<tr>
-				<td><h3>활동이력</h3><br>
-				
-				
+				<td><h3>가수소개</h3><br>
+				서툴고 미숙한 시기, 사춘기라는 이유만으로도 포용할 수 있는 그런 때가 있다.
+				순수하고 솔직한, 때 타지 않은 말간 감성들을 담아 노래하고픈 볼빨간사춘기.
+				그대들의 싱그러웠던 사춘기 잔상을 톡톡 튀는 음악으로 전하고자 한다.
+
+				안지영(보컬), 우지윤(베이스, 기타, 서브보컬, 랩)으로 구성된 볼빨간사춘기는 2016년 4월 22일 Half Album 'RED ICKLE'로 데뷔, 작사/작곡/연주 까지 모든 작업을 직접 하는 실력파 여성 듀오이다.
 				
 				</td>
 			</tr>		
