@@ -12,27 +12,8 @@
 <title>Melon/Artist/Main</title>
 </head>
 <body>
-	<div>
-	<input >
-		<br><h2 align="center">아티스트 채널</h2><br>
-		<div class="container">
-		<table align="center" class="table table-hover">	
-			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="가수이미지"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >볼빨간사춘기</font></td>
-			</tr>
-			<tr>
-				<td>
-				가수소개</td>
-			</tr>		
-			<tr>
-				<td>수상경력	<br>
-				
-				</td>
-			</tr>	
-		</table>
-		
-
+	    <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp"%>
+<div class="container">
   <h3>상세정보</h3>
   <ul class="nav nav-tabs">
     <li class="active"><a href="main">상세정보</a></li>
@@ -61,7 +42,6 @@
 				</td>
 			</tr>		
 		</table>
-</div>
 </div>
 </body>
 </html>

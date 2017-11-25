@@ -13,25 +13,25 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="css/layer_popup.css" />
-<link rel="stylesheet" type="text/css" href="css/cancel_rsv.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/layer_popup.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/cancel_rsv.css" />
 
 
 <!-- 음악 플레이어 -->
-<link href="css/jplayer.blue.monday.min.css" rel="stylesheet"
+<link href="${pageContext.request.contextPath}/css/jplayer.blue.monday.min.css" rel="stylesheet"
 	type="text/css" />
 <script type="text/javascript"
-	src="/js/jquery.min.js"></script>
+	src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 <script type="text/javascript"
-	src="/js/jquery.jplayer.min.js"></script>
+	src="${pageContext.request.contextPath}/js/jquery.jplayer.min.js"></script>
 <script type="text/javascript"
-	src="/js/jplayer.playlist.min.js"></script>
+	src="${pageContext.request.contextPath}/js/jplayer.playlist.min.js"></script>
 <script type="text/javascript"
-	src="/js/playlist.js"></script>
-<link rel="stylesheet" type="text/css" href="css/playlist.css" />
+	src="${pageContext.request.contextPath}/js/playlist.js"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/playlist.css" />
 
 <!-- 검색 헤더 -->
-<link rel="stylesheet" type="text/css" href="css/header.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/header.css" />
 
 
 <style>

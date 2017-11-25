@@ -12,24 +12,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div>
-		<br><h2 align="center">아티스트 채널</h2><br>
-		<div class="container">
-		<table align="center" class="table table-hover">	
-			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="가수이미지"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >볼빨간사춘기</font></td>
-			</tr>
-			<tr>
-				<td>가수소개</td>
-			</tr>		
-			<tr>
-				<td>수상경력	<br>
-				
-				</td>
-			</tr>	
-		</table>
-		
+  <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp"%>
+<div class="container">
   <h3>곡정보</h3>
   <ul class="nav nav-tabs">
     <li ><a href="main">상세정보</a></li>
@@ -78,11 +62,9 @@
   				<td align="center"><a href="artist_album">앨범</a></td>
   				<td align="center"><img alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_black_48dp.png" width="20px" height="20px" onclick=""></td>	<!--  이후에 추가 할지 안할지 결정해야 -->
   		</tr>
-  		
   		</c:forEach>
   	
   	</table>
-</div>
 </div>
 
 </body>

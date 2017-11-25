@@ -38,8 +38,4 @@ public class ArtistController {
 	return "artist_video";
 	}
 	
-	
-	
-	
-	
 }
