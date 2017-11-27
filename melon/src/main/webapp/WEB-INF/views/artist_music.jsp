@@ -1,40 +1,25 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+    <%@ include file="/WEB-INF/views/template/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Melon/Artist/Music</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-		<br><h2 align="center">¾ÆÆ¼½ºÆ® Ã¤³Î</h2><br>
-		<div class="container">
-		<table align="center" class="table table-hover">	
-			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="°¡¼öÀÌ¹ÌÁö"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >º¼»¡°£»çÃá±â</font></td>
-			</tr>
-			<tr>
-				<td>°¡¼ö¼Ò°³</td>
-			</tr>		
-			<tr>
-				<td>¼ö»ó°æ·Â	<br>
-				
-				</td>
-			</tr>	
-		</table>
-		
-  <h3>°îÁ¤º¸</h3>
+  <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp"%>
+<div class="container">
+  <h3>ê³¡ì •ë³´</h3>
   <ul class="nav nav-tabs">
-    <li ><a href="main">»ó¼¼Á¤º¸</a></li>
-    <li class="active"><a href="artist_music">°î</a></li>
-    <li><a href="artist_album">¾Ù¹ü</a></li>
-    <li><a href="artist_video">¹ÂÁ÷ºñµð¿À</a></li>
+    <li ><a href="main">ìƒì„¸ì •ë³´</a></li>
+    <li class="active"><a href="artist_music">ê³¡</a></li>
+    <li><a href="artist_album">ì•¨ë²”</a></li>
+    <li><a href="artist_video">ë®¤ì§ë¹„ë””ì˜¤</a></li>
   </ul>	
   <br>
   	<table  class="table table-hover" align="center">
@@ -44,11 +29,11 @@
   	<tr>
   		<td colspan="7" align="Right">
 
- 		 <img src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_spellcheck_black_48dp.png" width="25px" height="25px"  onclick=""><!-- Ã¼Å©¹Ú½º-> °î¸ñ·Ï ÀüÃ¼¼±ÅÃ -->
+ 		 <img src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_spellcheck_black_48dp.png" width="25px" height="25px"  onclick=""><!-- ì²´í¬ë°•ìŠ¤-> ê³¡ëª©ë¡ ì „ì²´ì„ íƒ -->
  		&nbsp;&nbsp;&nbsp;
- 		 <img src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_playlist_add_black_48dp.png" width="25px" height="25px"  onclick="" > <!-- ÇÃ·¹ÀÌ¸®½ºÆ®¿¡ ÀúÀå+Àç»ý -->
+ 		 <img src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_playlist_add_black_48dp.png" width="25px" height="25px"  onclick="" > <!-- í”Œë ˆì´ë¦¬ìŠ¤íŠ¸ì— ì €ìž¥+ìž¬ìƒ -->
  		&nbsp;&nbsp;&nbsp; 
- 		 <img src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_vertical_align_bottom_black_48dp.png" width="25px" height="25px"  onclick=""><!-- ÇÃ·¹ÀÌ¸®½ºÆ®¿¡ ÀúÀå -->
+ 		 <img src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_vertical_align_bottom_black_48dp.png" width="25px" height="25px"  onclick=""><!-- í”Œë ˆì´ë¦¬ìŠ¤íŠ¸ì— ì €ìž¥ -->
   		&nbsp;&nbsp;&nbsp;
 		</td>
   	</tr>
@@ -57,10 +42,10 @@
   			<td align="center"><input type="checkbox"></td>
   			<td>NO</td>
   			<td align="center"></td>
-  			<td align="center">°î¸í</td>
-  			<td align="center">¾ÆÆ¼½ºÆ®</td>
-  			<td align="center">¾Ù¹ü</td>
-  			<td align="center">ÁÁ¾Æ¿ä</td>	<!--  ÀÌÈÄ¿¡ Ãß°¡ ÇÒÁö ¾ÈÇÒÁö °áÁ¤ÇØ¾ß -->
+  			<td align="center">ê³¡ëª…</td>
+  			<td align="center">ì•„í‹°ìŠ¤íŠ¸</td>
+  			<td align="center">ì•¨ë²”</td>
+  			<td align="center">ì¢‹ì•„ìš”</td>	<!--  ì´í›„ì— ì¶”ê°€ í• ì§€ ì•ˆí• ì§€ ê²°ì •í•´ì•¼ -->
   			
   		</tr>
   		<c:forEach var="i" begin="1" end="50" step="1">
@@ -68,21 +53,20 @@
   				<td align="center"><input type="checkbox" value=""></td>
   				<td width="30px">&nbsp;${i}</td>
   				<td width="100px"> 
-  					<img alt="Àç»ý" title="Àç»ý" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
-  					<img alt="Àç»ý¸ñ·Ï ´ã±â" title="Àç»ý¸ñ·Ï ´ã±â" src="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
-  					<img alt="°¡»çº¸±â" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="">
+  					<img alt="ìž¬ìƒ" title="ìž¬ìƒ" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
+  					<img alt="ìž¬ìƒëª©ë¡ ë‹´ê¸°" title="ìž¬ìƒëª©ë¡ ë‹´ê¸°" src="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
+  					<img alt="ê°€ì‚¬ë³´ê¸°" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="">
   				</td>
-  				<td><a href="artist_music">°î¸í</a></td>
-  				<td align="center"><a href="artist_main">¾ÆÆ¼½ºÆ®</a></td>
-  				<td align="center"><a href="artist_album">¾Ù¹ü</a></td>
-  				<td align="center"><img alt="ÁÁ¾Æ¿ä" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_black_48dp.png" width="20px" height="20px" onclick=""></td>	<!--  ÀÌÈÄ¿¡ Ãß°¡ ÇÒÁö ¾ÈÇÒÁö °áÁ¤ÇØ¾ß -->
+  				<td><a href="artist_music">ê³¡ëª…</a></td>
+  				<td align="center"><a href="artist_main">ì•„í‹°ìŠ¤íŠ¸</a></td>
+  				<td align="center"><a href="artist_album">ì•¨ë²”</a></td>
+  				<td align="center"><img alt="ì¢‹ì•„ìš”" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_black_48dp.png" width="20px" height="20px" onclick=""></td>	<!--  ì´í›„ì— ì¶”ê°€ í• ì§€ ì•ˆí• ì§€ ê²°ì •í•´ì•¼ -->
   		</tr>
-  		
   		</c:forEach>
   	
   	</table>
 </div>
 
-
 </body>
 </html>
+<%@ include file="/WEB-INF/views/template/footer.jsp"%>

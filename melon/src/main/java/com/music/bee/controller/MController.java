@@ -1,6 +1,5 @@
 package com.music.bee.controller;
 
-import java.io.FileWriter;
 import java.util.ArrayList;
 
 import org.apache.ibatis.session.SqlSession;
@@ -13,12 +12,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-import com.music.bee.dao.IDAO;
+import com.music.bee.dao.CrolDAO;
 
 @Controller
 public class MController   {
 
-			IDAO idao;
+			CrolDAO idao;
 			
 			@Autowired
 			private SqlSession sqlSession;
@@ -28,11 +27,10 @@ public class MController   {
 				
 //				String chartUrl = "http://www.melon.com/chart/month/index.htm#params%5Bidx%5D=1&params%5BrankMonth%5D=201710&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
 //				String chartUrl = "http://www.melon.com/genre/song_list.htm";
-//				String chartUrl = "http://www.melon.com/chart/day/index.htm";		
 //				String chartUrl = "http://www.melon.com/chart/index.htm";
-//				String chartUrl = "http://www.melon.com/new/index.htm";
+				String chartUrl = "http://www.melon.com/new/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/day/index.htm";
-				String chartUrl = "http://www.melon.com/chart/index.htm#params%5Bidx%5D=51";
+//				String chartUrl = "http://www.melon.com/chart/index.htm#params%5Bidx%5D=51";
 				
 				ArrayList<String> singer_list = new ArrayList<>();
 				ArrayList<String> title_list = new ArrayList<>();
@@ -51,9 +49,8 @@ public class MController   {
 				Elements albumImg = doc1.select("img[src$= optimize]");
 
 				String artist_get,title_get, albumName_get, album_Img,artist_No,SongNum_get;
-				FileWriter fw=null;
 				
-				for(int i= 26; i< titles.size(); i++){
+				for(int i= 0; i< titles.size(); i++){
 					
 					String trimed_singerNo= artistNo.get(i).html().split("<a href=\"javascript:melon.link.goArtistDetail")[1].substring(2).split("'")[0];
 					String trimed_albumNum= albumName.get(i).html().split("\"javascript:melon.link.goAlbumDetail")[1].substring(2).split("'")[0];  //trimed_albumNum
@@ -89,11 +86,11 @@ public class MController   {
 					//앨범사진
 					Elements album_AlbumImg = docAlbum.select("img[src$= optimize]");
 					//앨범제목
-					Elements album_Title = docAlbum.select(".albumname");
+//					Elements album_Title = docAlbum.select(".albumname");
 					//타이틀곡 & 타이틀곡번호
-					Elements title_Music = docAlbum.select(".ellipsis:has(span[class$=title]) a:eq(2)");
+//					Elements title_Music = docAlbum.select(".ellipsis:has(span[class$=title]) a:eq(2)");
 					//출시일
-					Elements album_relDate = docAlbum.select("dl[class~=song_info] dd:eq(3)");
+					Elements album_relDate = docAlbum.select(".list dd:eq(0)");
 					//곡목록 ->pending
 //					Elements music_List = docAlbum.select("#d_artist_award");
 					//곡번호
@@ -101,15 +98,17 @@ public class MController   {
 
 				
 					musicNum_trimed  = music_Num.attr("href").split("javascript:melon.link.goSongDetail")[1].substring(2).split("'")[0];  //곡번호
-					album_titleMuVar =title_Music.get(0).attr("title").toString();	//타이틀명 출력	
+					System.out.println("여기까지는됨1");
+//					album_titleMuVar =title_Music.get(0).attr("title").toString();	//타이틀명 출력	
+					System.out.println("여기까지는됨2");
 					album_albumImgVar = album_AlbumImg.attr("src");
-					album_TitleVar = album_Title.text(); 	//앨범명
-					album_relDateVar =album_relDate.get(0).text().toString();
+					System.out.println("여기까지는됨3");
+					album_relDateVar =album_relDate.text();
 //					.split(" <dd>")[1].split("\n")[0]
 //					System.out.println("타이틀곡 : " + album_titleMuVar);
 //					System.out.println("타이틀곡 번호 : "+ musicNum_trimed);
 					System.out.println("앨범사진 : "+album_albumImgVar);
-					System.out.println("앨범명 : "+album_TitleVar);
+					System.out.println("앨범명 : "+albumName_get);
 					System.out.println("앨범출시일 : "+album_relDateVar);
 					System.out.println("--------------------------------2단계크롤링 완료");
 					
@@ -132,19 +131,19 @@ public class MController   {
 					System.out.println("수상경력"+"\n"+Award_record+"\n");
 					
 					String arti_intro = detail_Debut03.text();
-					int cnt=0;
 					ArrayList<String> list_title = new ArrayList<>();
 					ArrayList<String> list_content = new ArrayList<>();
+					String str_get ,str_get02;
+					
 						for(Element el : detail_Debut01){
 							list_title.add(el.text().toString());
 						}
 						for(Element el2 : detail_Debut02){
 							list_content.add(el2.text().toString());		
-								cnt++;
 						}
-						for(int k=1;k<list_title.size();k++){
-							String str_get = list_title.get(k);
-							String str_get02 = list_content.get(k);			// artist 테이블 -etc 컬럼
+						for(int k=0;k<list_title.size();k++){
+							str_get = list_title.get(k);
+							str_get02 = list_content.get(k);			// artist 테이블 -etc 컬럼
 							System.out.println(str_get+"\n" + str_get02+"\n");
 						}
 						String artist_img=detail_Img.attr("src");
@@ -158,17 +157,17 @@ public class MController   {
 					String url04= "http://www.melon.com/song/detail.htm?songId="+singNum_list.get(i);
 					Document doc3 = Jsoup.connect(url04).get();
 					Elements lyrics = doc3.select(".lyric");
-					Elements song_info = doc3.select("dl[class~=song_info] dd");
-					Elements song_Name = doc3.select(".songname");
+					Elements song_info = doc3.select(".list dd");
+					Elements song_Name = doc3.select(".song_name");
 
 					String lyric_get=lyrics.text().toString();
 //					String song_Info_get=song_info.text().toString();
-					String song_Name_get=song_Name.text().substring(2).toString();
+					String song_Name_get=song_Name.text().toString();
 					
 //					System.out.println("곡정보 (아티스트/앨범/발매일/장르) \n"+song_Info_get);
 					System.out.println("제목 : "+ song_Name_get);
 					for(int k=0;k<4;k++){
-						String list[] = {"아티스트","앨범","발매일","장르"};
+						String list[] = {"앨범","발매일","장르","FLAC"};
 						System.out.println(list[k]);
 						System.out.println(song_info.get(0).text().toString()+"\n");
 						System.out.println(song_info.get(1).text().toString()+"\n");
@@ -201,15 +200,16 @@ public class MController   {
 									System.out.println("youtube크롤링완료----------------------------------------");
 										}
 					
-						IDAO dao = sqlSession.getMapper(IDAO.class);
+						CrolDAO dao = sqlSession.getMapper(CrolDAO.class);
 						System.out.println("sql세션연결완료");
 						dao.album(trimed_albumNum, al, arti_, album_albumImgVar, rel);
 						System.out.println("album db저장 완료");
-						dao.artist(artist_No, arti_, artist_img, arti_intro, Award_record);
+						dao.artist(artist_No, arti_, artist_img, arti_intro, Award_record,list_title,list_content);
 						System.out.println("artist db저장 완료");
 						dao.music(SongNum_get, al, song_Name_get, arti_, genr, strLink, lyric_get, rel);
 						System.out.println("music db저장 완료");
 					
 					}
-				}//첫번째 for
+				sqlSession.close();
+			}//첫번째 for
 }

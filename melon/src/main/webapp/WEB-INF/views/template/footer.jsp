@@ -91,7 +91,7 @@
 <%@ include file="/WEB-INF/views/popup/layerpop.jsp"%>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="js/layer_popup.js"></script>
+<script src="${pageContext.request.contextPath}/js/layer_popup.js"></script>
 <script type="text/javascript"
 	src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
 	charset="utf-8"></script>

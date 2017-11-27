@@ -13,12 +13,12 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="css/layer_popup.css" />
-<link rel="stylesheet" type="text/css" href="css/cancel_rsv.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/layer_popup.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/cancel_rsv.css" />
 
 
 <!-- 음악 플레이어 -->
-<link href="css/jplayer.blue.monday.min.css" rel="stylesheet"
+<link href="${pageContext.request.contextPath}/css/jplayer.blue.monday.min.css" rel="stylesheet"
 	type="text/css" />
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
@@ -28,10 +28,10 @@
 	src="${pageContext.request.contextPath}/js/jplayer.playlist.min.js"></script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/js/playlist.js"></script>
-<link rel="stylesheet" type="text/css" href="css/playlist.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/playlist.css" />
 
 <!-- 검색 헤더 -->
-<link rel="stylesheet" type="text/css" href="css/header.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/header.css" />
 
 
 <style>
@@ -65,7 +65,7 @@ body, html {
 	bottom: 0;
 	display: inline-block;
 }
-.w3-button:hover {
+#btn:hover {
     color: white !important;
     background-color: #333333 !important;
 }
@@ -106,16 +106,16 @@ body, html {
 
 				<!-- Right-sided navbar links -->
 				<div class="w3-right w3-hide-small">
-					<a href="#" class="loginbtn w3-bar-item w3-button">회원 가입</a>
-					<a href="#" class="loginbtn w3-bar-item w3-button">마이페이지</a>
+					<a href="#" class="loginbtn w3-bar-item w3-button" id="btn">회원 가입</a>
+					<a href="#" class="loginbtn w3-bar-item w3-button" id="btn">마이페이지</a>
 					<a href="#" class="loginbtn w3-bar-item w3-button" id="gold">이용권</a>
 					<sec:authorize access="!isAuthenticated()">
 						<a href="javaScript:void(0);"
-							class="loginbtn w3-bar-item w3-button">로그인</a>
+							class="loginbtn w3-bar-item w3-button" id="btn">로그인</a>
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">
 						<a	href="${pageContext.request.contextPath}"
-							class="w3-bar-item w3-button">로그 아웃</a>
+							class="w3-bar-item w3-button"id="btn">로그 아웃</a>
 					</sec:authorize>
 
 				</div>
