@@ -12,6 +12,7 @@
     <sec:http pattern="/js**" security="none"/>
     <sec:http pattern="/img**" security="none"/>
     <sec:http pattern="/music**" security="none"/>
+    <sec:http pattern="/font**" security="none"/>
     
     <!-- http 보안 설정 -->
     <sec:http use-expressions="true">

@@ -28,6 +28,7 @@
 	src="${pageContext.request.contextPath}/js/jplayer.playlist.min.js"></script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/js/playlist.js"></script>
+
 <link rel="stylesheet" type="text/css" href="css/playlist.css" />
 
 <!-- 검색 헤더 -->
@@ -37,11 +38,11 @@
 <style>
 
 @font-face{
-font-family: 'binggrae;
+font-family: 'binggrae';
 src: url('/font/binggrae.ttf');
 }
 body, h1, h2, h3, h4, h5, h6 {
-	font-family: 'binggrae'
+	font-family: 'binggrae';
 }
 
 body, html {
@@ -108,7 +109,7 @@ body, html {
 				<div class="w3-right w3-hide-small">
 					
 					<a href="#" class="loginbtn w3-bar-item w3-button">마이페이지</a>
-<<<<<<< HEAD
+					<a href="#" class="loginbtn w3-bar-item w3-button" id="gold">이용권</a>
 					<sec:authorize access="!isAuthenticated()">
 						<a href="javaScript:void(0);"
 							class="loginbtn w3-bar-item w3-button">로그인</a>
@@ -117,14 +118,6 @@ body, html {
 						<a	href="${pageContext.request.contextPath}"
 							class="w3-bar-item w3-button">로그아웃</a>
 					</sec:authorize>
-=======
-					<a href="#" class="loginbtn w3-bar-item w3-button" id="gold">이용권</a>
-					
-					<a href="javaScript:void(0);"
-						class="loginbtn w3-bar-item w3-button">로그인</a> 
-					<a	href="${pageContext.request.contextPath}"
-						class="w3-bar-item w3-button">로그아웃</a>
->>>>>>> branch 'master' of https://github.com/93hwan/melon.git
 				</div>
 				
 			</div>
