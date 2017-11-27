@@ -106,8 +106,13 @@ body, html {
 
 				<!-- Right-sided navbar links -->
 				<div class="w3-right w3-hide-small">
+<<<<<<< HEAD
 					<a href="#" class="loginbtn w3-bar-item w3-button" id="btn">회원 가입</a>
 					<a href="#" class="loginbtn w3-bar-item w3-button" id="btn">마이페이지</a>
+=======
+					
+					<a href="#" class="loginbtn w3-bar-item w3-button">마이페이지</a>
+>>>>>>> branch 'master' of https://github.com/93hwan/melon.git
 					<a href="#" class="loginbtn w3-bar-item w3-button" id="gold">이용권</a>
 					<sec:authorize access="!isAuthenticated()">
 						<a href="javaScript:void(0);"
@@ -115,9 +120,14 @@ body, html {
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">
 						<a	href="${pageContext.request.contextPath}"
+<<<<<<< HEAD
 							class="w3-bar-item w3-button"id="btn">로그 아웃</a>
 					</sec:authorize>
 
+=======
+							class="w3-bar-item w3-button">로그아웃</a>
+					</sec:authorize>
+>>>>>>> branch 'master' of https://github.com/93hwan/melon.git
 				</div>
 				
 			</div>
