@@ -106,7 +106,7 @@ body, html {
 
 				<!-- Right-sided navbar links -->
 				<div class="w3-right w3-hide-small">
-					
+					<a href="#" class="loginbtn w3-bar-item w3-button">회원 가입</a>
 					<a href="#" class="loginbtn w3-bar-item w3-button">마이페이지</a>
 					<a href="#" class="loginbtn w3-bar-item w3-button" id="gold">이용권</a>
 					<sec:authorize access="!isAuthenticated()">
@@ -115,7 +115,7 @@ body, html {
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">
 						<a	href="${pageContext.request.contextPath}"
-							class="w3-bar-item w3-button">로그아웃</a>
+							class="w3-bar-item w3-button">로그 아웃</a>
 					</sec:authorize>
 
 				</div>
