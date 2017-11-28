@@ -17,12 +17,12 @@ public class Artist_dto {
 	
 	public Artist_dto(HttpServletRequest request ){
 		
-		setArtist_no(request.getParameter("artist_name"));
+		setArtist_no(request.getParameter("artist_no"));
 		setArtist_name(request.getParameter("artist_name"));
-		setImg(request.getParameter("artist_name"));
-		setEtc(request.getParameter("artist_name"));
-		setAward_record(request.getParameter("artist_name"));
-		setNo(Integer.parseInt(request.getParameter("artist_name")));
+		setImg(request.getParameter("img"));
+		setEtc(request.getParameter("etc"));
+		setAward_record(request.getParameter("award_record"));
+		setNo(Integer.parseInt(request.getParameter("no")));
 		
 	}
 	
@@ -63,6 +63,12 @@ public class Artist_dto {
 	}
 	public void setNo(int no) {
 		this.no = no;
+	}
+
+	@Override
+	public String toString() {
+		return "Artist_dto [artist_no=" + artist_no + ", artist_name=" + artist_name + ", img=" + img + ", etc=" + etc
+				+ ", award_record=" + award_record + ", no=" + no + "]";
 	}
 	
 	

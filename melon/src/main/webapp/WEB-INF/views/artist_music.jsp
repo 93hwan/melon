@@ -57,9 +57,9 @@
   					<img alt="재생목록 담기" title="재생목록 담기" src="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
   					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="">
   				</td>
-  				<td><a href="artist_music">곡명</a></td>
-  				<td align="center"><a href="artist_main">아티스트</a></td>
-  				<td align="center"><a href="artist_album">앨범</a></td>
+  				<td><a href="artist_music">${arti_music.title}</a></td>
+  				<td align="center"><a href="artist_main">${arti_music.artist_name}</a></td>
+  				<td align="center"><a href="artist_album">${arti_music.album_title}</a></td>
   				<td align="center"><img alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_black_48dp.png" width="20px" height="20px" onclick=""></td>	<!--  이후에 추가 할지 안할지 결정해야 -->
   		</tr>
   		</c:forEach>

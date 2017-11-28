@@ -6,9 +6,9 @@ import com.music.bee.dto.Music_dto;
 
 public interface ArtistDAO {
 
+	public void artist_static(Artist_dto artiDTO);
 	public void arti_detail(Artist_dto artiDTO);
-	public void arti_album(Album_dto artiDTO);
-	public void arti_music(Music_dto artiDTO);
-	public void arti_video(Artist_dto artiDTO);
+	public void arti_albumList(Album_dto albumDTO);
+	public void arti_musicList(Music_dto musicDTO);
 	
 }
