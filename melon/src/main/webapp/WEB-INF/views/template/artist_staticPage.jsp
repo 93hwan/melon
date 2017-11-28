@@ -21,10 +21,10 @@
 				<td><font style="font-weight: bold; font-size: xx-large;" >${arti_main.artist_name}</font><br></td>
 			</tr>
 			<tr>
-				<td >가수소개</td>
+				<td>가수소개</td>
 			</tr>		
 			<tr>
-				<td>수상경력	<br>
+				<td>수상경력<br>
 				</td>
 			</tr>	
 		</table>

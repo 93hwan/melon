@@ -27,10 +27,12 @@ public class MController   {
 				
 //				String chartUrl = "http://www.melon.com/chart/month/index.htm#params%5Bidx%5D=1&params%5BrankMonth%5D=201710&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
 //				String chartUrl = "http://www.melon.com/genre/song_list.htm";
-//				String chartUrl = "http://www.melon.com/chart/index.htm";
-				String chartUrl = "http://www.melon.com/new/index.htm";
+				String chartUrl = "http://www.melon.com/chart/index.htm";
+//				String chartUrl = "http://www.melon.com/new/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/day/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/index.htm#params%5Bidx%5D=51";
+//				String chartUrl = "http://www.melon.com/genre/song_list.htm?gnrCode=GN0200";
+//				String chartUrl = "http://www.melon.com/search/song/index.htm?q=%EC%82%AC%EB%9E%91&section=song&searchGnbYn=Y&kkoSpl=Y&kkoDpType=&ipath=srch_form";
 				
 				ArrayList<String> singer_list = new ArrayList<>();
 				ArrayList<String> title_list = new ArrayList<>();
@@ -166,19 +168,16 @@ public class MController   {
 					
 //					System.out.println("곡정보 (아티스트/앨범/발매일/장르) \n"+song_Info_get);
 					System.out.println("제목 : "+ song_Name_get);
-					for(int k=0;k<4;k++){
-						String list[] = {"앨범","발매일","장르","FLAC"};
+					for(int k=0;k<3;k++){
+						String list[] = {"앨범","발매일","장르"};
 						System.out.println(list[k]);
 						System.out.println(song_info.get(0).text().toString()+"\n");
 						System.out.println(song_info.get(1).text().toString()+"\n");
 						System.out.println(song_info.get(2).text().toString()+"\n");
-						System.out.println(song_info.get(3).text().toString()+"\n");
-					
 					}
 					String al=song_info.get(0).text().toString();
 					String rel=song_info.get(1).text().toString();
 					String genr=song_info.get(2).text().toString();
-					String flac=song_info.get(3).text().toString();
 					
 					System.out.println("가사"+"\n"+ lyric_get);
 					System.out.println("--------------------------------4단계크롤링 완료");
@@ -209,6 +208,8 @@ public class MController   {
 							System.out.println("허각 저장안함");
 						}	else if(artist_No.equals("1142")){
 							System.out.println("임창정 저장안함");
+						}	else if(artist_No.equals("247893")){
+							System.out.println("저장안함");
 						} else{
 						dao.album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
 						System.out.println("album db저장 완료");
@@ -217,6 +218,6 @@ public class MController   {
 						dao.music(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
 							}
 						}
-				sqlSession.close();
+//				sqlSession.close();
 			}//첫번째 for
 }

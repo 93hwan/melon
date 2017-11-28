@@ -26,9 +26,11 @@ public class ArtistController {
 		System.out.println("/artist_main Start");
 		System.out.println("내용물 = "+artiDTO.toString());
 		artiDTO.setArtist_no("2032423");
-		artiDTO.setImg("zz");
+		artiDTO.setImg("http://cdnimg.melon.co.kr/cm/album/images/100/70/846/10070846_500.jpg/melon/resize/130/quality/80/optimize");
 		artiDTO.setArtist_name("이유경");
-		artiDTO.setEtc("정보");
+		artiDTO.setEtc("서툴고 미숙한 시기, 사춘기라는 이유만으로도 포용할 수 있는 그런 때가 있다."
+				+ "순수하고 솔직한, 때 타지 않은 말간 감성들을 담아 노래하고픈 볼빨간사춘기. "
+				+ "그대들의 싱그러웠던 사춘기 잔상을 톡톡 튀는 음악으로 전하고자 한다.");
 		System.out.println("내용물 = "+artiDTO.toString());
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
 		artiDAO.artist_static(artiDTO);
@@ -46,6 +48,9 @@ public class ArtistController {
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
 		
 		music_dto.setArtist_name("이유경");
+		music_dto.setTitle("좋다고 말해");
+		music_dto.setAlbum_title("월간 윤종신 11월 호");
+		music_dto.setMusic_no("좋아");
 		artiDAO.arti_musicList(music_dto);
 		
 		model.addAttribute("arti_music",music_dto);
@@ -59,6 +64,10 @@ public class ArtistController {
 		System.out.println("/artist_album Start");
 		
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
+		
+		albumDTO.setAlbum_title("월간 윤종신 11월 호");
+		albumDTO.setArtist_name("이유경");
+		albumDTO.setImg("http://cdnimg.melon.co.kr/cm/album/images/100/70/846/10070846_500.jpg/melon/resize/130/quality/80/optimize");
 		artiDAO.arti_albumList(albumDTO);
 		
 		model.addAttribute("arti_album",albumDTO);
@@ -67,8 +76,13 @@ public class ArtistController {
 	}
 	
 	@RequestMapping("/artist_video")
-	public String artist_video(){
+	public String artist_video(Model model, Music_dto musicDTO){
 	
+		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
+		artiDAO.arti_musicList(musicDTO);
+		
+		model.addAttribute("arti_muVideo",musicDTO);
+		
 	return "artist_video";
 	}
 	
