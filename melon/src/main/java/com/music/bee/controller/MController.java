@@ -27,10 +27,12 @@ public class MController   {
 				
 //				String chartUrl = "http://www.melon.com/chart/month/index.htm#params%5Bidx%5D=1&params%5BrankMonth%5D=201710&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
 //				String chartUrl = "http://www.melon.com/genre/song_list.htm";
-//				String chartUrl = "http://www.melon.com/chart/index.htm";
-				String chartUrl = "http://www.melon.com/new/index.htm";
+				String chartUrl = "http://www.melon.com/chart/index.htm";
+//				String chartUrl = "http://www.melon.com/new/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/day/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/index.htm#params%5Bidx%5D=51";
+//				String chartUrl = "http://www.melon.com/genre/song_list.htm?gnrCode=GN0200";
+//				String chartUrl = "http://www.melon.com/search/song/index.htm?q=%EC%82%AC%EB%9E%91&section=song&searchGnbYn=Y&kkoSpl=Y&kkoDpType=&ipath=srch_form";
 				
 				ArrayList<String> singer_list = new ArrayList<>();
 				ArrayList<String> title_list = new ArrayList<>();
@@ -133,7 +135,7 @@ public class MController   {
 					String arti_intro = detail_Debut03.text();
 					ArrayList<String> list_title = new ArrayList<>();
 					ArrayList<String> list_content = new ArrayList<>();
-					String str_get ,str_get02;
+					String str_get ="",str_get02="";
 					
 						for(Element el : detail_Debut01){
 							list_title.add(el.text().toString());
@@ -142,8 +144,8 @@ public class MController   {
 							list_content.add(el2.text().toString());		
 						}
 						for(int k=0;k<list_title.size();k++){
-							str_get = list_title.get(k);
-							str_get02 = list_content.get(k);			// artist 테이블 -etc 컬럼
+							str_get =str_get +","+ list_title.get(k);
+							str_get02 =str_get02 +","+ list_content.get(k);			// artist 테이블 -etc 컬럼
 							System.out.println(str_get+"\n" + str_get02+"\n");
 						}
 						String artist_img=detail_Img.attr("src");
@@ -166,19 +168,16 @@ public class MController   {
 					
 //					System.out.println("곡정보 (아티스트/앨범/발매일/장르) \n"+song_Info_get);
 					System.out.println("제목 : "+ song_Name_get);
-					for(int k=0;k<4;k++){
-						String list[] = {"앨범","발매일","장르","FLAC"};
+					for(int k=0;k<3;k++){
+						String list[] = {"앨범","발매일","장르"};
 						System.out.println(list[k]);
 						System.out.println(song_info.get(0).text().toString()+"\n");
 						System.out.println(song_info.get(1).text().toString()+"\n");
 						System.out.println(song_info.get(2).text().toString()+"\n");
-						System.out.println(song_info.get(3).text().toString()+"\n");
-					
 					}
-					String arti_=song_info.get(0).text().toString();
-					String al=	song_info.get(1).text().toString();
-					String rel=	song_info.get(2).text().toString();
-					String genr=song_info.get(3).text().toString();
+					String al=song_info.get(0).text().toString();
+					String rel=song_info.get(1).text().toString();
+					String genr=song_info.get(2).text().toString();
 					
 					System.out.println("가사"+"\n"+ lyric_get);
 					System.out.println("--------------------------------4단계크롤링 완료");
@@ -202,14 +201,23 @@ public class MController   {
 					
 						CrolDAO dao = sqlSession.getMapper(CrolDAO.class);
 						System.out.println("sql세션연결완료");
-						dao.album(trimed_albumNum, al, arti_, album_albumImgVar, rel);
+						
+						if(artist_No.equals("108356")){
+							System.out.println("에픽하이 저장안함");
+						}	else if(artist_No.equals("28801")){
+							System.out.println("허각 저장안함");
+						}	else if(artist_No.equals("1142")){
+							System.out.println("임창정 저장안함");
+						}	else if(artist_No.equals("247893")){
+							System.out.println("저장안함");
+						} else{
+						dao.album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
 						System.out.println("album db저장 완료");
-						dao.artist(artist_No, arti_, artist_img, arti_intro, Award_record,list_title,list_content);
+						dao.artist(artist_No, artist_get, artist_img, "", Award_record,str_get,str_get02);  //가수소개 부분 공백처리 -에러너무많이남
 						System.out.println("artist db저장 완료");
-						dao.music(SongNum_get, al, song_Name_get, arti_, genr, strLink, lyric_get, rel);
-						System.out.println("music db저장 완료");
-					
-					}
-				sqlSession.close();
+						dao.music(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
+							}
+						}
+//				sqlSession.close();
 			}//첫번째 for
 }

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ include file="/WEB-INF/views/template/header.jsp"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -27,12 +28,16 @@
   		</tr>
 			<tr>
 				<td><h3>수상경력</h3> <br>
-				
+				${arti_main.award_record}
 				
 				</td>
 			</tr>
 			<tr>
 				<td><h3>가수소개</h3><br>
+				
+				${arti_main.etc }<br>
+				-----------------------------------------------------
+				
 				서툴고 미숙한 시기, 사춘기라는 이유만으로도 포용할 수 있는 그런 때가 있다.
 				순수하고 솔직한, 때 타지 않은 말간 감성들을 담아 노래하고픈 볼빨간사춘기.
 				그대들의 싱그러웠던 사춘기 잔상을 톡톡 튀는 음악으로 전하고자 한다.

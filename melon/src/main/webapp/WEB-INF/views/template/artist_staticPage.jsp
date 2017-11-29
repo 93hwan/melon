@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,18 +12,19 @@
 </head>
 <body>
 <div>
+<input type="hidden" name="arti_no" value="${arti_main.artist_no}" />
 		<br><h2 align="center">아티스트 채널</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="http://cdnimg.melon.co.kr/cm/artistcrop/images/007/92/022/792022_500.jpg/melon/resize/208/quality/80/optimize" title="가수이미지"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >볼빨간사춘기</font><br></td>
+				<td width="300px" rowspan="5" align="center"><img align="middle" src="${arti_main.img}" title="가수이미지"/></td>
+				<td><font style="font-weight: bold; font-size: xx-large;" >${arti_main.artist_name}</font><br></td>
 			</tr>
 			<tr>
-				<td >가수소개</td>
+				<td>가수소개</td>
 			</tr>		
 			<tr>
-				<td>수상경력	<br>
+				<td>수상경력<br>
 				</td>
 			</tr>	
 		</table>

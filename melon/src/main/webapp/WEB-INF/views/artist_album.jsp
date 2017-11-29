@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="/WEB-INF/views/template/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -26,15 +26,16 @@
  	 <tr>
   			<td colspan="7"></td>
   	</tr>
+  	
   	<c:forEach var="i" begin="1" end="3" step="1">
   		<tr>
-  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/101/00/191/10100191_500.jpg/melon/resize/130/quality/80/optimize" alt="앨범사진"></img></td>
+  			<td align="center"><img src="${arti_album.img}" alt="앨범사진"></img></td>
   			<td>
   			<br>
-  			<strong>앨범명</strong><br>
-  			가수명<br>
+  			<strong>${arti_album.album_title}</strong><br>
+  			${arti_album.artist_name}<br>
   			앨범재생<br>
-  			앨범출시일 | 곡수 <br>
+  			${arti_album.release} | 곡수 <br>
   			</td>
   			
   			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/100/70/846/10070846_500.jpg/melon/resize/130/quality/80/optimize" alt="앨범사진"></img></td>
