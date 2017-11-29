@@ -40,7 +40,8 @@
 		</div>
 		<div class="content2">
 			<div class="album">
-				<a href="#" id="contents_title">최신 앨범</a>
+				<a href="#" id="contents_title" style="
+	margin-left: 13px;">최신 앨범</a>
 				<div class="album_contents">
 					<ul>
 						<li><a href="#"> <img
