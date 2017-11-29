@@ -106,12 +106,12 @@ body, html {
 
 				<!-- Right-sided navbar links -->
 				<div class="w3-right w3-hide-small">
-					<a href="#" class="loginbtn w3-bar-item w3-button" id="btn">회원 가입</a>
 					<a href="#" class="loginbtn w3-bar-item w3-button" id="btn">마이페이지</a>
 					<a href="#" class="loginbtn w3-bar-item w3-button" id="gold">이용권</a>
 					<sec:authorize access="!isAuthenticated()">
-						<a href="javaScript:void(0);"
+					<a href="javaScript:void(0);"
 							class="loginbtn w3-bar-item w3-button" id="btn">로그인</a>
+					<a href="#" class="joinbtn w3-bar-item w3-button" id="btn">회원 가입</a>
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">
 						<a	href="${pageContext.request.contextPath}"
