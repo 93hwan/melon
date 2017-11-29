@@ -72,7 +72,7 @@ public class ArtistController {
 		
 		model.addAttribute("arti_album",albumDTO);
 		
-	return "artist_album";
+		return "artist_album";
 	}
 	
 	@RequestMapping("/artist_video")
@@ -85,5 +85,18 @@ public class ArtistController {
 		
 	return "artist_video";
 	}
+	
+	@RequestMapping("/artist_reply")
+	public String artist_reply(Model model, Music_dto musicDTO){
+	
+		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
+		artiDAO.arti_musicList(musicDTO);
+		
+		model.addAttribute("arti_muVideo",musicDTO);
+		
+	return "artist_reply";
+	}
+	
+	
 	
 }
