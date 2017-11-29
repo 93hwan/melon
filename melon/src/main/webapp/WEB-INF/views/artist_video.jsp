@@ -21,6 +21,8 @@
     <li><a href="artist_music">곡</a></li>
     <li><a href="artist_album">앨범</a></li>
     <li class="active"><a href="artist_video">뮤직비디오</a></li>
+    <li><a href="artist_reply">가수에게 한마디</a></li>
+    
   </ul>	
 </div>
 
