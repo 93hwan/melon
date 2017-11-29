@@ -54,11 +54,55 @@ $(document).ready(
 				$('.mask, .window').hide();
 			});
 			
+			// 회원가입 ,회원 탈퇴 기능 구현
+			// 이메일 중복 검사
+			$("#a_email").on(
+					"blur",
+					function() {
+						$.ajax({
+							type : "POST",
+							url : "/bee/member/check",
+							data : {
+								"email" : $("#a_email").val()
+							},
+							success : function(data) {
+								if (data == "false") {
+									alert("중복된 아이디 입니다!!")
+									$("#a_email").addClass("cant");
+								} else {
+									$("#a_email").removeClass("cant");
+								}
+							},
+							error : function(request, status, error) {
+								console.log("code = " + request.status
+										+ " message = " + request.responseText
+										+ " error = " + error);
+							}
+						});
+					});
 
-//			// 회원가입 팝업창 close 누를시 리셋
-//			$(".close").on("click", function() {
-//				$(".resource").val(null);
-//				$("#a_email").removeClass("cant");
-//			});
+			// 중복 아닐시 데이터 전송
+			$("#a_join").on("submit", function() {
+				event.preventDefault(); // submit 이벤트를 없애자
 
-		});
+				if ($("#a_email").hasClass("cant")) {
+					alert("잘못된 정보 입니다!");
+				} else {
+					$.ajax({
+						type : "POST",
+						url : "/bee/member/join",
+						data : $("#a_join").serialize(),
+						success : function(data) {
+							alert("회원가입 완료~")
+							location.href = data;
+						}
+					});
+				}
+			});
+
+			// 회원가입 팝업창 close 누를시 리셋
+			$(".close").on("click", function() {
+				$(".resource").val(null);
+				$("#a_email").removeClass("cant");
+			});
+});
