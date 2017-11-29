@@ -19,15 +19,15 @@
     	
     	<!-- request에 대한 접근 제어 설정 -->
     	<sec:intercept-url pattern="/member/join*" access="isAnonymous()"/>
-    	<sec:intercept-url pattern="/member/loginProc*" access="isAnonymous()"/>
+    	<sec:intercept-url pattern="/member/login*" access="isAnonymous()"/>
     	<sec:intercept-url pattern="/member/logout*" access="isAuthenticated()"/>
     	<sec:intercept-url pattern="/member**" access="hasAuthority('회원')"/>
     	<sec:intercept-url pattern="/**" access="permitAll"/>
     	
-    	<sec:form-login login-page="/loginProc"
+    	<sec:form-login login-page="/member/login"
     							username-parameter="member_id"
     							password-parameter="password"
-    							authentication-failure-url="/login?error"/>
+    							authentication-failure-url="/member/login?error"/>
     	<sec:remember-me remember-me-cookie="remember"
     								remember-me-parameter="remember"
     								use-secure-cookie="true"
@@ -41,7 +41,7 @@
     </sec:http>
     
     <!-- BCrypt 암호화에 사용할 인코더를 등록 -->
-<!--     <bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/> -->
+    <bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
     
     <sec:authentication-manager>
     	<sec:authentication-provider>

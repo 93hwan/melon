@@ -11,7 +11,7 @@
 			class="close">
 		<div class="empty"></div>
 		<div class="area-60  layer-center">
-			<form action="${pageContext.request.contextPath}/loginProc"
+			<form action="${pageContext.request.contextPath}/member/login"
 				method="post">
 				<sec:csrfInput />
 				<div>
