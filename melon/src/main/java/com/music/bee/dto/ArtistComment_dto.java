@@ -7,18 +7,17 @@ import javax.servlet.http.HttpServletRequest;
 public class ArtistComment_dto {
 	
 	private int reply_artist_no;
-	private int artist_no;
+	private String artist_no;
 	private String member_id;
 	private String reply;
 	private Timestamp date;
 	
 	public ArtistComment_dto() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public ArtistComment_dto(HttpServletRequest request) {
 		setReply_artist_no(Integer.parseInt(request.getParameter("reply_artist_no")));
-		setArtist_no(Integer.parseInt(request.getParameter("artist_no")));
+		setArtist_no(request.getParameter("artist_no"));
 		setMember_id(request.getParameter("reply_artist_no"));
 		setReply(request.getParameter("reply_artist_no"));
 	}
@@ -31,11 +30,11 @@ public class ArtistComment_dto {
 		this.reply_artist_no = reply_artist_no;
 	}
 
-	public int getArtist_no() {
+	public String getArtist_no() {
 		return artist_no;
 	}
 
-	public void setArtist_no(int artist_no) {
+	public void setArtist_no(String artist_no) {
 		this.artist_no = artist_no;
 	}
 

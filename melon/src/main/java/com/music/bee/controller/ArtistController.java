@@ -92,7 +92,7 @@ public class ArtistController {
 	
 		System.out.println("artist_reply 통과");
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		commentDTO.setArtist_no(123456);
+		commentDTO.setArtist_no("123456");
 		artiDAO.arti_Comment(commentDTO);
 		
 		model.addAttribute("arti_comment",commentDTO);
@@ -106,7 +106,8 @@ public class ArtistController {
 	
 		System.out.println("artist_reply_send 통과");
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		commentDTO.setArtist_no(123456);
+		commentDTO.setArtist_no("123456");
+		commentDTO.setMember_id("rosie");
 		artiDAO.arti_Comment_send(commentDTO);
 		
 		model.addAttribute("artist_comment_send",commentDTO);
