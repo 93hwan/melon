@@ -7,4 +7,7 @@
 <insert id="join">
 	INSERT INTO M_MEMBER (member_no,member_id,password,name,birth,email,phone,status,authority,enabled,reg) VALUES(m_member_seq.nextval, #{member_id},#{password},#{name},#{birth},#{email},#{phone},'false','회원','true',sysdate)
 </insert>
+<select id="login">
+	
+</select>
 </mapper>

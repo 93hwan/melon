@@ -1,11 +1,14 @@
 package com.music.bee.controller;
 
 
+
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,7 +24,9 @@ public class MemberController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	private MemberDAO memberDAO;
-
+	
+	@Autowired
+	private BCryptPasswordEncoder encoder;
 	@Autowired
 	private SqlSession sqlSession;
 	
@@ -31,10 +36,19 @@ public class MemberController {
 	String join(Member_dto member_dto, 
 			@RequestHeader(required = false, value = "referer", defaultValue = "/") String referer) throws Exception {
 		logger.debug("member_dto = " + member_dto.toString());
-		
+		String securePassword = encoder.encode(member_dto.getPassword());
+		logger.debug("password = " + member_dto.getPassword());
+		member_dto.setPassword(securePassword);
+		logger.debug("암호화 password = " + securePassword);
 		memberDAO = sqlSession.getMapper(MemberDAO.class);
 		memberDAO.join(member_dto);
-		return "/";
+		return referer;
+	}
+	
+	//로그인
+	@RequestMapping("/login")
+	String login(Member_dto member_dto) {
+		return "";
 	}
 	
 }

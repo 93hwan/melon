@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.music.bee.dao.ArtistDAO;
 import com.music.bee.dto.Album_dto;
+import com.music.bee.dto.ArtistComment_dto;
 import com.music.bee.dto.Artist_dto;
 import com.music.bee.dto.Music_dto;
 
@@ -72,7 +73,7 @@ public class ArtistController {
 		
 		model.addAttribute("arti_album",albumDTO);
 		
-	return "artist_album";
+		return "artist_album";
 	}
 	
 	@RequestMapping("/artist_video")
@@ -83,7 +84,37 @@ public class ArtistController {
 		
 		model.addAttribute("arti_muVideo",musicDTO);
 		
-	return "artist_video";
+		return "artist_video";
 	}
+	
+	@RequestMapping("/artist_reply")
+	public String artist_reply(Model model, ArtistComment_dto commentDTO){
+	
+		System.out.println("artist_reply 통과");
+		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
+		commentDTO.setArtist_no("123456");
+		artiDAO.arti_Comment(commentDTO);
+		
+		model.addAttribute("arti_comment",commentDTO);
+		
+		return "artist_reply";
+	}
+	
+	
+	@RequestMapping("/artist_comment_send")
+	public String artist_reply_send(Model model, ArtistComment_dto commentDTO){
+	
+		System.out.println("artist_reply_send 통과");
+		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
+		commentDTO.setArtist_no("123456");
+		commentDTO.setMember_id("rosie");
+		artiDAO.arti_Comment_send(commentDTO);
+		
+		model.addAttribute("artist_comment_send",commentDTO);
+		
+		System.out.println("artist_comment_send 페이지 못넘겼니");
+		return "artist_reply";
+	}
+	
 	
 }

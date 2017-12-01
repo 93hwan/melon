@@ -5,8 +5,10 @@
 <mapper namespace="com.music.bee.dao.ArtistDAO">
 
 <!-- INSERT -->
-
-
+<insert id="artist_reply_send">
+ INSERT INTO M_REPLY_ARTIST (REPLY_ARTIST_NO, ARTIST_NO, MEMBER_ID, REPLY) 
+ 		VALUES (#{REPLY_ARTIST_NO},#{ARTIST_NO},#{MEMBER_ID},#{REPLY},SYSDATE)
+</insert>
 
 <!-- SELECT -->
 <select id="artist_static" resultType="com.music.bee.dto.Artist_dto">
@@ -26,7 +28,9 @@
 	
 </select>
 
-
+<select id="arti_Comment" resultType="com.music.bee.dto.ArtistComment_dto">
+	SELECT * FROM M_REPLY_ARTIST
+</select>
 
 <!-- UPDATE -->
 

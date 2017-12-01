@@ -21,6 +21,7 @@
     <li><a href="artist_music">곡</a></li>
     <li><a href="artist_album">앨범</a></li>
     <li><a href="artist_video">뮤직비디오</a></li>
+      <li><a href="artist_reply">가수에게 한마디</a></li>
   </ul>	
 		<table align="center" class="table table-hover"> <!--  상세정보 테이블 -->
 		<tr>
