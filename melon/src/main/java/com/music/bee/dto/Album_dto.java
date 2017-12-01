@@ -22,6 +22,7 @@ public class Album_dto {
 		setArtist_name(request.getParameter("artist_name"));
 		setImg(request.getParameter("img"));
 		setRelease(request.getParameter("release"));
+		setNO(Integer.parseInt(request.getParameter("NO")));
 	}
 	
 	public String getAlbum_no() {
