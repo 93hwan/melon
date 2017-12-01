@@ -210,7 +210,9 @@ public class MController   {
 							System.out.println("임창정 저장안함");
 						}	else if(artist_No.equals("247893")){
 							System.out.println("저장안함");
-						} else{
+						} 	else if(SongNum_get.equals("30566061")){
+							System.out.println("n분의1 저장 안함");
+						} 	else{
 						dao.album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
 						System.out.println("album db저장 완료");
 						dao.artist(artist_No, artist_get, artist_img, "", Award_record,str_get,str_get02);  //가수소개 부분 공백처리 -에러너무많이남

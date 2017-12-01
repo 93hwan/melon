@@ -40,47 +40,47 @@
 		</div>
 		<div class="content2">
 			<div class="album">
-				<a href="#" id="contents_title">최신 앨범</a>
+				<a href="#" id="contents_title" >최신 앨범</a>
 				<div class="album_contents">
 					<ul>
-						<li><a href="#"> <img
+						<li><a href="#"><img
 								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="100%" height="85%">
+								width="185px" height="195px">
 								<center>그린데이</center>
 						</a></li>
-						<li><a href="#"> <img
+						<li><a href="#"><img
 								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="100%" height="85%">
+								width="185px" height="195px">
 								<center>그린데이</center>
 						</a></li>
-						<li><a href="#"> <img
+						<li><a href="#"><img
 								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="100%" height="85%">
+								width="185px" height="195px">
 								<center>그린데이</center>
 						</a></li>
-						<li><a href="#"> <img
+						<li><a href="#"><img
 								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="100%" height="85%">
+								width="185px" height="195px">
 								<center>그린데이</center>
 						</a></li>
-						<li><a href="#"> <img
+						<li><a href="#"><img
 								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="100%" height="85%">
+								width="185px" height="195px">
 								<center>그린데이</center>
 						</a></li>
-						<li><a href="#"> <img
+						<li><a href="#"><img
 								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="100%" height="85%">
+								width="185px" height="195px">
 								<center>그린데이</center>
 						</a></li>
-						<li><a href="#"> <img
+						<li><a href="#"><img
 								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="100%" height="85%">
+								width="185px" height="195px">
 								<center>그린데이</center>
 						</a></li>
-						<li><a href="#"> <img
+						<li><a href="#"><img
 								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="100%" height="85%">
+								width="185px" height="195px">
 								<center>그린데이</center>
 						</a></li>
 					</ul>
@@ -95,8 +95,16 @@
 				</div>
 
 				<div id="latest" class="w3-container song">
-					<h2>최신</h2>
-					<p>London is the capital city of England.</p>
+					<p>	1London is the capital city of England.</p>
+					<p>	2London is the capital city of England.</p>
+					<p>	3London is the capital city of England.</p>
+					<p>	4London is the capital city of England.</p>
+					<p>	5London is the capital city of England.</p>
+					<p>	6London is the capital city of England.</p>
+					<p>	7London is the capital city of England.</p>
+					<p>	8London is the capital city of England.</p>
+					<p>	9London is the capital city of England.</p>
+					<p>	10London is the capital city of England.</p>
 				</div>
 
 				<div id="top" class="w3-container song" style="display: none">
@@ -113,7 +121,11 @@
 			</center>
 			<a href="${pageContext.request.contextPath}/artist/main">테스트 메인</a> <br>
 			<a href="${pageContext.request.contextPath}/album">데이터크롤링</a> <br>
+			<iframe width="360" height="202" src="https://www.youtube.com/embed/H1KBHFXm2Bg" frameborder="0"></iframe>
+			
+			<div class="mv_contents">
 
+			</div>
 		</div>
 
 	</div>

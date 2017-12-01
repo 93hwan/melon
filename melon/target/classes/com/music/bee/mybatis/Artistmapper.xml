@@ -6,7 +6,7 @@
 
 <!-- INSERT -->
 <insert id="artist_reply_send">
- INSERT INTO M_REPLY_ARTIST (REPLY_ARTIST_NO, ARTIST_NO, MEMBER_ID, REPLY, REG) 
+ INSERT INTO M_REPLY_ARTIST (REPLY_ARTIST_NO, ARTIST_NO, MEMBER_ID, REPLY) 
  		VALUES (#{REPLY_ARTIST_NO},#{ARTIST_NO},#{MEMBER_ID},#{REPLY},SYSDATE)
 </insert>
 
@@ -28,8 +28,8 @@
 	
 </select>
 
-<select id="artist_reply" resultType="com.music.bee.dto.ArtistComment_dto">
-	SELECT * FROM M_REPLY_ARTIST 
+<select id="arti_Comment" resultType="com.music.bee.dto.ArtistComment_dto">
+	SELECT * FROM M_REPLY_ARTIST
 </select>
 
 <!-- UPDATE -->
