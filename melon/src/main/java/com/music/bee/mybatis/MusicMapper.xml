@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<!-- 어느 클래스에서 이용할 것인지에 대해 지정 -->
+<!-- <mapper namespace="spring.model.ImageDao"> -->
+<mapper namespace="mdao">
+
+<select id="chart_latest" resultType="music">
+	SELECT * FROM(SELECT ROWNUM RN,A.* FROM(SELECT * FROM M_MUSIC ORDER BY REG DESC)A) WHERE RN BETWEEN 1 AND #{a};
+</select>
+	
+</mapper>
