@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,11 +30,11 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		
-		MusicDAO MusicDao = sqlSession.getMapper(MusicDAO.class);
+		MusicDAO musicDao = sqlSession.getMapper(MusicDAO.class);
 		
 		
 		//최신 챠트
-		List<Music_dto> chart_latest = MusicDao.chart_latest(10);
+		List<Music_dto> chart_latest = musicDao.chart_latest(10);
 		model.addAttribute("chart_latest",chart_latest);
 		
 		return "home";

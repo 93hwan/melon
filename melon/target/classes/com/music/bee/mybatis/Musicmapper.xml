@@ -5,10 +5,10 @@
     
 <!-- 어느 클래스에서 이용할 것인지에 대해 지정 -->
 <!-- <mapper namespace="spring.model.ImageDao"> -->
-<mapper namespace="mdao">
+<mapper namespace="com.music.bee.dao.MusicDAO">
 
-<select id="chart_latest" resultType="music">
-	SELECT * FROM(SELECT ROWNUM RN,A.* FROM(SELECT * FROM M_MUSIC ORDER BY REG DESC)A) WHERE RN BETWEEN 1 AND #{a};
+<select id="chart_latest" resultType="com.music.bee.dto.Music_dto">
+	SELECT * FROM(SELECT ROWNUM RN,A.* FROM(SELECT * FROM M_MUSIC ORDER BY REG DESC)A) WHERE RN BETWEEN 1 AND #{a}
 </select>
 	
 </mapper>
