@@ -95,16 +95,10 @@
 				</div>
 
 				<div id="latest" class="w3-container song">
-					<p>	1London is the capital city of England.</p>
-					<p>	2London is the capital city of England.</p>
-					<p>	3London is the capital city of England.</p>
-					<p>	4London is the capital city of England.</p>
-					<p>	5London is the capital city of England.</p>
-					<p>	6London is the capital city of England.</p>
-					<p>	7London is the capital city of England.</p>
-					<p>	8London is the capital city of England.</p>
-					<p>	9London is the capital city of England.</p>
-					<p>	10London is the capital city of England.</p>
+					<c:set var="num" value="1,2,3,4,5,6,7,8,9,10"/>
+					<c:forEach items="${chart_latest}" var="list"  varStatus="status">
+						<p>${status.index+1}${list.title}${list.artist_name}</p>
+					</c:forEach>
 				</div>
 
 				<div id="top" class="w3-container song" style="display: none">

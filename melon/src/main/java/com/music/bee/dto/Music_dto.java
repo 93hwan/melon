@@ -88,7 +88,7 @@ public class Music_dto {
 
 
 	public String getTitle() {
-		return title;
+		return title.replace("곡명 ", "");
 	}
 
 

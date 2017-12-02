@@ -37,8 +37,6 @@
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
 	</bean>
 
-	<context:component-scan base-package="spring.model"/>
-
 	<!-- 
 		Spring에서 제공하는 Transaction 관리 설정을 추가
 		 - 연속하여 DB를 갱신하는 작업(insert, update, delete)을 수행할 때 

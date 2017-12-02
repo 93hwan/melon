@@ -22,10 +22,10 @@
  	<typeAliases>
  		
  		<!-- spring.model.Image를 image라고 부르겠다 -->
- 		<typeAlias type="com.music.bee.dto.Music_dto" alias="music"/>
+<!--  		<typeAlias type="com.music.bee.dto.Music_dto" alias="music"/> -->
  		
  		<!-- spring.model.ImageDao를 idao라고 부르겠다 -->
- 		<typeAlias type="com.music.bee.dao.MusicDAO" alias="mdao"/>
+<!--  		<typeAlias type="com.music.bee.dao.MusicDAO" alias="mdao"/> -->
  		
  	</typeAliases>
 </configuration>
