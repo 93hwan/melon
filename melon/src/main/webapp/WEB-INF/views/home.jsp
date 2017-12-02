@@ -113,7 +113,11 @@
 			<center>
 				<h1>최신 뮤직비디오</h1>
 			</center>
-			<a href="${pageContext.request.contextPath}/artist/main">테스트 메인</a> <br>
+			<form action="${pageContext.request.contextPath}/artist/main">
+				<input type="hidden" name="artist_no" value="792022">
+				<input type="submit" value="테스트 메인">
+			</form><br>
+			<a href="${pageContext.request.contextPath}/album/album_main">테스트 앨범</a> <br>
 			<a href="${pageContext.request.contextPath}/album">데이터크롤링</a> <br>
 			<iframe width="360" height="202" src="https://www.youtube.com/embed/H1KBHFXm2Bg" frameborder="0"></iframe>
 			
