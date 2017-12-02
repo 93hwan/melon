@@ -20,12 +20,20 @@
  	
  	<!-- typeAliases : 내가 사용하는 주요 자료형에 별칭을 붙여 타이핑을 줄이도록 설정 -->
  	<typeAliases>
- 		
- 		<!-- spring.model.Image를 image라고 부르겠다 -->
- 		<typeAlias type="com.music.bee.dto.Music_dto" alias="music"/>
- 		
+ 	
+ 	<!-- DAO Alias -->
  		<!-- spring.model.ImageDao를 idao라고 부르겠다 -->
  		<typeAlias type="com.music.bee.dao.MusicDAO" alias="mdao"/>
+ 		<typeAlias type="com.music.bee.dao.ArtistDAO" alias="artistDAO"/>
+ 		
+ 	<!-- DTO Alias -->
+ 		<!-- spring.model.Image를 image라고 부르겠다 -->
+ 		<typeAlias type="com.music.bee.dto.Music_dto" alias="music"/>
+ 		<typeAlias type="com.music.bee.dto.Album_dto" alias="album"/>
+ 		<typeAlias type="com.music.bee.dto.Artist_dto" alias="artist"/>
+ 		
+ 		
+ 		
  		
  	</typeAliases>
 </configuration>

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.music.bee.dao.ArtistDAO">
+<mapper namespace="artistDAO">
 
 <!-- INSERT -->
 <insert id="artist_reply_send">
@@ -11,19 +11,19 @@
 </insert>
 
 <!-- SELECT -->
-<select id="artist_static" resultType="com.music.bee.dto.Artist_dto">
+<select id="artist_static" resultType="artist">
 	SELECT * FROM M_ARTIST WHERE ARTIST_NO = #{artist_no}
 </select>
 
-<select id="arti_detail" resultType="com.music.bee.dto.Artist_dto">
+<select id="arti_detail" resultType="artist">
 	SELECT (ARTIST_NO,ARTIST_NAME,IMG,ETC,AWARD_RECORD,ARTI_INFOTITLE,ARTI_INFOCONTENT) FROM M_ARTIST WHERE ARTIST_NO= #{ARTIST_NO}
 </select>
 
-<select id="arti_musicList" resultType="com.music.bee.dto.Music_dto">
+<select id="arti_musicList" resultType="music">
 	SELECT * FROM M_MUSIC WHERE ARTIST_NAME = #{artist_name}
 </select>
 
-<select id="arti_albumList" resultType="com.music.bee.dto.Album_dto">
+<select id="arti_albumList" resultType="album">
 	SELECT * FROM M_ALBUM WHERE ALBUM_NO =#{album_no}
 	
 </select>

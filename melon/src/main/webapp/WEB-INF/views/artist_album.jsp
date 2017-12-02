@@ -14,6 +14,8 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp" %>
+<form action="#" method="post">
+	<input type="hidden" value="${arti_no }" name="artist_no">
 <div class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
@@ -58,6 +60,7 @@
   	</c:forEach>
   	</table>
 	</div>
+	</form>
 </body>
 </html>
 <%@ include file="/WEB-INF/views/template/footer.jsp"%>
