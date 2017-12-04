@@ -98,7 +98,7 @@
 				<div id="domestic" class="w3-container song">
 					<ul>
 					<c:forEach items="${chart_domestic}" var="list"  varStatus="status">
-						<li clsss="${status.index+1}">
+						<li class="${status.index+1}">
 							<div id="chart_contents">${status.index+1} </div>
 							<img src="${list.img }" height="50px" width="50px" >
 							<div id="chart_contents" class="title">${list.title}</div>

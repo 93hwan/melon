@@ -25,14 +25,14 @@
  		
  		<!-- spring.model.ImageDao를 idao라고 부르겠다 -->
  		<typeAlias type="com.music.bee.dao.MusicDAO" alias="mdao"/>
- 		<typeAlias type="com.music.bee.dao.ArtistDAO" alias="artistDAO"/>
+ 		<!-- <typeAlias type="com.music.bee.dao.ArtistDAO" alias="artistDAO"/> -->
  		
  	<!-- DTO Alias -->
  		<!-- spring.model.Image를 image라고 부르겠다 -->
- 		<typeAlias type="com.music.bee.dto.Music_dto" alias="music"/>
+ 		<!-- <typeAlias type="com.music.bee.dto.Music_dto" alias="music"/>
  		<typeAlias type="com.music.bee.dto.Album_dto" alias="album"/>
  		<typeAlias type="com.music.bee.dto.Artist_dto" alias="artist"/>
- 		
+ 		 -->
  	</typeAliases>
 </configuration>
 

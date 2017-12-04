@@ -29,14 +29,14 @@
   		</tr>
 			<tr>
 				<td><h3>수상경력</h3> <br>
-				${arti_main.award_record}
+				${arti_main_detail.award_record}
 				
 				</td>
 			</tr>
 			<tr>
 				<td><h3>가수소개</h3><br>
 				
-				${arti_main.etc }<br>
+				${arti_main_detail.etc }<br>
 				-----------------------------------------------------
 				
 				</td>

@@ -12,13 +12,13 @@
 </head>
 <body>
 <div>
-<input type="hidden" name="arti_no" value="${arti_main.artist_no}" />
+<input type="hidden" name="arti_no" value="${arti_main_static.artist_no}" />
 		<br><h2 align="center">아티스트 채널</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="${arti_main.img}" title="가수이미지"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >${arti_main.artist_name}</font><br></td>
+				<td width="300px" rowspan="5" align="center"><img align="middle" src="${arti_main_static.img}" title="가수이미지"/></td>
+				<td><font style="font-weight: bold; font-size: xx-large;" >${arti_main_static.artist_name}</font><br></td>
 			</tr>
 			<tr>
 				<td>가수소개</td>

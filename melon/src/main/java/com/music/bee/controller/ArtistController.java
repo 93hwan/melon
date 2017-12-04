@@ -30,8 +30,10 @@ public class ArtistController {
 		System.out.println("내용물 = "+artist_no.toString());
 		
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		List<Artist_dto> arti_main = artiDAO.artist_static(artist_no);
-		model.addAttribute("arti_main", arti_main.get(0));		//artiDTO 대신에 artiDAO.artist_static~~ 넣어도되는건가ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
+		List<Artist_dto> arti_main_static = artiDAO.artist_static(artist_no);
+		model.addAttribute("arti_main_static", arti_main_static.get(0));		//artiDTO 대신에 artiDAO.artist_static~~ 넣어도되는건가ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
+		List<Artist_dto> arti_main_detail = artiDAO.arti_detail(artist_no);
+		model.addAttribute("arti_main_detail", arti_main_detail.get(0));		//artiDTO 대신에 artiDAO.artist_static~~ 넣어도되는건가ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
 		
 		return "artist_main";
 	}
@@ -42,8 +44,15 @@ public class ArtistController {
 		System.out.println("/artist_music Start");
 		
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		List<Music_dto> arti_music = artiDAO.arti_musicList("볼빨간사춘기");
-		model.addAttribute("arti_music",arti_music.get(0));
+		List<Music_dto> arti_music = artiDAO.arti_musicList("볼빨간사춘기"); //나중엔 hidden으로 받아온 파라미터 String 값으로 받아야함
+		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
+		model.addAttribute("arti_main_static", arti_main_static.get(0));		//artiDTO 대신에 artiDAO.artist_static~~ 넣어도되는건가ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
+		for(int k=0; k<arti_music.size();k++){
+			System.out.println(""+k+ arti_music.get(k).toString());
+		}
+		
+		model.addAttribute("arti_music",arti_music);
+//		model.addAttribute("arti_music",arti_music.get(0));
 	
 			return "artist_music";
 	}
@@ -54,8 +63,10 @@ public class ArtistController {
 		System.out.println("/artist_album Start");
 		
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		List<Album_dto> arti_album = artiDAO.arti_albumList(artist_name);
-		model.addAttribute("arti_album",arti_album);
+		List<Album_dto> arti_album = artiDAO.arti_albumList("볼빨간사춘기"); //나중엔 hidden으로 받아온 파라미터 String 값으로 받아야함
+		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
+		model.addAttribute("arti_main_static", arti_main_static.get(0));	
+		model.addAttribute("arti_album",arti_album.get(0));
 		
 		return "artist_album";
 	}
@@ -65,7 +76,9 @@ public class ArtistController {
 	
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
 		List<Music_dto> arti_muVideo =	artiDAO.album_musicList(music_no);
-		model.addAttribute("arti_muVideo",arti_muVideo);
+		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
+		model.addAttribute("arti_main_static", arti_main_static.get(0));	
+		model.addAttribute("arti_muVideo",arti_muVideo.get(0));
 		
 		return "artist_video";
 	}
@@ -77,7 +90,7 @@ public class ArtistController {
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
 		List<ArtistComment_dto> arti_comment = artiDAO.arti_Comment(arti_no);
 		
-		model.addAttribute("arti_comment",arti_comment);
+		model.addAttribute("arti_comment",arti_comment.get(0));
 		
 		return "artist_reply";
 	}
