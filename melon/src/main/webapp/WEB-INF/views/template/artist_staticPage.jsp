@@ -25,6 +25,7 @@
 			</tr>		
 			<tr>
 				<td>수상경력<br>
+				
 				</td>
 			</tr>	
 		</table>

@@ -2,16 +2,16 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.music.bee.dao.AlbumDAO">
+<mapper namespace="artistDAO">
 
 <!-- INSERT -->
 
 <!-- SELECT -->
-<select id="album_main" resultType="com.music.bee.dto.Album_dto">
-	SELECT * FROM M_ALBUM WHERE ALBUM_NO = ${ALBUM_NO}
+<select id="album_main" resultType="album">
+	SELECT * FROM M_ALBUM WHERE ALBUM_NO = #{ALBUM_NO}
 </select>
-<select id="arti_musicList" resultType="com.music.bee.dto.Music_dto">
-	SELECT * FROM M_MUSIC WHERE ALBUM_TITLE = ${ALBUM_TITLE}
+<select id="arti_musicList" resultType="music">
+	SELECT * FROM M_MUSIC WHERE ALBUM_TITLE = #{ALBUM_TITLE}
 </select>
 
 <!-- UPDATE -->

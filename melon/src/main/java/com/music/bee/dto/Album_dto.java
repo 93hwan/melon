@@ -61,6 +61,12 @@ public class Album_dto {
 	public void setNO(int nO) {
 		NO = nO;
 	}
+
+	@Override
+	public String toString() {
+		return "Album_dto [album_no=" + album_no + ", album_title=" + album_title + ", artist_name=" + artist_name
+				+ ", img=" + img + ", release=" + release + ", NO=" + NO + "]";
+	}
 	
 	
 }
