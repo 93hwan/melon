@@ -71,11 +71,19 @@
 	width: 40%;
 	height: 100%;
 }
+.content2 .chart ul {
+	padding: 0px;
+	list-style: none;
+}
+.content2 .chart #chart_contents{
+	display: inline-block;
+}
 .chart-btn{
 	color: white;
 	background: #333333;
 }
 .song{
+	  border-top: 0px !important;
 	border: 2px solid #333333;
 }
 
@@ -85,5 +93,5 @@
 	border: 2px solid yellow;
 }
 .chart  p{
-font-size: 16px;	
+font-size: 14px;	
 }

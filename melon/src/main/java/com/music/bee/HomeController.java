@@ -33,9 +33,9 @@ public class HomeController {
 		
 		
 		//최신 챠트
-		List<Music_dto> chart_latest = MusicDao.chart_latest(10);
+		List<Music_dto> chart_domestic = MusicDao.chart_domestic(10);
 		
-		model.addAttribute("chart_latest",chart_latest);
+		model.addAttribute("chart_domestic",chart_domestic);
 		
 		return "home";
 	}
