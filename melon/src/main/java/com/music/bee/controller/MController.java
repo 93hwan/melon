@@ -229,9 +229,9 @@ public class MController   {
 						System.out.println("artist db저장 완료");
 						dao.music(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
 //		팝송	
-						dao.pop_album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
-						System.out.println("album db저장 완료");
-						dao.pop(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
+//						dao.pop_album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
+//						System.out.println("album db저장 완료");
+//						dao.pop(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
 							}
 						}
 //				sqlSession.close();

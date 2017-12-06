@@ -30,9 +30,9 @@
   			<td colspan="7"></td>
   	</tr>
   	
-  	<c:forEach items="${arti_albumList}" varStatus="status" var="i">
+  	<c:forEach items="${arti_album}" varStatus="status" var="i">
   		<tr>
-  			<td align="center"><img src="${i.img}" alt="앨범사진"></img></td>
+  			<td align="center"><img src="${i.img}" alt="앨범사진" width="80px" height="80px"></img></td>
   			<td>
   			<br>
   			<strong>${i.album_title}</strong><br>

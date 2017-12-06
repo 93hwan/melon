@@ -40,6 +40,8 @@
 			<tr>
 				<td>
  				<div class="arti_info" >${arti_main_detail.arti_infotitle }<br></div>
+ 				</td>
+ 				<td>
 				<div class="arti_content">${arti_main_detail.arti_infocontent }<br></div>
 				</td>
 			</tr>
