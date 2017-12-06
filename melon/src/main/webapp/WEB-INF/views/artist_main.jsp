@@ -24,25 +24,18 @@
     <li><a href="artist_video">뮤직비디오</a></li>
       <li><a href="artist_reply">가수에게 한마디</a></li>
   </ul>	
+  	<br><br>
 		<table align="center" class="table table-hover"> <!--  상세정보 테이블 -->
-		<tr>
-  			<td colspan="7"></td>
-  		</tr>
 			<tr>
 				<td><h3>수상경력</h3> <br>
-				${arti_main_detail.award_record}
-				
+				${arti_main_static.award_record}
+				<br><br>
 				</td>
 			</tr>
 			<tr>
-				<td><h3>가수소개</h3></td>
-			</tr>
-			<tr>
-				<td>
- 				<div class="arti_info" >${arti_main_detail.arti_infotitle }<br></div>
- 				</td>
- 				<td>
-				<div class="arti_content">${arti_main_detail.arti_infocontent }<br></div>
+				<td><h3>가수소개</h3>
+ 				<div class="arti_info" style="float: left; padding-right: 30px" >${arti_main_static.arti_infotitle }<br></div>
+				<div class="arti_content">${arti_main_static.arti_infocontent }<br><br><br></div>
 				</td>
 			</tr>
 		</table>

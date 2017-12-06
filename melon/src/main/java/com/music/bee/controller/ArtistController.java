@@ -33,8 +33,6 @@ public class ArtistController {
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
 		List<Artist_dto> arti_main_static = artiDAO.artist_static(artist_no);
 		model.addAttribute("arti_main_static", arti_main_static.get(0));		//artiDTO 대신에 artiDAO.artist_static~~ 넣어도되는건가ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
-		List<Artist_dto> arti_main_detail = artiDAO.arti_detail(artist_no);
-		model.addAttribute("arti_main_detail", arti_main_detail.get(0));		//artiDTO 대신에 artiDAO.artist_static~~ 넣어도되는건가ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
 		
 		return "artist_main";
 	}
@@ -73,10 +71,10 @@ public class ArtistController {
 	}
 	
 	@RequestMapping("/artist_video")
-	public String artist_video(Model model, String music_no){
+	public String artist_video(Model model, String artist_name){
 	
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		List<Music_dto> arti_muVideo =	artiDAO.album_musicList(music_no);
+		List<Music_dto> arti_muVideo =	artiDAO.arti_musicList("볼빨간사춘기");
 		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
 		model.addAttribute("arti_main_static", arti_main_static.get(0));	
 		model.addAttribute("arti_muVideo",arti_muVideo);
@@ -89,22 +87,27 @@ public class ArtistController {
 	
 		System.out.println("artist_reply 통과");
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		List<ArtistComment_dto> arti_comment = artiDAO.arti_Comment(arti_no);
+		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
+		List<ArtistComment_dto> arti_comment = artiDAO.arti_Comment("792022");
 		
-		model.addAttribute("arti_comment",arti_comment.get(0));
+		model.addAttribute("arti_main_static", arti_main_static.get(0));	
+		model.addAttribute("arti_comment",arti_comment);
 		
 		return "artist_reply";
 	}
 	
 	
 	@RequestMapping("/artist_comment_send")
-	public String artist_reply_send(Model model, ArtistComment_dto commentDTO){
+	public String artist_reply_send(Model model, String arti_no){
 	
 		System.out.println("artist_reply_send 통과");
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		commentDTO.setMember_id("rosie");
+//		commentDTO.setMember_id("rosie");
+		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
+		List<ArtistComment_dto> arti_comment = artiDAO.arti_Comment("792022");
 		
-		model.addAttribute("artist_comment_send",commentDTO);
+		model.addAttribute("arti_main_static", arti_main_static.get(0));	
+		model.addAttribute("artist_comment_send",arti_comment.get(0));
 		
 		System.out.println("artist_reply_send 페이지 못넘겼니");
 		return "artist_reply";

@@ -25,23 +25,21 @@
     <li><a href="artist_video">뮤직비디오</a></li>
     <li><a href="artist_reply">가수에게 한마디</a></li>
   </ul>	
+	<br><br>  	
   <table  class="table table-hover" align="center">
- 	 <tr>
-  			<td colspan="7"></td>
-  	</tr>
-  	
-  	<c:forEach items="${arti_album}" varStatus="status" var="i">
   		<tr>
-  			<td align="center"><img src="${i.img}" alt="앨범사진" width="80px" height="80px"></img></td>
-  			<td>
-  			<br>
-  			<strong>${i.album_title}</strong><br>
+  	<c:forEach items="${arti_album}" varStatus="status" var="i">
+  			<td align="center"><br><img src="${i.img}" alt="앨범사진" width="170px" height="170px"></img></td>
+  			<td> <br>
+  			<strong>${i.album_title}</strong><br><br>
   			${i.artist_name}<br>
   			앨범재생<br>
-  			${i.release} | 곡수 <br>
+  			${i.release} | 곡수 <br><br>
+  			<button class="btn btn-default">앨범듣기</button>&nbsp;<button class="btn btn-default">앨범담기</button>
+  			<br><br><br><br>
   			</td>
-  		</tr>
   	</c:forEach>
+  		</tr>
   	</table>
 	</div>
 	</form>
