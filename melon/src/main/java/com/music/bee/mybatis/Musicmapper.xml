@@ -7,8 +7,8 @@
 <!-- <mapper namespace="spring.model.ImageDao"> -->
 <mapper namespace="com.music.bee.dao.MusicDAO">
 
-<select id="chart_latest" resultType="com.music.bee.dto.Music_dto">
-	SELECT * FROM(SELECT ROWNUM RN,A.* FROM(SELECT * FROM M_MUSIC ORDER BY REG DESC)A) WHERE RN BETWEEN 1 AND #{a}
+<select id="chart_domestic" resultType="com.music.bee.dto.Music_dto"  parameterType="int">
+	SELECT * FROM(SELECT ROWNUM RN,A.* FROM(SELECT * FROM M_MUSIC ORDER BY REG DESC)A) WHERE RN BETWEEN 1 AND #{num}
 </select>
 	
 </mapper>

@@ -12,22 +12,29 @@
 </head>
 <body>
 <div>
-<input type="hidden" name="arti_no" value="${arti_main_static.artist_no}" />
-		<br><h2 align="center">아티스트 채널</h2><br>
+<input type="hidden" name="album_no" value="${album_main.album_no}" />
+		<br><h2 align="center">앨범 정보</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="${arti_main_static.img}" title="가수이미지"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >${arti_main_static.artist_name}</font><br></td>
+				<td width="300px" rowspan="5" align="center"><img align="middle" src="${album_main.img}" title="앨범이미지"/></td>
+				<td><font style="font-weight: bold; font-size: xx-large;" >${album_main.album_title}</font><br></td>
 			</tr>
 			<tr>
-				<td>가수소개</td>
-			</tr>		
+				<td><h4>${album_main.artist_name }</h4></td>
+			</tr>
 			<tr>
-				<td>수상경력<br>
-				
-				</td>
-			</tr>	
+				<td><h5>발매일</h5></td>
+				<td><h3>${album_main.release }</h3></td>
+			</tr>
+			<tr>
+				<td><h5>장르</h5></td>
+				<td><h3>R&B/Soul</h3></td>
+			</tr>
+			<tr>
+				<td><h5>발매사</h5></td>
+				<td><h3>CJ E&M MUSIC</h3></td>
+			</tr>
 		</table>
 		</div>
 	</div>

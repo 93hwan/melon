@@ -61,6 +61,13 @@ public class ArtistComment_dto {
 	public void setDate(Timestamp date) {
 		this.date = date;
 	}
+
+	@Override
+	public String toString() {
+		return "ArtistComment_dto [reply_artist_no=" + reply_artist_no + ", artist_no=" + artist_no + ", member_id="
+				+ member_id + ", reply=" + reply + ", date=" + date + "]";
+	}
+	
 	
 	
 }

@@ -193,7 +193,7 @@ public class MController   {
 										.get();
 								
 								Element VideoLink = youtube_doc.select(".yt-lockup-title > a[title]").first();
-								String strLink = (String)VideoLink.attr("href").toString();
+								String strLink = VideoLink.attr("href").toString();
 								if(VideoLink!=null){
 									System.out.println(strLink);
 									System.out.println("youtube크롤링완료----------------------------------------");

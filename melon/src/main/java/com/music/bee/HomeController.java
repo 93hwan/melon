@@ -29,12 +29,13 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		
-		MusicDAO musicDao = sqlSession.getMapper(MusicDAO.class);
+		MusicDAO MusicDao = sqlSession.getMapper(MusicDAO.class);
 		
 		
 		//최신 챠트
-		List<Music_dto> chart_latest = musicDao.chart_latest(10);
-		model.addAttribute("chart_latest",chart_latest);
+		List<Music_dto> chart_domestic = MusicDao.chart_domestic(10);
+		
+		model.addAttribute("chart_domestic",chart_domestic);
 		
 		return "home";
 	}

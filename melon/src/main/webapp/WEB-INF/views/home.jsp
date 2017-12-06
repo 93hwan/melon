@@ -90,25 +90,26 @@
 				<a href="#" id="contents_title">차트</a>
 
 				<div class="w3-bar chart-btn">
-					<button class="w3-bar-item chart-btn"  id="gold" onclick="openSong('latest')">최신</button>
-					<button class="w3-bar-item  chart-btn" id="gold" onclick="openSong('top')">Top 10</button>
+					<button class="w3-bar-item chart-btn"  id="gold" onclick="openSong('domestic')">국내 Top</button>
+					<button class="w3-bar-item  chart-btn" id="gold" onclick="openSong('overseas')">해외 Top</button>
+				</div>
+				
+<!-- 최신 -->
+				<div id="domestic" class="w3-container song">
+					<ul>
+					<c:forEach items="${chart_domestic}" var="list"  varStatus="status">
+						<li class="${status.index+1}">
+							<div id="chart_contents">${status.index+1} </div>
+							<img src="${list.img }" height="50px" width="50px" >
+							<div id="chart_contents" class="title">${list.title}</div>
+							<div id="chart_contents" class="artist">${list.artist_name}</div>
+						</li>
+					</c:forEach>
+					</ul>
 				</div>
 
-				<div id="latest" class="w3-container song">
-					<p>	1London is the capital city of England.</p>
-					<p>	2London is the capital city of England.</p>
-					<p>	3London is the capital city of England.</p>
-					<p>	4London is the capital city of England.</p>
-					<p>	5London is the capital city of England.</p>
-					<p>	6London is the capital city of England.</p>
-					<p>	7London is the capital city of England.</p>
-					<p>	8London is the capital city of England.</p>
-					<p>	9London is the capital city of England.</p>
-					<p>	10London is the capital city of England.</p>
-				</div>
-
-				<div id="top" class="w3-container song" style="display: none">
-					<h2>Top10</h2>
+				<div id="overseas" class="w3-container song" style="display: none">
+					<h2>해외 Top10</h2>
 					<p>Paris is the capital of France.</p>
 				</div>
 
@@ -119,9 +120,13 @@
 			<center>
 				<h1>최신 뮤직비디오</h1>
 			</center>
-			<a href="${pageContext.request.contextPath}/artist/main">테스트 메인</a> <br>
+			<form action="${pageContext.request.contextPath}/artist/main">
+				<input type="hidden" name="artist_no" value="792022">
+				<input type="submit" value="테스트 메인">
+			</form><br>
+			<a href="${pageContext.request.contextPath}/album/album_main">테스트 앨범</a> <br>
 			<a href="${pageContext.request.contextPath}/album">데이터크롤링</a> <br>
-			<iframe width="360" height="202" src="https://www.youtube.com/embed/H1KBHFXm2Bg" frameborder="0"></iframe>
+			<iframe width="360" height="202" src="https://www.youtube.com/embed/PLb_YYOPPBI" frameborder="0"></iframe>
 			
 			<div class="mv_contents">
 

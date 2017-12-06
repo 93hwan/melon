@@ -12,31 +12,27 @@
 
 <!-- SELECT -->
 <select id="artist_static" resultType="com.music.bee.dto.Artist_dto">
-	SELECT * FROM M_ARTIST WHERE ARTIST_NO = '99999'
+	SELECT * FROM M_ARTIST WHERE ARTIST_NO = #{artist_no}
 </select>
 
 <select id="arti_detail" resultType="com.music.bee.dto.Artist_dto">
-	SELECT (ARTIST_NO,ARTIST_NAME,IMG,ETC,AWARD_RECORD,ARTI_INFOTITLE,ARTI_INFOCONTENT) FROM M_ARTIST WHERE ARTIST_NO= 'ARTIST_NO'
+	SELECT * FROM M_ARTIST WHERE ARTIST_NO = #{artist_no}
 </select>
 
 <select id="arti_musicList" resultType="com.music.bee.dto.Music_dto">
-	SELECT * FROM M_MUSIC WHERE ARTIST_NAME = 'ARTIST' 
+	SELECT * FROM M_MUSIC WHERE ARTIST_NAME = #{artist_name}
 </select>
 
 <select id="arti_albumList" resultType="com.music.bee.dto.Album_dto">
-	SELECT * FROM M_ALBUM WHERE ALBUM_NO ='123456'
+	SELECT * FROM M_ALBUM WHERE ALBUM_NO =#{album_no}
 	
 </select>
 
 <select id="arti_Comment" resultType="com.music.bee.dto.ArtistComment_dto">
-	SELECT * FROM M_REPLY_ARTIST
+	SELECT * FROM M_REPLY_ARTIST ARTIST_NO =#{artist_no}
 </select>
 
 <!-- UPDATE -->
-
-
-
-
 
 
 <!-- DELETE -->

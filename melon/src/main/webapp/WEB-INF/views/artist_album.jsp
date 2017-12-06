@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Melon/Artist/Album</title>
+<title>Bee/Artist/Album</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,6 +14,8 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp" %>
+<form action="#" method="post">
+	<input type="hidden" value="${arti_no }" name="artist_no">
 <div class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
@@ -58,6 +60,7 @@
   	</c:forEach>
   	</table>
 	</div>
+	</form>
 </body>
 </html>
 <%@ include file="/WEB-INF/views/template/footer.jsp"%>

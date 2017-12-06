@@ -2,8 +2,6 @@ package com.music.bee.dto;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.http.HttpRequest;
-
 public class Music_dto {
 
 	private String music_no;
@@ -16,8 +14,10 @@ public class Music_dto {
 	private String reg;
 	private int play_count;
 	private int no;
+	private String img;
 	
-	
+
+
 	public Music_dto() {
 
 	}
@@ -88,7 +88,7 @@ public class Music_dto {
 
 
 	public String getTitle() {
-		return title;
+		return title.replace("곡명 ", "");
 	}
 
 
@@ -126,6 +126,17 @@ public class Music_dto {
 		return no;
 	}
 	
+	public String getImg() {
+		System.out.println("getimgg");
+		return img;
+	}
+
+
+	public void setImg(String img) {
+		System.out.println("셋img");
+		this.img = img;
+	}
+
 	
 	
 	
