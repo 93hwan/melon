@@ -27,7 +27,9 @@ public class MController   {
 				
 //				String chartUrl = "http://www.melon.com/chart/month/index.htm#params%5Bidx%5D=1&params%5BrankMonth%5D=201710&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
 //				String chartUrl = "http://www.melon.com/genre/song_list.htm";
-				String chartUrl = "http://www.melon.com/chart/index.htm";
+//				String chartUrl = "http://www.melon.com/chart/index.htm";
+//				↓ 이건 팝송 
+					String chartUrl = "http://www.melon.com/chart/day/index.htm?classCd=AB0000";
 //				String chartUrl = "http://www.melon.com/new/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/day/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/index.htm#params%5Bidx%5D=51";
@@ -212,12 +214,15 @@ public class MController   {
 							System.out.println("저장안함");
 						} 	else if(SongNum_get.equals("30566061")){
 							System.out.println("n분의1 저장 안함");
+						} 	else if(SongNum_get.equals("30769545")){
+							System.out.println("방탄소년단 크리스탈 스노우");
+						
 						} 	else{
-						dao.album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
+						dao.pop_album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
 						System.out.println("album db저장 완료");
 						dao.artist(artist_No, artist_get, artist_img, "", Award_record,str_get,str_get02);  //가수소개 부분 공백처리 -에러너무많이남
 						System.out.println("artist db저장 완료");
-						dao.music(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
+						dao.pop(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
 							}
 						}
 //				sqlSession.close();

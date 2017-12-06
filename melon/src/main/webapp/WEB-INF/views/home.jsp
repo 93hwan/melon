@@ -100,7 +100,7 @@
 					<c:forEach items="${chart_domestic}" var="list"  varStatus="status">
 						<li class="${status.index+1}">
 							<div id="chart_contents">${status.index+1} </div>
-							<img src="${list.img }" height="50px" width="50px" >
+							<img src="${list.img}" height="50px" width="50px" >
 							<div id="chart_contents" class="title">${list.title}</div>
 							<div id="chart_contents" class="artist">${list.artist_name}</div>
 						</li>
@@ -109,8 +109,16 @@
 				</div>
 
 				<div id="overseas" class="w3-container song" style="display: none">
-					<h2>해외 Top10</h2>
-					<p>Paris is the capital of France.</p>
+					<ul>
+						<c:forEach items="${chart_overseas}" var="list" varStatus="status">
+							<li class="${status.index+1}">
+								<div id="chart_contents">${status.index+1}</div> <img
+								src="${list.img}" height="50px" width="50px">
+								<div id="chart_contents" class="title">${list.title}</div>
+								<div id="chart_contents" class="artist">${list.artist_name}</div>
+							</li>
+						</c:forEach>
+					</ul>
 				</div>
 
 
