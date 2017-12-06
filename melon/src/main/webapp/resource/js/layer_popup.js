@@ -54,29 +54,24 @@ $(document).ready(
 				$('.mask, .window').hide();
 			});
 			
-			// 회원가입 ,회원 탈퇴 기능 구현
-			// 이메일 중복 검사
-			$("#a_email").on(
+			// 아이디 중복 검사
+			$("#member_id").on(
 					"blur",
 					function() {
 						$.ajax({
 							type : "POST",
 							url : "/bee/member/check",
 							data : {
-								"email" : $("#a_email").val()
+								"member_id" : $("#member_id").val()
 							},
 							success : function(data) {
+								console.log("data = "+data);
 								if (data == "false") {
 									alert("중복된 아이디 입니다!!")
-									$("#a_email").addClass("cant");
+									$("#member_id").addClass("cant");
 								} else {
-									$("#a_email").removeClass("cant");
+									$("#member_id").removeClass("cant");
 								}
-							},
-							error : function(request, status, error) {
-								console.log("code = " + request.status
-										+ " message = " + request.responseText
-										+ " error = " + error);
 							}
 						});
 					});
@@ -85,7 +80,7 @@ $(document).ready(
 			$("#a_join").on("submit", function() {
 				event.preventDefault(); // submit 이벤트를 없애자
 
-				if ($("#a_email").hasClass("cant")) {
+				if ($("#member_id").hasClass("cant")) {
 					alert("잘못된 정보 입니다!");
 				} else {
 					$.ajax({
@@ -93,7 +88,7 @@ $(document).ready(
 						url : "/bee/member/join",
 						data : $("#a_join").serialize(),
 						success : function(data) {
-							alert("회원가입 완료~")
+							alert("회원가입 완료")
 							location.href = data;
 						}
 					});
@@ -103,6 +98,6 @@ $(document).ready(
 			// 회원가입 팝업창 close 누를시 리셋
 			$(".close").on("click", function() {
 				$(".resource").val(null);
-				$("#a_email").removeClass("cant");
+				$("#member_id").removeClass("cant");
 			});
 });

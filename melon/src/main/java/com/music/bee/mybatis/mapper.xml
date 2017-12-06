@@ -16,7 +16,13 @@
 	INSERT INTO M_MUSIC (music_no,album_title,title,artist_name,genre,video,lyrics,reg,play_count,NO) VALUES(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},0,M_MUSIC_SEQ.NEXTVAL)
 </insert>
 
-
+<!-- 팝송 -->
+<insert id="pop_album">
+	INSERT INTO M_POP_ALBUM (ALBUM_NO,ALBUM_TITLE,ARTIST_NAME,IMG,RELEASE,NO) VALUES(#{param1},#{param2},#{param3},#{param4},#{param5},M_ALBUM_SEQ.NEXTVAL)
+</insert>
+<insert id="pop">
+	INSERT INTO M_POP(music_no,album_title,title,artist_name,genre,video,lyrics,reg,play_count,NO) VALUES(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},0,M_MUSIC_SEQ.NEXTVAL)
+</insert>
 
 
 <!-- SELECT -->

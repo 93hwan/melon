@@ -6,6 +6,8 @@
 <title>Bee</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="_csrf" content="${_csrf.token}"/>
+<meta name="_csrf_header" content="${_csrf.headerName}"/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Raleway">
@@ -114,8 +116,11 @@ body, html {
 					<a href="#" class="joinbtn w3-bar-item w3-button" id="btn">회원 가입</a>
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">
-						<a	href="${pageContext.request.contextPath}"
+						<a	href="javascript:logoutForm.submit();"
 							class="w3-bar-item w3-button"id="btn">로그 아웃</a>
+						<form name="logoutForm" action="<c:url value="/logout"/>" method="post">
+							<sec:csrfInput/>
+						</form>
 					</sec:authorize>
 				</div>
 				
