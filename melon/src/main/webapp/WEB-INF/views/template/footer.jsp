@@ -100,6 +100,14 @@
 
 Add Google Maps
 <script>
+	var token = $("meta[name='_csrf']").attr("content");
+	var header = $("meta[name='_csrf_header']").attr("content");
+	 
+	$(function() {
+	    $(document).ajaxSend(function(e, xhr, options) {
+	        xhr.setRequestHeader(header, token);
+	    });
+	});
 	// Modal Image Gallery
 	function onClick(element) {
 		document.getElementById("img01").src = element.src;
