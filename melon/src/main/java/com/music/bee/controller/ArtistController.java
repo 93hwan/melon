@@ -29,6 +29,7 @@ public class ArtistController {
 	public String artist_main(Model model,String artist_no){
 		System.out.println("내용물 = "+artist_no.toString());
 		
+		
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
 		List<Artist_dto> arti_main_static = artiDAO.artist_static(artist_no);
 		model.addAttribute("arti_main_static", arti_main_static.get(0));		//artiDTO 대신에 artiDAO.artist_static~~ 넣어도되는건가ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
@@ -66,7 +67,7 @@ public class ArtistController {
 		List<Album_dto> arti_album = artiDAO.arti_albumList("볼빨간사춘기"); //나중엔 hidden으로 받아온 파라미터 String 값으로 받아야함
 		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
 		model.addAttribute("arti_main_static", arti_main_static.get(0));	
-		model.addAttribute("arti_album",arti_album.get(0));
+		model.addAttribute("arti_album",arti_album);
 		
 		return "artist_album";
 	}
@@ -78,7 +79,7 @@ public class ArtistController {
 		List<Music_dto> arti_muVideo =	artiDAO.album_musicList(music_no);
 		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
 		model.addAttribute("arti_main_static", arti_main_static.get(0));	
-		model.addAttribute("arti_muVideo",arti_muVideo.get(0));
+		model.addAttribute("arti_muVideo",arti_muVideo);
 		
 		return "artist_video";
 	}

@@ -25,7 +25,7 @@
 			</tr>		
 			<tr>
 				<td>수상경력<br>
-				
+				${arti_main_static.award_record}
 				</td>
 			</tr>	
 		</table>
