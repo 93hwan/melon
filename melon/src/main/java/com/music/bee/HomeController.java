@@ -32,10 +32,18 @@ public class HomeController {
 		MusicDAO MusicDao = sqlSession.getMapper(MusicDAO.class);
 		
 		
-		//최신 챠트
+		//국내 top10 챠트
 		List<Music_dto> chart_domestic = MusicDao.chart_domestic(10);
 		
+		//해외 top10 챠트
+		List<Music_dto> chart_overseas = MusicDao.chart_overseas(10);
+		
+		for( Music_dto list : chart_domestic) {
+			System.out.println(list.getImg());
+					}
+		
 		model.addAttribute("chart_domestic",chart_domestic);
+		model.addAttribute("chart_overseas",chart_overseas);
 		
 		return "home";
 	}
