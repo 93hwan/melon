@@ -56,7 +56,7 @@
 				method="post">
 				<sec:csrfInput />
 				<div>
-					<input type="text" name="member_id" placeholder="id"
+					<input type="text" id="member_id" name="member_id" placeholder="id"
 						class="w3-input resource" required>
 				</div>
 				<div>
@@ -72,7 +72,7 @@
 						class="w3-input resource" required>
 				</div>
 				<div>
-					<input type="email" id="a_email" name="email" placeholder="Email"
+					<input type="email" name="email" placeholder="Email"
 						class="w3-input resource" required>
 				</div>
 				<div>

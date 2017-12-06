@@ -7,7 +7,7 @@
 <insert id="join">
 	INSERT INTO M_MEMBER (member_no,member_id,password,name,birth,email,phone,status,authority,enabled,reg) VALUES(m_member_seq.nextval, #{member_id},#{password},#{name},#{birth},#{email},#{phone},'false','회원','true',sysdate)
 </insert>
-<select id="login" resultType="com.music.bee.dto.Member_dto">
-	select password from m_member where member_id = #{member_id} 
+<select id="check" resultType="java.lang.Integer">
+	select count(*) from m_member where member_id = #{member_id} 
 </select>
 </mapper>
