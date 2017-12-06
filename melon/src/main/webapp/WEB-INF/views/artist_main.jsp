@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/artist.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -34,13 +35,14 @@
 				</td>
 			</tr>
 			<tr>
-				<td><h3>가수소개</h3><br>
-				
-				${arti_main_detail.etc }<br>
-				-----------------------------------------------------
-				
+				<td><h3>가수소개</h3></td>
+			</tr>
+			<tr>
+				<td>
+ 				<div class="arti_info" >${arti_main_detail.arti_infotitle }<br></div>
+				<div class="arti_content">${arti_main_detail.arti_infocontent }<br></div>
 				</td>
-			</tr>		
+			</tr>
 		</table>
 </div>
 </body>

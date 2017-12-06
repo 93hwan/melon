@@ -19,7 +19,7 @@
 <div class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main">상세정보</a></li>
+    <li><a href="main?artist_no=792022">상세정보</a></li>
     <li><a href="artist_music">곡</a></li>
     <li class="active"><a href="artist_album">앨범</a></li>
     <li><a href="artist_video">뮤직비디오</a></li>
@@ -30,32 +30,16 @@
   			<td colspan="7"></td>
   	</tr>
   	
-  	<c:forEach var="i" begin="1" end="3" step="1">
+  	<c:forEach items="${arti_albumList}" varStatus="status" var="i">
   		<tr>
-  			<td align="center"><img src="${arti_album.img}" alt="앨범사진"></img></td>
+  			<td align="center"><img src="${i.img}" alt="앨범사진"></img></td>
   			<td>
   			<br>
-  			<strong>${arti_album.album_title}</strong><br>
-  			${arti_album.artist_name}<br>
+  			<strong>${i.album_title}</strong><br>
+  			${i.artist_name}<br>
   			앨범재생<br>
-  			${arti_album.release} | 곡수 <br>
+  			${i.release} | 곡수 <br>
   			</td>
-  			
-  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/100/70/846/10070846_500.jpg/melon/resize/130/quality/80/optimize" alt="앨범사진"></img></td>
-  			<td>
-  			<br>
-  			<strong>앨범명</strong><br>
-  			가수명<br>
-  			앨범재생<br>
-  			앨범출시일 | 곡수 <br>
-  			</td>
-  			<td align="center"><img src="http://cdnimg.melon.co.kr/cm/album/images/027/07/131/2707131_500.jpg/melon/resize/130/quality/80/optimize" alt="앨범사진"></img></td>
-  			<td>
-  			<br>
-  			<strong>앨범명</strong><br>
-  			가수명<br>
-  			앨범재생<br>
-  			앨범출시일 | 곡수 <br></td>
   		</tr>
   	</c:forEach>
   	</table>
