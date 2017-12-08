@@ -17,7 +17,7 @@
 <div class="container">
   <h3>뮤직비디오</h3>
   <ul class="nav nav-tabs">
-    <li ><a href="main">상세정보</a></li>
+    <li ><a href="main?artist_no=792022">상세정보</a></li>
     <li><a href="artist_music">곡</a></li>
     <li><a href="artist_album">앨범</a></li>
     <li class="active"><a href="artist_video">뮤직비디오</a></li>
@@ -25,43 +25,20 @@
     
   </ul>	
 </div>
-
+	<br><br>
 	<div class="container">
-		<table align="center" class="table table-hover">
-		<tr>
-  			<td colspan="7"></td>
-  		</tr>
-		<tr>
-			<td colspan="4"></td>
-		</tr>
-		<c:forEach begin="0" end="2" step="1">
+		<table class="table table-hover">
 			<tr>
-				<td><img  height="180dp" width="300dp" src="http://cdnimg.melon.co.kr/cm/album/images/101/00/191/10100191_500.jpg/melon/resize/130/quality/80/optimize" onclick=""><br>
+		<c:forEach items="${arti_muVideo}" varStatus="status" var="i">
+				<td>
+					<iframe width="300dp" height="180dp" src="https://www.youtube.com/${i.video }" frameborder="0"></iframe><br>
 					<br>
-					<strong>뮤직비디오 타이틀</strong><br>
-					가수<br>
-					조회수 &nbsp; <img alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
+					<strong><a href="artist_music">${i.title }</a></strong> <img align="middle" alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="18px" height="18px" onclick=""><br>
+					<a href="main?artist_no=792022">${i.artist_name }</a><br>
+					<div style="padding-bottom: 10dp">좋아요 <img alt="좋아요" align="middle" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_black_48dp.png" width="15px" height="15px" onclick="">&nbsp; | 조회 &nbsp;</div>
 				</td>
-				<td><img height="180dp" width="300dp" src="http://cdnimg.melon.co.kr/cm/album/images/100/70/846/10070846_500.jpg/melon/resize/130/quality/80/optimize" onclick=""><br>
-					<br>
-					<strong>뮤직비디오 타이틀</strong><br>
-					가수<br>
-					조회수 &nbsp;<img alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
-				</td>
-				<td><img height="180dp" width="300dp" src="http://cdnimg.melon.co.kr/cm/album/images/027/07/131/2707131_500.jpg/melon/resize/130/quality/80/optimize" onclick=""><br>
-					<br>
-					<strong>뮤직비디오 타이틀</strong><br>
-					가수<br>
-					조회수 &nbsp; <img alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
-				</td>
-				<td><img height="180dp" width="300dp" src="http://cdnimg.melon.co.kr/cm/album/images/100/24/816/10024816_500.jpg/melon/resize/130/quality/80/optimize" onclick=""><br>
-					<br>
-					<strong>뮤직비디오 타이틀</strong><br>
-					가수<br>
-					조회수 &nbsp; <img alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick=""><br>
-				</td>
-			</tr>
 		</c:forEach>
+			</tr>
 		</table>	
 	</div>
 

@@ -17,35 +17,53 @@
 <div class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main">상세정보</a></li>
+    <li><a href="main?artist_no=792022">상세정보</a></li>
     <li><a href="artist_music">곡</a></li>
     <li><a href="artist_album">앨범</a></li>
     <li><a href="artist_video">뮤직비디오</a></li>
     <li class="active"><a href="artist_reply">가수에게 한마디</a></li>
   </ul>	
+  	<br>
   <form action="${pageContext.request.contextPath}/artist_comment_send" method="post" >
   <input type="hidden" name="artist_No" value="${artist_comment_send.artist_no}">
   <input type="hidden" name="member_id" value="${artist_comment_send.member_id}">
+  	<br>
   <table  class="table table-hover" align="center">
- 	 <tr>
-  			<td colspan="7"></td>
-  	</tr>
-  	
   	<tr>
-  		<td align="center"><img width="60dp" height="60dp" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_face_black_48dp.png" title="프로필사진"/></td>
-  		<td align="center"><textarea name="reply" rows="5" cols="100"></textarea></td>
-  		<td><input type="submit" onclick="location.href='${pageContext.request.contextPath}/artist_comment_send'" width="50dp" height="50dp" value="등록하기" class="btn btn-default" ></td>
+  		
+  		<td align="center">
+  			<br>
+  			<img width="70dp" height="70dp" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_face_black_48dp.png" title="프로필사진"/>
+  		</td>
+  		<td width="723" align="center">
+  			<br>
+  			<textarea name="reply" rows="5" cols="100"></textarea>
+  			<br>
+  		</td>
+  		<td align="center">
+  			<br><br>
+  			<input type="submit" onclick="location.href='${pageContext.request.contextPath}/artist_comment_send'" value="등록하기" class="btn btn-default" >
+  		</td>
   	</tr>
   	
   </table>
   </form>
   
   <table class="table table-hover" align="center">
-  	<c:forEach step="1" begin="0" end="5" var="i" >
+  <tr>
+ 	<a>총  100개<br></a>
+  	<td colspan="3">
+  		<br><br>
+  	</td>
+  	
+  </tr>
+  	<c:forEach varStatus="status" items="${arti_comment }" var="i" >
   		<tr >
-  			<td align="center"><img width="40dp" height="40dp" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_account_circle_black_48dp.png" title="프로필사진">${arti_comment.member_id }아이디</td>
-  			<td bordercolor=""><p>comment 내용</p></td>
-  			<td align="center"><img width="20dp" height="20dp" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_pan_tool_black_48dp.png" onclick="#"></td>
+  			<td style="padding-left: 40px"><img width="50dp" height="50dp" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_account_circle_black_48dp.png" title="프로필사진">${i.member_id }아이디</td>
+  			<td><p>${i.reply }</p>
+  				<br>${i.date }
+  			</td>
+  			<td><img width="20dp" height="20dp" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_pan_tool_black_48dp.png" onclick="#"></td>
   		</tr>
 	</c:forEach>
   </table>

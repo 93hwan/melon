@@ -9,7 +9,10 @@ public class Artist_dto {
 	private String img;
 	private String etc;
 	private String award_record;
+	private String arti_infotitle;
+	private String arti_infocontent;
 	private int no;
+	
 	
 	public Artist_dto() {
 		// TODO Auto-generated constructor stub
@@ -23,11 +26,27 @@ public class Artist_dto {
 		setEtc(request.getParameter("etc"));
 		setAward_record(request.getParameter("award_record"));
 		setNo(Integer.parseInt(request.getParameter("no")));
+		setArti_infotitle(request.getParameter("arti_infotitle"));
+		setArti_infocontent(request.getParameter("arti_infocontent"));
 		
 	}
 	
-	
-	
+	public String getArti_infotitle() {
+		return arti_infotitle.replace(",", "<br>");
+	}
+
+	public void setArti_infotitle(String arti_infotitle) {
+		this.arti_infotitle = arti_infotitle;
+	}
+
+	public String getArti_infocontent() {
+		return arti_infocontent.replace(",", "<br>");
+	}
+
+	public void setArti_infocontent(String arti_infocontent) {
+		this.arti_infocontent = arti_infocontent;
+	}
+
 	public String getArtist_no() {
 		return artist_no;
 	}
@@ -68,8 +87,10 @@ public class Artist_dto {
 	@Override
 	public String toString() {
 		return "Artist_dto [artist_no=" + artist_no + ", artist_name=" + artist_name + ", img=" + img + ", etc=" + etc
-				+ ", award_record=" + award_record + ", no=" + no + "]";
+				+ ", award_record=" + award_record + ", arti_infotitle=" + arti_infotitle + ", arti_infocontent="
+				+ arti_infocontent + ", no=" + no + "]";
 	}
+
 	
 	
 	

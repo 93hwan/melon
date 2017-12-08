@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,19 +13,25 @@
 <body>
 <div>
 <input type="hidden" name="arti_no" value="${arti_main_static.artist_no}" />
-		<br><h2 align="center">아티스트 채널</h2><br>
+		<br><br><br><br><br>
 		<div class="container">
-		<table align="center" class="table table-hover">	
+		<table align="center" class="table table-hover" >
+		<tr>
+		<td colspan="2"><h3>아티스트 채널</h3></td>
+		</tr>	
 			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="${arti_main_static.img}" title="가수이미지"/></td>
+				<td width="350px" rowspan="5" align="center"><br><img align="middle" src="${arti_main_static.img}" width="250px" height="250px" title="가수이미지"/></td>
 				<td><font style="font-weight: bold; font-size: xx-large;" >${arti_main_static.artist_name}</font><br></td>
 			</tr>
 			<tr>
-				<td>가수소개</td>
+				<td>
+				<div class="arti_info" style="float: left; padding-right: 30px" >${arti_main_static.arti_infotitle }<br></div>
+				${arti_main_static.arti_infocontent }<br><br>
+				</td>
 			</tr>		
 			<tr>
-				<td>수상경력<br>
-				
+				<td><h4>수상경력</h4>
+				${arti_main_static.award_record}
 				</td>
 			</tr>	
 		</table>
