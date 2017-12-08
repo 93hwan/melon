@@ -94,7 +94,7 @@
 					<button class="w3-bar-item  chart-btn" id="gold" onclick="openSong('overseas')">해외 Top</button>
 				</div>
 				
-<!-- 최신 -->
+<!-- 국내 -->
 				<div id="domestic" class="w3-container song">
 					<ul>
 					<c:forEach items="${chart_domestic}" var="list"  varStatus="status">
@@ -107,8 +107,9 @@
 					</c:forEach>
 					</ul>
 				</div>
-
-				<div id="overseas" class="w3-container song" style="display: none">
+				
+<!-- 해외 -->
+				<div id="overseas" class="w3-container song" >
 					<ul>
 						<c:forEach items="${chart_overseas}" var="list" varStatus="status">
 							<li class="${status.index+1}">
