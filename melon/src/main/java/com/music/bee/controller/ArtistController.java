@@ -10,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.music.bee.dao.AlbumDAO;
 import com.music.bee.dao.ArtistDAO;
+import com.music.bee.dao.MusicDAO;
 import com.music.bee.dto.Album_dto;
 import com.music.bee.dto.ArtistComment_dto;
 import com.music.bee.dto.Artist_dto;
@@ -37,7 +39,7 @@ public class ArtistController {
 		return "artist_main";
 	}
 	
-	@RequestMapping("/artist_music")
+	@RequestMapping(value="/artist_music",method = RequestMethod.GET)
 	public String artist_music(Model model,String artist_name){
 		
 		System.out.println("/artist_music Start");
@@ -56,7 +58,7 @@ public class ArtistController {
 			return "artist_music";
 	}
 	
-	@RequestMapping("/artist_album")
+	@RequestMapping(value="/artist_album" ,method = RequestMethod.GET)
 	public String artist_album(Model model, String artist_name){
 		
 		System.out.println("/artist_album Start");
@@ -70,7 +72,7 @@ public class ArtistController {
 		return "artist_album";
 	}
 	
-	@RequestMapping("/artist_video")
+	@RequestMapping(value="/artist_video",method = RequestMethod.GET)
 	public String artist_video(Model model, String artist_name){
 	
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
@@ -82,13 +84,13 @@ public class ArtistController {
 		return "artist_video";
 	}
 	
-	@RequestMapping("/artist_reply")
+	@RequestMapping(value="/artist_reply",method = RequestMethod.GET)
 	public String artist_reply(Model model, String arti_no){
 	
 		System.out.println("artist_reply 통과");
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
-		List<ArtistComment_dto> arti_comment = artiDAO.arti_Comment("792022");
+		List<Artist_dto> arti_main_static = artiDAO.artist_static(arti_no);
+		List<ArtistComment_dto> arti_comment = artiDAO.arti_Comment(arti_no);
 		
 		model.addAttribute("arti_main_static", arti_main_static.get(0));	
 		model.addAttribute("arti_comment",arti_comment);
@@ -97,12 +99,12 @@ public class ArtistController {
 	}
 	
 	
-	@RequestMapping("/artist_comment_send")
+	@RequestMapping(value="/artist_comment_send",method = RequestMethod.GET)
 	public String artist_reply_send(Model model, ArtistComment_dto arti_no){
 		System.out.println("artist_reply_send 통과");
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
 		arti_no.setMember_id("rosie");
-		List<Artist_dto> arti_main_static = artiDAO.artist_static("792022");
+		List<Artist_dto> arti_main_static = artiDAO.artist_static(arti_no.getArtist_no());
 		
 		model.addAttribute("arti_main_static", arti_main_static.get(0));
 		model.addAttribute("artist_comment_send",arti_no);
@@ -110,6 +112,5 @@ public class ArtistController {
 		System.out.println("artist_reply_send 페이지 못넘겼니");
 		return "artist_reply";
 	}
-	
 	
 }
