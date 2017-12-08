@@ -22,23 +22,22 @@
     <li><a href="artist_album">앨범</a></li>
     <li class="active"><a href="artist_video">뮤직비디오</a></li>
     <li><a href="artist_reply">가수에게 한마디</a></li>
-    
   </ul>	
+  <br><br>
 </div>
-	<br><br>
-	<div class="container">
+	<div  style="padding-bottom: 200px;" class="container">
 		<table class="table table-hover">
-			<tr>
 		<c:forEach items="${arti_muVideo}" varStatus="status" var="i">
+			<tr>
 				<td>
 					<iframe width="300dp" height="180dp" src="https://www.youtube.com/${i.video }" frameborder="0"></iframe><br>
 					<br>
 					<strong><a href="artist_music">${i.title }</a></strong> <img align="middle" alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="18px" height="18px" onclick=""><br>
 					<a href="main?artist_no=792022">${i.artist_name }</a><br>
-					<div style="padding-bottom: 10dp">좋아요 <img alt="좋아요" align="middle" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_black_48dp.png" width="15px" height="15px" onclick="">&nbsp; | 조회 &nbsp;</div>
+					<div style="padding-bottom: 10dp">좋아요 <img alt="좋아요" align="middle" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_black_48dp.png" width="15px" height="15px" onclick="">&nbsp; | 조회 164 회 &nbsp;</div>
 				</td>
-		</c:forEach>
 			</tr>
+		</c:forEach>
 		</table>	
 	</div>
 

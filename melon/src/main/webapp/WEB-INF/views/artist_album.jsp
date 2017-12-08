@@ -16,7 +16,7 @@
 <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp" %>
 <form action="#" method="post">
 	<input type="hidden" value="${arti_no }" name="artist_no">
-<div class="container">
+<div style="padding-bottom: 200px;" class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
     <li><a href="main?artist_no=792022">상세정보</a></li>
@@ -36,7 +36,6 @@
   			앨범재생<br>
   			${i.release} | 곡수 <br><br>
   			<button class="btn btn-default">앨범듣기</button>&nbsp;<button class="btn btn-default">앨범담기</button>
-  			<br><br><br><br>
   			</td>
   	</c:forEach>
   		</tr>

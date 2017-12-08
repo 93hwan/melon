@@ -15,7 +15,7 @@
 </head>
 <body>
 	    <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp"%>
-<div class="container">
+<div style="padding-bottom: 200px;" class="container">
   <h3>상세정보</h3>
   <ul class="nav nav-tabs">
     <li class="active"><a href="main">상세정보</a></li>

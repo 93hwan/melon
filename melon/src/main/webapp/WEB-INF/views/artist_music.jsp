@@ -13,7 +13,7 @@
 </head>
 <body>
   <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp"%>
-<div class="container">
+<div style="padding-bottom: 200px;" class="container">
   <h3>곡정보</h3>
   <ul class="nav nav-tabs">
     <li ><a href="main?artist_no=792022">상세정보</a></li>
@@ -60,7 +60,6 @@
   		</tr>
   		</c:forEach>
   	</table>
-  	<br><br><br><br><br>
 </div>
 </body>
 </html>

@@ -22,15 +22,15 @@ public class AlbumController {
 	SqlSession sqlSession ;
 	
 	@RequestMapping(value="/album_main")
-	public String album_main(Model model,String albumNo,String albumName){
+	public String album_main(Model model,String albumNo){
 
 		System.out.println("헬로 album");
 		AlbumDAO albumDAO = sqlSession.getMapper(AlbumDAO.class);
-		List<Album_dto> album_main = albumDAO.album_main(albumNo);
-		List<Music_dto> album_music = albumDAO.album_musicList(albumName);
+		List<Album_dto> album_main = albumDAO.album_main("10100191");
+		List<Music_dto> album_music = albumDAO.album_musicList("Red Diary Page.1");
 		
 		model.addAttribute("album_main",album_main.get(0));
-		model.addAttribute("album_musicList",album_music.get(0));
+		model.addAttribute("album_musicList",album_music);
 		System.out.println("바이 album");
 		
 		return "album_main";
