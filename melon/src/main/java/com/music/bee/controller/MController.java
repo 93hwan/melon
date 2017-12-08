@@ -28,10 +28,10 @@ public class MController   {
 //				String chartUrl = "http://www.melon.com/chart/month/index.htm#params%5Bidx%5D=1&params%5BrankMonth%5D=201710&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
 //				String chartUrl = "http://www.melon.com/genre/song_list.htm";
 //				String chartUrl = "http://www.melon.com/artist/song.htm?artistId=792022";
-				/** 국내 최신*/
-				String chartUrl ="http://www.melon.com/new/index.htm#params%5BareaFlg%5D=I&params%5BorderBy%5D=&po=pageObj&startIndex=1";
-				/** 해외 최신*/
-//					String chartUrl ="http://www.melon.com/new/index.htm#params%5BareaFlg%5D=O&params%5BorderBy%5D=&po=pageObj&startIndex=1";
+				/** 국내 종합*/
+				String chartUrl ="http://www.melon.com/chart/day/index.htm?classCd=DM0000";
+				/** 해외 종합*/
+//					String chartUrl ="http://www.melon.com/chart/day/index.htm?classCd=AB0000";
 //				String chartUrl = "http://www.melon.com/chart/style/index.htm#params%5Bidx%5D=1&params%5BstartDay%5D=20171127&params%5BendDay%5D=20171203&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
 //				String chartUrl = "http://www.melon.com/chart/day/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/index.htm#params%5Bidx%5D=51";
