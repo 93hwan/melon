@@ -27,12 +27,12 @@ public class MController   {
 				
 //				String chartUrl = "http://www.melon.com/chart/month/index.htm#params%5Bidx%5D=1&params%5BrankMonth%5D=201710&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
 //				String chartUrl = "http://www.melon.com/genre/song_list.htm";
-//				국내
-//				String chartUrl = "http://www.melon.com/chart/index.htm";
 //				String chartUrl = "http://www.melon.com/artist/song.htm?artistId=792022";
-//				↓ 팝송 
-//					String chartUrl = "http://www.melon.com/chart/day/index.htm?classCd=AB0000";
-				String chartUrl = "http://www.melon.com/chart/style/index.htm#params%5Bidx%5D=1&params%5BstartDay%5D=20171127&params%5BendDay%5D=20171203&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
+				/** 국내 종합*/
+				String chartUrl ="http://www.melon.com/chart/day/index.htm?classCd=DM0000";
+				/** 해외 종합*/
+//					String chartUrl ="http://www.melon.com/chart/day/index.htm?classCd=AB0000";
+//				String chartUrl = "http://www.melon.com/chart/style/index.htm#params%5Bidx%5D=1&params%5BstartDay%5D=20171127&params%5BendDay%5D=20171203&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
 //				String chartUrl = "http://www.melon.com/chart/day/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/index.htm#params%5Bidx%5D=51";
 //				String chartUrl = "http://www.melon.com/genre/song_list.htm?gnrCode=GN0200";
@@ -232,6 +232,8 @@ public class MController   {
 //		팝송	
 //						dao.pop_album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
 //						System.out.println("album db저장 완료");
+//						dao.artist(artist_No, artist_get, artist_img, "", Award_record,str_get,str_get02);  //가수소개 부분 공백처리 -에러너무많이남
+//						System.out.println("artist db저장 완료");
 //						dao.pop(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
 							}
 						}
