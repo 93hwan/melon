@@ -38,15 +38,15 @@
   			<td align="center">좋아요</td>	<!--  이후에 추가 할지 안할지 결정해야 -->
   			
   		</tr>
-  		<c:forEach var="i" begin="1" end="5" step="1">
+  		<c:forEach items="${arti_comment }" varStatus="status" var="i">
   			<tr>	
   				<td align="center"><input type="checkbox" value=""></td>
-  				<td width="30px">&nbsp;${i}</td>
+  				<td width="30px">&nbsp;${status.index+1}</td>
   				<td>	
   					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="">
   				</td>	
-  				<td><a href="artist_music">${album_musicList.title}</a><br>
-  					<a href="artist_main">${arti_musicList.artist_name}</a></td>
+  				<td><a href="artist_music">${i.title}</a><br>
+  					<a href="artist_main">${i.artist_name}</a></td>
   				<td> 
   					<img alt="재생" title="재생" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
   				</td>
