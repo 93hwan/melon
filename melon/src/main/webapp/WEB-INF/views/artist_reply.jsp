@@ -51,7 +51,7 @@
   
   <table class="table table-hover" align="center">
   <tr>
- 	<a>총  100개<br></a>
+ 	총<a> 100</a>개<br>"src/main/java/com/music/bee/controller/MemberController.java"
   	<td colspan="3">
   		<br><br>
   	</td>
@@ -61,7 +61,7 @@
   		<tr >
   			<td style="padding-left: 40px"><img width="50dp" height="50dp" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_account_circle_black_48dp.png" title="프로필사진">${i.member_id }아이디</td>
   			<td><p>${i.reply }</p>
-  				<br>${i.date }
+  				<br>${i.reg }
   			</td>
   			<td><img width="20dp" height="20dp" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_pan_tool_black_48dp.png" onclick="#"></td>
   		</tr>
