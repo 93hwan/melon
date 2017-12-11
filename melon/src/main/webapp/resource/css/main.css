@@ -29,7 +29,7 @@
 
 .content2 .album {
 	float: left;
-	width:  60%;
+	width: 60%;
 	height: 100%;
 }
 
@@ -52,66 +52,95 @@
 }
 
 .album_contents ul li {
-    float: left;
-    border: 1px solid black;
-    list-style: none;
-    height: 197px;
-    width: 188px;
-    margin-bottom: 10px;
-    margin-right: 15px;
+	float: left;
+	border: 1px solid black;
+	list-style: none;
+	height: 197px;
+	width: 188px;
+	margin-bottom: 10px;
+	margin-right: 15px;
 }
 
 .album_contents .album_artist_name {
 	padding-top: 5px;
-    position: absolute;
-    height: 30px;
-    width: 186px;
-    text-align: center;
-    font-size: 15px;
-    color: white;
-    background-color: rgba(51, 51, 51, 0.7);
-    margin-top: -25px;
+	position: absolute;
+	height: 30px;
+	width: 186px;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+	background-color: rgba(51, 51, 51, 0.7);
+	margin-top: -25px;
 }
-.album_contents .album_move{
+
+.album_contents .album_move {
 	display: none;
 }
 
-.album_contents > ul > li:hover .album_artist_name{
-	display:none;
+.album_contents>ul>li:hover .album_artist_name {
+	display: none;
 }
-.album_contents > ul > li:hover .album_move{
+
+.album_contents>ul>li:hover .album_move {
 	display: block;
 }
-.album_move >a{
+
+.album_move>a {
 	background-color: rgba(51, 51, 51, 0.7);
-    position: absolute;
-    height: 195px;
-    width: 186px;
-    margin-top: -190px;
-    font-size: 15px;
-    text-align: center;
-    color: white;
-    padding-top: 75px;
+	position: absolute;
+	height: 195px;
+	width: 186px;
+	margin-top: -190px;
+	font-size: 15px;
+	text-align: center;
+	color: white;
+	padding-top: 75px;
 }
+
 .content2 .chart {
 	float: right;
 	width: 40%;
 	height: 100%;
 }
+
 .content2 .chart ul {
+	margin: 0px;
 	padding: 0px;
 	list-style: none;
 }
-.content2 .chart #chart_contents{
-	display: inline-block;
+
+.chart ul li {
+	border-bottom:1px solid #333333;
+	height: 34px;
+	width: 507.313px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
-.chart-btn{
+.chart   .chart_listover{
+	border-bottom:1px solid #333333;
+    height: 72.200px !important;
+    width: 507.313px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.chart .chart_middle{
+	display: inline-block;
+	width: 60%;
+}
+#chart_contents {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.chart-btn {
 	color: white;
 	background: #333333;
 }
-.song{
-	  border-top: 0px !important;
+
+.song {
+	border-top: 0px !important;
 	border: 2px solid #333333;
+	height: 380px;
 }
 
 .main .content3 {
@@ -119,6 +148,11 @@
 	height: 600px;
 	border: 2px solid yellow;
 }
-.chart  p{
-font-size: 14px;	
+
+.chart  p {
+	font-size: 14px;
+}
+.gold{
+    color: white !important;
+    background-color: #ffc300 !important;
 }
