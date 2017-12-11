@@ -11,20 +11,23 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div>
+<div style="padding-top: 100px;">
 <input type="hidden" name="arti_no" value="${arti_main_static.artist_no}" />
-		<br><h2 align="center">아티스트 채널</h2><br>
+		<h2 style=" position:relative; margin-left: 370px; font-weight: bold;">아티스트 채널</h2>
 		<div class="container">
-		<table align="center" class="table table-hover">	
+		<table align="center" class="table table-hover" >
 			<tr>
-				<td width="300px" rowspan="5" align="center"><img align="middle" src="${arti_main_static.img}" title="가수이미지"/></td>
-				<td><font style="font-weight: bold; font-size: xx-large;" >${arti_main_static.artist_name}</font><br></td>
+				<td rowspan="5" align="center"><br><img align="middle" src="${arti_main_static.img}" width="350px" height="350px" title="가수이미지"/></td>
+				<td><a href="${pageContext.request.contextPath}/artist/main?artist_no=792022"><font style="font-weight: bold; font-size: xx-large;" >${arti_main_static.artist_name}</font></a><br></td>
 			</tr>
 			<tr>
-				<td>가수소개</td>
+				<td>
+				<div class="arti_info" style="float: left; padding-right: 30px" >${arti_main_static.arti_infotitle }<br></div>
+				${arti_main_static.arti_infocontent }<br><br>
+				</td>
 			</tr>		
 			<tr>
-				<td>수상경력<br>
+				<td><h4>수상경력</h4>
 				${arti_main_static.award_record}
 				</td>
 			</tr>	

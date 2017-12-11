@@ -43,46 +43,15 @@
 				<a href="#" id="contents_title" >최신 앨범</a>
 				<div class="album_contents">
 					<ul>
-						<li><a href="#"><img
-								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
+						<c:forEach items="${album_lateast }" var="list">
+							<li>
+							<img
+								src="${list.img }"
 								width="185px" height="195px">
-								<center>그린데이</center>
-						</a></li>
-						<li><a href="#"><img
-								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="185px" height="195px">
-								<center>그린데이</center>
-						</a></li>
-						<li><a href="#"><img
-								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="185px" height="195px">
-								<center>그린데이</center>
-						</a></li>
-						<li><a href="#"><img
-								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="185px" height="195px">
-								<center>그린데이</center>
-						</a></li>
-						<li><a href="#"><img
-								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="185px" height="195px">
-								<center>그린데이</center>
-						</a></li>
-						<li><a href="#"><img
-								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="185px" height="195px">
-								<center>그린데이</center>
-						</a></li>
-						<li><a href="#"><img
-								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="185px" height="195px">
-								<center>그린데이</center>
-						</a></li>
-						<li><a href="#"><img
-								src="http://cdnimg.melon.co.kr/cm/album/images/101/12/164/10112164_500.jpg?91950f466db7e4d388bbbe8e5414557e/melon/quality/80/optimize"
-								width="185px" height="195px">
-								<center>그린데이</center>
-						</a></li>
+							<div class="album_artist_name">${list.artist_name }</div>
+							<div class="album_move"><a href="">${list.album_title }<br>${list.artist_name }</a></div>	
+						</li>
+						</c:forEach>
 					</ul>
 				</div>
 			</div>
@@ -94,7 +63,7 @@
 					<button class="w3-bar-item  chart-btn" id="gold" onclick="openSong('overseas')">해외 Top</button>
 				</div>
 				
-<!-- 최신 -->
+<!-- 국내 -->
 				<div id="domestic" class="w3-container song">
 					<ul>
 					<c:forEach items="${chart_domestic}" var="list"  varStatus="status">
@@ -107,8 +76,9 @@
 					</c:forEach>
 					</ul>
 				</div>
-
-				<div id="overseas" class="w3-container song" style="display: none">
+				
+<!-- 해외 -->
+				<div id="overseas" class="w3-container song"  style="display: none">
 					<ul>
 						<c:forEach items="${chart_overseas}" var="list" varStatus="status">
 							<li class="${status.index+1}">
@@ -142,9 +112,6 @@
 		</div>
 
 	</div>
-
-
-
 
 </body>
 </html>

@@ -55,17 +55,44 @@
     float: left;
     border: 1px solid black;
     list-style: none;
-    height: 224px;
+    height: 197px;
     width: 188px;
     margin-bottom: 10px;
     margin-right: 15px;
 }
 
-.album_contents a {
-	text-decoration: none;
-	font-size: 15px;
+.album_contents .album_artist_name {
+	padding-top: 5px;
+    position: absolute;
+    height: 30px;
+    width: 186px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    background-color: rgba(51, 51, 51, 0.7);
+    margin-top: -25px;
+}
+.album_contents .album_move{
+	display: none;
 }
 
+.album_contents > ul > li:hover .album_artist_name{
+	display:none;
+}
+.album_contents > ul > li:hover .album_move{
+	display: block;
+}
+.album_move >a{
+	background-color: rgba(51, 51, 51, 0.7);
+    position: absolute;
+    height: 195px;
+    width: 186px;
+    margin-top: -190px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    padding-top: 75px;
+}
 .content2 .chart {
 	float: right;
 	width: 40%;
