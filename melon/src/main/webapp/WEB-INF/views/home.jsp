@@ -59,19 +59,28 @@
 				<a href="#" id="contents_title">차트</a>
 
 				<div class="w3-bar chart-btn">
-					<button class="w3-bar-item chart-btn"  id="gold" onclick="openSong('domestic')">국내 Top</button>
-					<button class="w3-bar-item  chart-btn" id="gold" onclick="openSong('overseas')">해외 Top</button>
+					<button class="w3-bar-item chart-btn country_top"  value="domestic" id="gold">국내 Top</button>
+					<button class="w3-bar-item  chart-btn country_top"  value="overseas" id="gold">해외 Top</button>
 				</div>
 				
 <!-- 국내 -->
 				<div id="domestic" class="w3-container song">
 					<ul>
 					<c:forEach items="${chart_domestic}" var="list"  varStatus="status">
-						<li class="${status.index+1}">
-							<div id="chart_contents">${status.index+1} </div>
-							<img src="${list.img}" height="50px" width="50px" >
-							<div id="chart_contents" class="title">${list.title}</div>
-							<div id="chart_contents" class="artist">${list.artist_name}</div>
+						<li class="chart_list">
+							<div id="chart_contents" style="width: 5%">${status.index+1} </div>
+							<div class="chart_middle" >
+								<div  id="chart_contents"  class="chart_img" style="display:none">
+									<a href="#"><img src="${list.img}" height="50px" width="50px" ></a>
+								</div>
+								<div id="chart_contents" >${list.title}</div>
+							</div>
+							<div id="chart_contents" style="width: 30%">
+							<c:if test="${list.artist_name}">
+							
+							</c:if>${list.artist_name}
+							
+							</div>
 						</li>
 					</c:forEach>
 					</ul>
@@ -80,14 +89,23 @@
 <!-- 해외 -->
 				<div id="overseas" class="w3-container song"  style="display: none">
 					<ul>
-						<c:forEach items="${chart_overseas}" var="list" varStatus="status">
-							<li class="${status.index+1}">
-								<div id="chart_contents">${status.index+1}</div> <img
-								src="${list.img}" height="50px" width="50px">
-								<div id="chart_contents" class="title">${list.title}</div>
-								<div id="chart_contents" class="artist">${list.artist_name}</div>
-							</li>
-						</c:forEach>
+					<c:forEach items="${chart_overseas}" var="list"  varStatus="status">
+						<li class="chart_list">
+							<div id="chart_contents" style="width: 5%">${status.index+1} </div>
+							<div class="chart_middle" >
+								<div  id="chart_contents"  class="chart_img" style="display:none">
+									<a href="#"><img src="${list.img}" height="50px" width="50px" ></a>
+								</div>
+								<div id="chart_contents" >${list.title}</div>
+							</div>
+							<div id="chart_contents" style="width: 30%">
+							<c:if test="${list.artist_name}">
+							
+							</c:if>${list.artist_name}
+							
+							</div>
+						</li>
+					</c:forEach>
 					</ul>
 				</div>
 
@@ -116,13 +134,39 @@
 </body>
 </html>
 <script>
-	function openSong(name) {
-    var i;
-    var x = document.getElementsByClassName("song");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    document.getElementById(name).style.display = "block";  
-}
+	<%-- 차트 이벤트 --%>
+	 $(document).ready(function(){
+		 
+		 		$(".chart_list").parent().children().first().addClass("chart_listover").find(".chart_img").css("display","inline-block");
+		 		console.log("ㅎㅇ");
+		 		console.log($("chart_list").parent());
+		 		
+			<%--마우스 올릴때--%>
+		 	 	$(".chart_list").on("mouseover",function(){
+		 	 		$(".chart_list").removeClass("chart_listover").find(".chart_img").css("display","none");
+		 	 		$(this).addClass("chart_listover").find(".chart_img").css("display","inline-block");
+		 	 		console.log("안녕하세여!");
+		 	 	});
+		 	 	
+		 	 <%-- 제일 첫 차트 사진고정 --%>
+		 	 	$(".country_top").on("click",function(){
+		 	 		console.log("버튼 눌림???");
+		 	 		$(".country_top").removeClass("gold");
+		 	 		$(this).addClass("gold");
+		 	 		if($(this).val() =="overseas"){
+ 		 	 			$("#domestic").css("display","none");
+		 	 			$("#overseas").css("display","block");
+		 	 		 	$("#overseas").find(".chart_list").parent().children().first().addClass("chart_listover").find(".chart_img").css("display","inline-block");
+		 	 		 	$("#domestic").find(".chart_list").parent().children().first().removeClass("chart_listover").find(".chart_img").css("display","none");
+		 	 		}else{
+ 		 	 			 $("#overseas").css("display","none");
+ 		 	 			 $("#domestic").css("display","block");
+ 		 	 	 		 $("#domestic").find(".chart_list").parent().children().first().addClass("chart_listover").find(".chart_img").css("display","inline-block");
+ 			 	 		 $("#overseas").find(".chart_list").parent().children().first().removeClass("chart_listover").find(".chart_img").css("display","none");
+ 			 	 		
+		 	 		}
+		 	 	});
+
+	 });
 </script>
 <%@ include file="/WEB-INF/views/template/footer.jsp"%>

@@ -88,12 +88,22 @@ public class Music_dto {
 
 
 	public String getTitle() {
-		return title.replace("곡명 ", "");
+		String a = title.replace("곡명 ", "");
+		if(a.length()>15) {
+			String title = a.substring(0,15)+"...";
+			return title;
+		}
+		return a;
 	}
 
 
 	public String getArtist_name() {
-		return artist_name;
+		String name = artist_name;
+		if(name.length() > 10){
+			String artist = name.substring(0,10)+"..."; 
+			return artist;
+		}
+		return name;
 	}
 
 
@@ -127,13 +137,11 @@ public class Music_dto {
 	}
 	
 	public String getImg() {
-		System.out.println("getimgg");
 		return img;
 	}
 
 
 	public void setImg(String img) {
-		System.out.println("셋img");
 		this.img = img;
 	}
 

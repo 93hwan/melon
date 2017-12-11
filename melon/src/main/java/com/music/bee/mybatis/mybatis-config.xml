@@ -14,7 +14,7 @@
  		<setting name="defaultExecutorType" value="REUSE"/>
  	
  		<!-- 데이터베이스 응답대기 만료시간 설정(10초) -->
- 		<setting name="defaultStatementTimeout" value="10000"/>
+ 		<!-- <setting name="defaultStatementTimeout" value="10000"/> -->
  	
  	</settings>
  	
