@@ -59,4 +59,14 @@ public class MemberController {
 		boolean result = memberDAO.check(member_id)==0;
 		return String.valueOf(result);
 	}
+	
+	@RequestMapping("/mypage")
+	String mypage(UsernamePasswordAuthenticationToken token) {
+		return "mypage";
+	}
+	
+	@RequestMapping("/edit")
+	String edit(UsernamePasswordAuthenticationToken token, Member_dto member_dto, String new_password) {
+		return "mypage";
+	}
 }
