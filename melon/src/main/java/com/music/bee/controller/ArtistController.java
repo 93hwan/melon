@@ -4,6 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -23,11 +24,11 @@ public class ArtistController {
 	private SqlSession sqlSession;
 
 	@RequestMapping(value="/main", method = RequestMethod.GET)
-	public String artist_main(Model model,String artist_no){
-		System.out.println("내용물 = "+artist_no.toString());
+	public String artist_main(Model model,String artist_name){
+		System.out.println("내용물 = "+artist_name.toString());
 		
 //		ArtistDAO artiDAO ;
-		model.addAttribute("arti_main_static", sqlSession.getMapper(ArtistDAO.class).artist_static(artist_no).get(0));		//artiDTO 대신에 artiDAO.artist_static~~ 넣어도되는건가ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
+		model.addAttribute("arti_main_static", sqlSession.getMapper(ArtistDAO.class).artist_static(artist_name).get(0));	
 		
 		return "artist_main";
 	}

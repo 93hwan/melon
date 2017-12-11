@@ -29,10 +29,10 @@
   <table  class="table table-hover" align="center">
   		<tr>
   	<c:forEach items="${arti_album}" varStatus="status" var="i">
-  			<td align="center"><br><img src="${i.img}" alt="앨범사진" width="170px" height="170px"></img></td>
+  			<td align="center"><br><img src="${i.img}" onclick="location.href='${pageContext.request.contextPath}/album/album_main'" alt="앨범사진" width="170px" height="170px"></img></td>
   			<td> <br>
-  			<strong>${i.album_title}</strong><br><br>
-  			${i.artist_name}<br>
+  			<strong><a href="${pageContext.request.contextPath}/album/album_main" >${i.album_title}</a></strong><br><br>
+  			<a href="main?artist_no=${arti_main_static.artist_no }">${i.artist_name}</a><br>
   			앨범재생<br>
   			${i.release} | 곡수 <br><br>
   			<button class="btn btn-default">앨범듣기</button>&nbsp;<button class="btn btn-default">앨범담기</button>
