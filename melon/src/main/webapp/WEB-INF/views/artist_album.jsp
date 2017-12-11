@@ -19,26 +19,26 @@
 <div style="padding-bottom: 200px;" class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main?artist_no=${arti_main_static.artist_no }">상세정보</a></li>
-    <li><a href="artist_music?artist_no=${arti_main_static.artist_no }">곡</a></li>
-    <li class="active"><a href="artist_album?artist_no=${arti_main_static.artist_no }">앨범</a></li>
-    <li><a href="artist_video?artist_no=${arti_main_static.artist_no }">뮤직비디오</a></li>
-    <li><a href="artist_reply?artist_no=${arti_main_static.artist_no }">가수에게 한마디</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/main/${arti_main_static.artist_no }">상세정보</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/artist_music/${arti_main_static.artist_no }">곡</a></li>
+    <li class="active"><a href="${pageContext.request.contextPath}/artist/artist_album/${arti_main_static.artist_no }">앨범</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/artist_video/${arti_main_static.artist_no }">뮤직비디오</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/artist_reply/${arti_main_static.artist_no }">가수에게 한마디</a></li>
   </ul>	
 	<br><br>  	
   <table  class="table table-hover" align="center">
-  		<tr>
   	<c:forEach items="${arti_album}" varStatus="status" var="i">
-  			<td align="center"><br><img src="${i.img}" onclick="location.href='${pageContext.request.contextPath}/album/album_main'" alt="앨범사진" width="170px" height="170px"></img></td>
+  		<tr>
+  			<td align="center"><br><img src="${i.img}" onclick="location.href='${pageContext.request.contextPath}/album/album_main/${i.album_no}'" alt="앨범사진" width="170px" height="170px"></img></td>
   			<td> <br>
-  			<strong><a href="${pageContext.request.contextPath}/album/album_main" >${i.album_title}</a></strong><br><br>
-  			<a href="main?artist_no=${arti_main_static.artist_no }">${i.artist_name}</a><br>
+  			<strong><a href="${pageContext.request.contextPath}/album/album_main/${i.album_no}" >${i.album_title}</a></strong><br><br>
+  			<a href="main/${arti_main_static.artist_no }">${i.artist_name}</a><br>
   			앨범재생<br>
   			${i.release} | 곡수 <br><br>
   			<button class="btn btn-default">앨범듣기</button>&nbsp;<button class="btn btn-default">앨범담기</button>
   			</td>
-  	</c:forEach>
   		</tr>
+  	</c:forEach>
   	</table>
 	</div>
 	</form>

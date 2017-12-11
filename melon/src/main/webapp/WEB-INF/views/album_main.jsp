@@ -13,7 +13,7 @@
 <body>
 
 <%@ include file="/WEB-INF/views/template/album_staticPage.jsp" %>
-<div class="container">
+<div class="container" style="padding-bottom: 100px; ">
  <table  class="table table-hover" align="center">
   	<tr>
   		<td colspan="9"></td>
@@ -29,7 +29,7 @@
   		&nbsp;&nbsp;&nbsp;
 		</td>
   	</tr>
-  		<tr >	
+  		<tr>	
   			<td align="center"><input type="checkbox"></td>
   			<td>NO</td>
   			<td></td>
@@ -46,10 +46,10 @@
   				<td align="center"><input type="checkbox" value=""></td>
   				<td width="30px">&nbsp;${status.index+1}</td>
   				<td>	
-  					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="location.href='${pageContext.request.contextPath}/album/music_info?music_no=${i.music_no}'">
+  					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="location.href='${pageContext.request.contextPath}/album/music_info/${i.music_no}'">
   				</td>	
-  				<td><a href="${pageContext.request.contextPath}/album/music_info?music_no=${i.music_no}">${i.title}</a></td>
-  				<td><a href="${pageContext.request.contextPath}/artist/main?artist_no=792022">${i.artist_name}</a></td>
+  				<td><a href="${pageContext.request.contextPath}/album/music_info/${i.music_no}">${i.title}</a></td>
+  				<td><a href="${pageContext.request.contextPath}/artist/main/${i.artist_no}">${i.artist_name}</a></td>
   				<td> 
   					<img alt="재생" title="재생" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
   				</td>

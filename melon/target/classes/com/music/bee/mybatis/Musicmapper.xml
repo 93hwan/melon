@@ -17,5 +17,8 @@
 <select id="music_info" resultType="com.music.bee.dto.Music_dto">
 	SELECT * FROM M_MUSIC WHERE MUSIC_NO = #{MUSIC_NO}
 </select>
+<select id="music_album" resultType="com.music.bee.dto.Album_dto">
+	SELECT * FROM M_ALBUM WHERE music_no = #{music_no}
+</select>
 	
 </mapper>

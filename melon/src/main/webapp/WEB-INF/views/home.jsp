@@ -116,13 +116,12 @@
 			<center>
 				<h1>최신 뮤직비디오</h1>
 			</center>
-			<form action="${pageContext.request.contextPath}/artist/main">
-				<input type="hidden" name="artist_name" value="볼빨간사춘기">
+			<a href="${pageContext.request.contextPath}/artist/main/792022">ARTIST MAIN</a>
+			<form action="${pageContext.request.contextPath}/artist/main/792022">
 				<input type="submit" value="ARTIST">
 			</form><br>
 			
-			<form action="${pageContext.request.contextPath}/album/album_main">
-				<input type="hidden" name="album_no" value="10100191">
+			<form action="${pageContext.request.contextPath}/album/album_main/10100191">
 				<input type="submit" value="ALBUM">
 			</form><br>
 			
