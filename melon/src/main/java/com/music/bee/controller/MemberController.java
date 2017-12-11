@@ -71,8 +71,16 @@ public class MemberController {
 		return "mypage";
 	}
 	
+	@ResponseBody
 	@RequestMapping("/edit")
 	String edit(UsernamePasswordAuthenticationToken token, Member_dto member_dto, String new_password) {
-		return "mypage";
+			memberDAO = sqlSession.getMapper(MemberDAO.class);
+			String origin = memberDAO.getPassword(token.getName());
+			logger.debug("edit로 들어옴");
+			boolean result = encoder.matches(member_dto.getPassword(), origin);
+			if(result) {
+				memberDAO.pwChange(encoder.encode(new_password), token.getName());
+			}
+		return String.valueOf(result);
 	}
 }

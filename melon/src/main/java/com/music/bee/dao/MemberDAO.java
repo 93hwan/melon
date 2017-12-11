@@ -8,4 +8,6 @@ public interface MemberDAO {
 	public void join(Member_dto member_dto);
 	public int check(String member_id);
 	public List<Member_dto> info(String member_id);
+	public String getPassword(String member_id);
+	public void pwChange(String new_password, String member_id);
 }

@@ -13,4 +13,10 @@
 <select id="info" resultType="com.music.bee.dto.Member_dto">
 	select * from m_member where member_id = #{member_id}
 </select>
+<select id="getPassword" resultType="java.lang.String">
+	select password from m_member where member_id = #{member_id}
+</select>
+<update id="pwChange">
+	update m_member set password = #{param1} where member_id = #{param2}
+</update>
 </mapper>
