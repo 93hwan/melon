@@ -29,11 +29,11 @@ public class MController   {
 //				String chartUrl = "http://www.melon.com/genre/song_list.htm";
 //				String chartUrl = "http://www.melon.com/artist/song.htm?artistId=792022";
 				/** 국내 종합*/
-				String chartUrl ="http://www.melon.com/chart/day/index.htm?classCd=DM0000";
+//				String chartUrl ="http://www.melon.com/chart/day/index.htm?classCd=DM0000";
 				/** 해외 종합*/
 //					String chartUrl ="http://www.melon.com/chart/day/index.htm?classCd=AB0000";
 //				String chartUrl = "http://www.melon.com/chart/style/index.htm#params%5Bidx%5D=1&params%5BstartDay%5D=20171127&params%5BendDay%5D=20171203&params%5BisFirstDate%5D=false&params%5BisLastDate%5D=true";
-//				String chartUrl = "http://www.melon.com/chart/day/index.htm";
+				String chartUrl = "http://www.melon.com/chart/day/index.htm";
 //				String chartUrl = "http://www.melon.com/chart/index.htm#params%5Bidx%5D=51";
 //				String chartUrl = "http://www.melon.com/genre/song_list.htm?gnrCode=GN0200";
 //				String chartUrl = "http://www.melon.com/search/song/index.htm?q=%EC%82%AC%EB%9E%91&section=song&searchGnbYn=Y&kkoSpl=Y&kkoDpType=&ipath=srch_form";
@@ -53,6 +53,7 @@ public class MController   {
 				Elements artist = doc1.select("span.checkEllipsis");
 				Elements artistNo = doc1.select(".checkEllipsis:has(a[href])");
 				Elements albumImg = doc1.select("img[src$= optimize]");
+				Elements etc = doc1.select("#d_artist_intro");
 
 				String artist_get,title_get, albumName_get, album_Img,artist_No,SongNum_get;
 				
@@ -220,21 +221,22 @@ public class MController   {
 							System.out.println("방탄소년단 크리스탈 스노우");
 						}	else if(SongNum_get.equals("30395919")){
 							System.out.println("DJ Khaled 저장안함");
-						
-						} 	else{
+						}	else if(SongNum_get.equals("30769470")){
+							System.out.println("크리스마스데이 저장안함");
+						} else{
 						
 //		국내
-						dao.album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
+						dao.album(trimed_albumNum, al,artist_get, album_albumImgVar, rel,artist_No,SongNum_get);
 						System.out.println("album db저장 완료");
-						dao.artist(artist_No, artist_get, artist_img, "", Award_record,str_get,str_get02);  //가수소개 부분 공백처리 -에러너무많이남
+						dao.artist(artist_No, artist_get, artist_img, etc.text(), Award_record,str_get,str_get02,trimed_albumNum,SongNum_get);  //가수소개 부분 공백처리 -에러너무많이남
 						System.out.println("artist db저장 완료");
-						dao.music(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
+						dao.music(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel,trimed_albumNum,artist_No);
 //		팝송	
-//						dao.pop_album(trimed_albumNum, al,artist_get, album_albumImgVar, rel);
+//						dao.pop_album(trimed_albumNum, al,artist_get, album_albumImgVar, rel,artist_No,SongNum_get);
 //						System.out.println("album db저장 완료");
 //						dao.artist(artist_No, artist_get, artist_img, "", Award_record,str_get,str_get02);  //가수소개 부분 공백처리 -에러너무많이남
 //						System.out.println("artist db저장 완료");
-//						dao.pop(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel);
+//						dao.pop(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel,trimed_albumNum,artist_No);
 							}
 						}
 //				sqlSession.close();

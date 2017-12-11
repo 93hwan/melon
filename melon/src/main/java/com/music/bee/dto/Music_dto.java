@@ -15,6 +15,8 @@ public class Music_dto {
 	private int play_count;
 	private int no;
 	private String img;
+	private String album_no;
+	private String artist_no;
 	
 
 
@@ -34,6 +36,8 @@ public class Music_dto {
 		setReg(request.getParameter("reg"));
 		setPlay_count(Integer.parseInt(request.getParameter("play_count")));
 		setNo(Integer.parseInt(request.getParameter("no")));
+		setAlbum_no(request.getParameter("album_no"));
+		setMusic_no(request.getParameter("music_no"));
 	}
 
 	public void setMusic_no(String music_no) {
@@ -135,6 +139,26 @@ public class Music_dto {
 	public void setImg(String img) {
 		System.out.println("셋img");
 		this.img = img;
+	}
+
+
+	public String getAlbum_no() {
+		return album_no;
+	}
+
+
+	public void setAlbum_no(String album_no) {
+		this.album_no = album_no;
+	}
+
+
+	public String getArtist_no() {
+		return artist_no;
+	}
+
+
+	public void setArtist_no(String artist_no) {
+		this.artist_no = artist_no;
 	}
 
 	

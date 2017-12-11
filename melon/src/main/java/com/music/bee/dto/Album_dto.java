@@ -10,11 +10,10 @@ public class Album_dto {
 	private String img;
 	private String release;
 	private int NO ;
+	private String artist_no;
+	private String music_no; 
 	
 	
-	public Album_dto() {
-		super();
-	}
 	
 	public Album_dto(HttpServletRequest request) {
 		setAlbum_no(request.getParameter("album_no"));
@@ -23,6 +22,8 @@ public class Album_dto {
 		setImg(request.getParameter("img"));
 		setRelease(request.getParameter("release"));
 		setNO(Integer.parseInt(request.getParameter("NO")));
+		setArtist_no(request.getParameter("artist_no"));
+		setMusic_no(request.getParameter("music_no"));
 	}
 	
 	public String getAlbum_no() {
@@ -62,11 +63,33 @@ public class Album_dto {
 		NO = nO;
 	}
 
+	public String getArtist_no() {
+		return artist_no;
+	}
+
+	public void setArtist_no(String artist_no) {
+		this.artist_no = artist_no;
+	}
+
+	public String getMusic_no() {
+		return music_no;
+	}
+
+	public void setMusic_no(String music_no) {
+		this.music_no = music_no;
+	}
+
+	public Album_dto() {
+		super();
+	}
+
 	@Override
 	public String toString() {
 		return "Album_dto [album_no=" + album_no + ", album_title=" + album_title + ", artist_name=" + artist_name
-				+ ", img=" + img + ", release=" + release + ", NO=" + NO + "]";
+				+ ", img=" + img + ", release=" + release + ", NO=" + NO + ", artist_no=" + artist_no + ", music_no="
+				+ music_no + "]";
 	}
-	
+
+
 	
 }
