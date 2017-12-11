@@ -11,6 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 <%@ include file="/WEB-INF/views/template/album_staticPage.jsp" %>
 <div class="container">
  <table  class="table table-hover" align="center">
@@ -45,9 +46,9 @@
   				<td align="center"><input type="checkbox" value=""></td>
   				<td width="30px">&nbsp;${status.index+1}</td>
   				<td>	
-  					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="">
+  					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="location.href='${pageContext.request.contextPath}/album/music_info?music_no=${i.music_no}'">
   				</td>	
-  				<td><a href="artist_music">${i.title}</a></td>
+  				<td><a href="${pageContext.request.contextPath}/album/music_info?music_no=${i.music_no}">${i.title}</a></td>
   				<td><a href="${pageContext.request.contextPath}/artist/main?artist_no=792022">${i.artist_name}</a></td>
   				<td> 
   					<img alt="재생" title="재생" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
@@ -61,7 +62,7 @@
   				<td>
   					<img alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_black_48dp.png" width="20px" height="20px" onclick="">
   				</td>	<!--  이후에 추가 할지 안할지 결정해야 -->
-  		</tr>
+  			</tr>
   		</c:forEach>
   	</table>
   </div>

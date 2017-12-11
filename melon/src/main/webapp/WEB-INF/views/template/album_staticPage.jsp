@@ -14,7 +14,7 @@
 <body>
 <div style="padding-top:100px;">
 <input type="hidden" name="album_no" value="${album_main.album_no}" />
-		<br><h2 style="margin-left: 370px;">앨범 정보</h2><br>
+		<br><h2 style="margin-left: 370px; font-weight: bold;">앨범 정보</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
@@ -26,7 +26,7 @@
 				<td colspan="5"><a href="${pageContext.request.contextPath}/artist/main?artist_no=792022"><h2>${album_main.artist_name }</h2></a></td>
 			</tr>
 			<tr>
-				<td colspan="5"><h4>발매일 &nbsp;&nbsp; ${album_main.release }<h4></h4></td>
+				<td colspan="5"><h4>발매일 &nbsp;&nbsp; ${album_main.release }</h4></td>
 			</tr>
 			<c:forEach items="${album_musicList }" varStatus="status" var="i" begin="4" end="4">
 			<tr>

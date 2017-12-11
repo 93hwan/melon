@@ -14,14 +14,16 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp" %>
+	<input type="hidden" value="${artist_comment_send.artist_no }" name="artist_no">
+	
 <div class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main?artist_no=792022">상세정보</a></li>
-    <li><a href="artist_music">곡</a></li>
-    <li><a href="artist_album">앨범</a></li>
-    <li><a href="artist_video">뮤직비디오</a></li>
-    <li class="active"><a href="artist_reply">가수에게 한마디</a></li>
+    <li><a href="main?artist_no=${artist_comment_send.artist_no }">상세정보</a></li>
+    <li><a href="artist_music?artist_no=${artist_comment_send.artist_no }">곡</a></li>
+    <li><a href="artist_album?artist_no=${artist_comment_send.artist_no }">앨범</a></li>
+    <li><a href="artist_video?artist_no=${artist_comment_send.artist_no }">뮤직비디오</a></li>
+    <li class="active"><a href="artist_reply?artist_no=${artist_comment_send.artist_no }">가수에게 한마디</a></li>
   </ul>	
   	<br>
   <form action="${pageContext.request.contextPath}/artist_comment_send" method="post" >
@@ -37,7 +39,7 @@
   		</td>
   		<td width="723" align="center">
   			<br>
-  			<textarea name="reply" rows="5" cols="100"></textarea>
+  			<div><textarea name="reply" rows="5" cols="100" style="resize: none;"></textarea></div>
   			<br>
   		</td>
   		<td align="center">
@@ -51,7 +53,7 @@
   
   <table class="table table-hover" align="center">
   <tr>
- 	총<a> 100</a>개<br>"src/main/java/com/music/bee/controller/MemberController.java"
+ 	총<a> 100</a>개<br>
   	<td colspan="3">
   		<br><br>
   	</td>

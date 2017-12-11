@@ -15,19 +15,20 @@
 </head>
 <body>
 	    <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp"%>
+	<input type="hidden" value="${arti_main_static.artist_no }" name="artist_no">
 <div style="padding-bottom: 200px;" class="container">
   <h3>상세정보</h3>
   <ul class="nav nav-tabs">
-    <li class="active"><a href="main">상세정보</a></li>
-    <li><a href="artist_music">곡</a></li>
-    <li><a href="artist_album">앨범</a></li>
-    <li><a href="artist_video">뮤직비디오</a></li>
-      <li><a href="artist_reply">가수에게 한마디</a></li>
+    <li class="active"><a href="main?artist_no=${arti_main_static.artist_no }">상세정보</a></li>
+    <li><a href="artist_music?artist_no=${arti_main_static.artist_no }">곡</a></li>
+    <li><a href="artist_album?artist_no=${arti_main_static.artist_no }">앨범</a></li>
+    <li><a href="artist_video?artist_no=${arti_main_static.artist_no }">뮤직비디오</a></li>
+    <li><a href="artist_reply?artist_no=${arti_main_static.artist_no }">가수에게 한마디</a></li>
   </ul>	
   	<br><br>
 		<table align="center" class="table table-hover"> <!--  상세정보 테이블 -->
 			<tr>
-				<td><h3>수상경력</h3> <br>
+				<td><h3 style="float: left; padding-right: 30px;">수상경력</h3><br>
 				${arti_main_static.award_record}
 				<br><br>
 				</td>

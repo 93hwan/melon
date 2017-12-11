@@ -12,6 +12,8 @@ public class Artist_dto {
 	private String arti_infotitle;
 	private String arti_infocontent;
 	private int no;
+	private String album_no;
+	private String music_no;
 	
 	
 	public Artist_dto() {
@@ -28,7 +30,8 @@ public class Artist_dto {
 		setNo(Integer.parseInt(request.getParameter("no")));
 		setArti_infotitle(request.getParameter("arti_infotitle"));
 		setArti_infocontent(request.getParameter("arti_infocontent"));
-		
+		setAlbum_no(request.getParameter("album_no"));
+		setMusic_no(request.getParameter("music_no"));
 	}
 	
 	public String getArti_infotitle() {
@@ -84,12 +87,29 @@ public class Artist_dto {
 		this.no = no;
 	}
 
+	public String getAlbum_no() {
+		return album_no;
+	}
+
+	public void setAlbum_no(String album_no) {
+		this.album_no = album_no;
+	}
+
+	public String getMusic_no() {
+		return music_no;
+	}
+
+	public void setMusic_no(String music_no) {
+		this.music_no = music_no;
+	}
+
 	@Override
 	public String toString() {
 		return "Artist_dto [artist_no=" + artist_no + ", artist_name=" + artist_name + ", img=" + img + ", etc=" + etc
 				+ ", award_record=" + award_record + ", arti_infotitle=" + arti_infotitle + ", arti_infocontent="
-				+ arti_infocontent + ", no=" + no + "]";
+				+ arti_infocontent + ", no=" + no + ", album_no=" + album_no + ", music_no=" + music_no + "]";
 	}
+
 
 	
 	

@@ -10,4 +10,7 @@
 <select id="check" resultType="java.lang.Integer">
 	select count(*) from m_member where member_id = #{member_id} 
 </select>
+<select id="info" resultType="com.music.bee.dto.Member_dto">
+	select * from m_member where member_id = #{member_id}
+</select>
 </mapper>

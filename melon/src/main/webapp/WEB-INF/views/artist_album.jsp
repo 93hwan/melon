@@ -15,24 +15,24 @@
 <body>
 <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp" %>
 <form action="#" method="post">
-	<input type="hidden" value="${arti_no }" name="artist_no">
+	<input type="hidden" value="${arti_main_static.artist_no }" name="artist_no">
 <div style="padding-bottom: 200px;" class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main?artist_no=792022">상세정보</a></li>
-    <li><a href="artist_music">곡</a></li>
-    <li class="active"><a href="artist_album">앨범</a></li>
-    <li><a href="artist_video">뮤직비디오</a></li>
-    <li><a href="artist_reply">가수에게 한마디</a></li>
+    <li><a href="main?artist_no=${arti_main_static.artist_no }">상세정보</a></li>
+    <li><a href="artist_music?artist_no=${arti_main_static.artist_no }">곡</a></li>
+    <li class="active"><a href="artist_album?artist_no=${arti_main_static.artist_no }">앨범</a></li>
+    <li><a href="artist_video?artist_no=${arti_main_static.artist_no }">뮤직비디오</a></li>
+    <li><a href="artist_reply?artist_no=${arti_main_static.artist_no }">가수에게 한마디</a></li>
   </ul>	
 	<br><br>  	
   <table  class="table table-hover" align="center">
   		<tr>
   	<c:forEach items="${arti_album}" varStatus="status" var="i">
-  			<td align="center"><br><img src="${i.img}" alt="앨범사진" width="170px" height="170px"></img></td>
+  			<td align="center"><br><img src="${i.img}" onclick="location.href='${pageContext.request.contextPath}/album/album_main'" alt="앨범사진" width="170px" height="170px"></img></td>
   			<td> <br>
-  			<strong>${i.album_title}</strong><br><br>
-  			${i.artist_name}<br>
+  			<strong><a href="${pageContext.request.contextPath}/album/album_main" >${i.album_title}</a></strong><br><br>
+  			<a href="main?artist_no=${arti_main_static.artist_no }">${i.artist_name}</a><br>
   			앨범재생<br>
   			${i.release} | 곡수 <br><br>
   			<button class="btn btn-default">앨범듣기</button>&nbsp;<button class="btn btn-default">앨범담기</button>

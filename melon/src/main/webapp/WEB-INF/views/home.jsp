@@ -117,10 +117,15 @@
 				<h1>최신 뮤직비디오</h1>
 			</center>
 			<form action="${pageContext.request.contextPath}/artist/main">
-				<input type="hidden" name="artist_no" value="792022">
-				<input type="submit" value="테스트 메인">
+				<input type="hidden" name="artist_name" value="볼빨간사춘기">
+				<input type="submit" value="ARTIST">
 			</form><br>
-			<a href="${pageContext.request.contextPath}/album/album_main">테스트 앨범</a> <br>
+			
+			<form action="${pageContext.request.contextPath}/album/album_main">
+				<input type="hidden" name="album_no" value="10100191">
+				<input type="submit" value="ALBUM">
+			</form><br>
+			
 			<a href="${pageContext.request.contextPath}/album">데이터크롤링</a> <br>
 			<iframe width="360" height="202" src="https://www.youtube.com/embed/PLb_YYOPPBI" frameborder="0"></iframe>
 			
