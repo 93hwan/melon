@@ -8,10 +8,11 @@
 			<thead>
 				<th align="center" colspan="2">내정보</th>
 			</thead>
+			<c:forEach var="member_dto" items="${member_dto}">
 			<tbody>
 				<tr>
 					<th>이름</th>
-					<td><input type="text" name="name" value="노지형" readonly></td>
+					<td><input type="text" name="name" value="${member_dto.name}" readonly></td>
 				</tr>
 				<tr>
 					<th>이전 비밀번호</th>
@@ -23,20 +24,21 @@
 				</tr>
 				<tr>
 					<th>생일</th>
-					<td><input type="text" name="birth" required value="1991.12.26"></td>
+					<td><input type="text" name="birth" required value="${member_dto.birth}"></td>
 				</tr>
 				<tr>
 					<th>이메일</th>
-					<td><input type="text" name="email;" placeholder="이메일" value="njh4803@naver.com"></td>
+					<td><input type="text" name="email;" placeholder="이메일" value="${member_dto.email}"></td>
 				</tr>
 				<tr>
 					<th>핸드폰 번호</th>
-					<td><input type="text" name="phone;" placeholder="'-'제외" value="01066674803"></td>
+					<td><input type="text" name="phone;" placeholder="'-'제외" value="${member_dto.phone}"></td>
 				</tr>
 				<tr align="center">
 					<td colspan="2"><input type="submit" value="수정"></td>
 				</tr>
 			</tbody>
+			</c:forEach>
 		</table>
 	</form>
 </div>

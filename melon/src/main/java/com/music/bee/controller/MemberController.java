@@ -4,6 +4,8 @@ package com.music.bee.controller;
 
 
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -61,7 +64,10 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/mypage")
-	String mypage(UsernamePasswordAuthenticationToken token) {
+	String mypage(UsernamePasswordAuthenticationToken token, Model m) {
+		memberDAO = sqlSession.getMapper(MemberDAO.class);
+		List<Member_dto> list= memberDAO.info(token.getName());
+		m.addAttribute("member_dto", list);
 		return "mypage";
 	}
 	
