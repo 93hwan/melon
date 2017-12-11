@@ -46,7 +46,7 @@
   				<td align="center"><input type="checkbox" value=""></td>
   				<td width="30px">&nbsp;${status.index+1}</td>
   				<td>	
-  					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="">
+  					<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" onclick="location.href='${pageContext.request.contextPath}/album/music_info?music_no=${i.music_no}'">
   				</td>	
   				<td><a href="${pageContext.request.contextPath}/album/music_info?music_no=${i.music_no}">${i.title}</a></td>
   				<td><a href="${pageContext.request.contextPath}/artist/main?artist_no=792022">${i.artist_name}</a></td>

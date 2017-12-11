@@ -13,14 +13,15 @@
 </head>
 <body>
   <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp"%>
+  	<input type="hidden" value="${arti_main_static.artist_no }" name="artist_no">
 <div style="padding-bottom: 200px;" class="container">
   <h3>곡정보</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main?artist_no=792022">상세정보</a></li>
-    <li class="active"><a href="artist_music?artist_no=792022">곡</a></li>
-    <li><a href="artist_album?artist_no=792022">앨범</a></li>
-    <li><a href="artist_video?artist_no=792022">뮤직비디오</a></li>
-    <li><a href="artist_reply?artist_no=792022">가수에게 한마디</a></li>
+    <li><a href="main?artist_no=${arti_main_static.artist_no }">상세정보</a></li>
+    <li class="active"><a href="artist_music?artist_no=${arti_main_static.artist_no }">곡</a></li>
+    <li><a href="artist_album?artist_no=${arti_main_static.artist_no }">앨범</a></li>
+    <li><a href="artist_video?artist_no=${arti_main_static.artist_no }">뮤직비디오</a></li>
+    <li><a href="artist_reply?artist_no=${arti_main_static.artist_no }">가수에게 한마디</a></li>
   </ul>	
   	<br><br>
   	<table  class="table table-hover" align="center">
@@ -49,8 +50,8 @@
   				<td width="30px">&nbsp;${status.index +1}</td>
   				<td>
   					<a href="${pageContext.request.contextPath}/album/music_info?music_no=${i.music_no }">${i.title}</a></td>
-  				<td align="center" width="100px"><a href="artist_main">${i.artist_name}</a></td>
-  				<td align="center"><a href="${pageContext.request.contextPath}/album/music_info?album_title=${i.album_title}">${i.album_title}</a></td>
+  				<td align="center" width="100px"><a href="main?artist_no=${arti_main_static.artist_no }">${i.artist_name}</a></td>
+  				<td align="center"><a href="${pageContext.request.contextPath}/album/album_main?album_title=${i.album_title}">${i.album_title}</a></td>
   				<td width="120px" align="center">
   					<img alt="재생" title="재생" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
   					&nbsp;&nbsp;<img alt="재생목록 담기" title="재생목록 담기" src="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">

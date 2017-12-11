@@ -14,14 +14,16 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp" %>
+	<input type="hidden" value="${artist_comment_send.artist_no }" name="artist_no">
+	
 <div class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main?artist_no=792022">상세정보</a></li>
-    <li><a href="artist_music?artist_no=792022">곡</a></li>
-    <li><a href="artist_album?artist_no=792022">앨범</a></li>
-    <li><a href="artist_video?artist_no=792022">뮤직비디오</a></li>
-    <li class="active"><a href="artist_reply?artist_no=792022">가수에게 한마디</a></li>
+    <li><a href="main?artist_no=${artist_comment_send.artist_no }">상세정보</a></li>
+    <li><a href="artist_music?artist_no=${artist_comment_send.artist_no }">곡</a></li>
+    <li><a href="artist_album?artist_no=${artist_comment_send.artist_no }">앨범</a></li>
+    <li><a href="artist_video?artist_no=${artist_comment_send.artist_no }">뮤직비디오</a></li>
+    <li class="active"><a href="artist_reply?artist_no=${artist_comment_send.artist_no }">가수에게 한마디</a></li>
   </ul>	
   	<br>
   <form action="${pageContext.request.contextPath}/artist_comment_send" method="post" >
