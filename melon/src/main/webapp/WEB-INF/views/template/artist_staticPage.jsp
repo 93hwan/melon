@@ -13,7 +13,7 @@
 <body>
 <div style="padding-top: 100px;">
 <input type="hidden" name="artist_no" value="${arti_main_static.artist_no}" />
-		<h2 style=" position:relative; margin-left: 370px; font-weight: bold;">아티스트 채널</h2>
+		<h2 style=" margin-left: 200px; font-weight: bold;">아티스트 채널</h2>
 		<div class="container">
 		<table align="center" class="table table-hover" >
 			<tr>

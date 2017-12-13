@@ -8,7 +8,7 @@
 
 <!-- SELECT -->
 <select id="album_main" resultType="com.music.bee.dto.Album_dto">
-	SELECT * FROM M_ALBUM WHERE ALBUM_NO = #{ALBUM_NO}
+	SELECT *,COUNT(*) FROM M_ALBUM WHERE ALBUM_NO = #{ALBUM_NO}
 </select>
 <select id="album_musicList" resultType="com.music.bee.dto.Music_dto">
 	SELECT * FROM M_MUSIC WHERE ALBUM_NO = #{ALBUM_NO}

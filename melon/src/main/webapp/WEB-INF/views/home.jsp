@@ -119,7 +119,8 @@
 			
 			<form action="${pageContext.request.contextPath}/album/album_main/10100191">
 				<input type="submit" value="ALBUM">
-			</form><br>
+			</form>
+			<a href="${pageContext.request.contextPath}/chart/chart_recent">최신차트</a><br>
 			
 			<a href="${pageContext.request.contextPath}/album">데이터크롤링</a> <br>
 		

@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bee/Artist/Comment</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,6 +26,7 @@
   </ul>	
   	<br>
   <form action="${pageContext.request.contextPath}/artist/artist_comment_send" method="post" >
+  	<input type="hidden" name="artist_no" value="${arti_main_static.artist_no }">
   	<br>
   <table  class="table table-hover" align="center">
   	<tr>
@@ -33,10 +35,8 @@
   			<br>
   			<img width="70dp" height="70dp" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_face_black_48dp.png" title="프로필사진"/>
   		</td>
-  		<td width="723" align="center">
-  			<br>
+  		<td width="720" align="center" style="padding-top: 50px;padding-bottom: 50px;">
   			<div><textarea name="reply" rows="5" cols="100" style="resize: none;"></textarea></div>
-  			<br>
   		</td>
   		<td align="center">
   			<br><br>

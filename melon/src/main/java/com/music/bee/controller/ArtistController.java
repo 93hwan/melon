@@ -82,14 +82,16 @@ public class ArtistController {
 	}
 	
 	
-	@RequestMapping("/artist_comment_send")
-	public String artist_reply_send(Model model,ArtistComment_dto arti_no){
+	
+	// 해결해야해.....................................ㅠ_ㅠ
+	@RequestMapping(value="/artist_comment_send", method = RequestMethod.GET)
+	public String artist_reply_send(Model model,String arti_no){
 		
 		System.out.println("artist_reply_send 통과");
 		ArtistDAO artiDAO = sqlSession.getMapper(ArtistDAO.class);
-		arti_no.setMember_id("rosie");
+//		arti_no.setMember_id("rosie");
 		
-		model.addAttribute("arti_main_static", artiDAO.artist_static(arti_no.getArtist_no()));
+		model.addAttribute("arti_main_static", artiDAO.artist_static(arti_no));
 		model.addAttribute("artist_comment_send",arti_no);
 		
 		System.out.println("artist_reply_send 페이지 못넘겼니");

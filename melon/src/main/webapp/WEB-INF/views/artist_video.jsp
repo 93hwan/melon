@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bee/Artist/Video</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,7 +15,6 @@
 </head>
 <body>
   <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp"%>
-  	<input type="hidden" value="${arti_main_static.artist_no }" name="artist_no">
 <div class="container">
   <h3>뮤직비디오</h3>
   <ul class="nav nav-tabs">

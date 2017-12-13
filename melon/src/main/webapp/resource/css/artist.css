@@ -1,4 +1,5 @@
-	.arti_info {
-		float: left;
-   		margin-right: 30px;
+	.recent_chart .li {
+		padding: 10px;
+		text-align: center;
+		resize: none;
 	}

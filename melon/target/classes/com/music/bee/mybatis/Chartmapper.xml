@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.music.bee.dao.ChartDAO">
+
+<!-- INSERT -->
+
+<!-- SELECT -->
+<select id="recentChart" resultType="com.music.bee.dto.Music_dto">
+	SELECT * FROM M_MUSIC WHERE music_no = #{music_no}
+</select>
+<select id="recentChart_music" resultType="com.music.bee.dto.Music_dto">
+	SELECT * FROM (SELECT ROWNUM RN,A.* FROM (SELECT * FROM M_MUSIC ORDER BY REG DESC)A) WHERE RN BETWEEN 1 AND 100
+<!-- 	SELECT * FROM M_MUSIC WHERE ROWNUM <=100 ORDER BY REG ASC -->
+</select>
+
+<!-- UPDATE -->
+
+
+
+
+
+
+<!-- DELETE -->
+
+
+
+</mapper>

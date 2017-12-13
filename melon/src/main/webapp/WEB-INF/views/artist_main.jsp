@@ -15,7 +15,7 @@
 </head>
 <body>
 	    <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp"%>
-	<input type="hidden" value="${arti_main_static.artist_no }" name="artist_no">
+	    
 <div style="padding-bottom: 200px;" class="container">
   <h3>상세정보</h3>
   <ul class="nav nav-tabs">

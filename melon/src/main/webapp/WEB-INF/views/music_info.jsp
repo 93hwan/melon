@@ -14,7 +14,7 @@
 <body>
 <div style="padding-top:100px;">
 <input type="hidden" name="album_no" value="${music_info.music_no}" />
-		<br><h2 style="margin-left: 370px; font-weight: bold;">곡정보</h2><br>
+		<br><h2 style="margin-left: 200px; font-weight: bold;">곡정보</h2><br>
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
