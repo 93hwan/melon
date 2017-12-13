@@ -146,7 +146,59 @@
 .main .content3 {
 	width: 100%;
 	height: 600px;
-	border: 2px solid yellow;
+}
+.content3 .concert{
+	 width: 991px;
+	 margin: auto;
+}
+.concert .concert_btn{
+	width: 495px !important;
+}
+.con_form{
+	height: 360px;
+    border: 2px solid #333333;
+    border-top:0px;
+}
+.con_form li img{
+	width: 220px;
+}
+.content3 .concert ul{
+	list-style: none;
+	padding: 0px;
+	 padding-left: 15px;
+}
+.content3 .concert ul li{
+	margin-right:15px;
+	float: left;
+}
+.concert .con_artist{
+	    padding-top: 5px;
+    position: absolute;
+    height: 35px;
+    width: 220px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(51, 51, 51, 0.7);
+    margin-top: -35px;
+}
+.concert .con_move{
+	display:none;
+	background-color: rgba(51, 51, 51, 0.7);
+    position: absolute;
+    height: 310px;
+    width: 220px;
+    margin-top: -310px;
+    font-size: 17px;
+    text-align: center;
+    color: white;
+    padding-top: 110px;
+}
+.concert > ul > li:hover .con_artist{
+	display: none;
+}
+.concert > ul > li:hover .con_move{
+	display: block;
 }
 
 .chart  p {

@@ -235,11 +235,7 @@ public class MController   {
 //		팝송	
 						dao.pop_album(trimed_albumNum, al,artist_get, album_albumImgVar, rel,artist_No,SongNum_get);
 						System.out.println("album db저장 완료");
-<<<<<<< HEAD
 						dao.artist(artist_No, artist_get, artist_img, etc.text(), Award_record,str_get,str_get02,trimed_albumNum,SongNum_get);    //가수소개 부분 공백처리 -에러너무많이남
-=======
-						dao.artist(artist_No, artist_get, artist_img, "", Award_record,str_get,str_get02,trimed_albumNum,SongNum_get);  //가수소개 부분 공백처리 -에러너무많이남
->>>>>>> branch 'master' of https://github.com/93hwan/melon.git
 						System.out.println("artist db저장 완료");
 						dao.pop(SongNum_get, al, song_Name_get, artist_get, genr, strLink, lyric_get, rel,trimed_albumNum,artist_No);
 							}

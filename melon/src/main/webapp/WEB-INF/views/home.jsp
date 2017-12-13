@@ -112,11 +112,7 @@
 
 			</div>
 		</div>
-		<div class="content3">
-			<center>
-				<h1>최신 뮤직비디오</h1>
-			</center>
-			<a href="${pageContext.request.contextPath}/artist/main/792022">ARTIST MAIN</a>
+		<a href="${pageContext.request.contextPath}/artist/main/792022">ARTIST MAIN</a>
 			<form action="${pageContext.request.contextPath}/artist/main/792022">
 				<input type="submit" value="ARTIST">
 			</form><br>
@@ -126,11 +122,68 @@
 			</form><br>
 			
 			<a href="${pageContext.request.contextPath}/album">데이터크롤링</a> <br>
-			<iframe width="360" height="202" src="https://www.youtube.com/embed/PLb_YYOPPBI" frameborder="0"></iframe>
-			
-			<div class="mv_contents">
+		
+		<div class="content3">
 
+			
+			<div class="w3-bar w3-black concert">
+				<button class="w3-bar-item w3-button concert_btn gold"  value="new" id="gold" style="background-color: #333333">new 공연!</button>
+				<button class="w3-bar-item w3-button concert_btn"  value="upcomming" id="gold" style="background-color: #333333">임박 공연!</button>
 			</div>
+
+
+			<div id="new" class="w3-container concert con_form"  >
+				<ul>
+					<li>
+						<img src="http://cdnticket.melon.co.kr/resource/image/upload/product/2017/12/20171205095650785dd371-1352-4546-8bfc-a7b10d034e6f.jpg/melon/resize/180x250/strip/true" >
+						<div class="con_artist">디자이너</div>
+						<div class="con_move" >디자이너（Desiigner）첫 내한공연</div>
+					</li>
+					<li>
+						<img src="http://cdnticket.melon.co.kr/resource/image/upload/product/2017/12/20171206181855ae4a9e4c-6c79-45ef-be83-d547ad0ef3c5.jpg/melon/resize/180x250/strip/true" >
+						<div class="con_artist">케이윌</div>
+						<div class="con_move" >2017 케이윌 전국투어</div>
+					</li>
+					<li>
+						<img src="http://cdnticket.melon.co.kr/resource/image/upload/product/2017/11/201711201705581e713a25-e919-4910-b737-e5c3c049f00d.jpg/melon/resize/180x250/strip/true" >
+						<div class="con_artist">신승훈</div>
+						<div class="con_move" >2017 THE신승훈SHOW</div>
+					</li>
+					<li>
+						<img src="http://cdnticket.melon.co.kr/resource/image/upload/product/2017/10/20171030171733b4b6624a-7e4c-4dcc-a5bf-aa5d7745436b.jpg/melon/resize/180x250/strip/true" >
+						<div class="con_artist">어반자카파</div>
+						<div class="con_move" >2017 어반자카파 전국투어</div>
+					</li>
+				</ul>
+			</div>
+
+			<div id="upcomming" class="w3-container concert con_form"  style="display: none">
+				<ul>
+					<li>
+						<img src="http://cdnticket.melon.co.kr/resource/image/upload/product/2017/11/20171110122524179aa360-e1e6-4519-9942-559dbb3efea1.jpg/melon/resize/180x250/strip/true">
+						<div class="con_artist">박효신</div>
+						<div class="con_move" >Park HyoShin x Milla Ariwan</div>
+					</li>
+					<li>
+						<img src="http://cdnticket.melon.co.kr/resource/image/upload/product/2017/11/2017112115452862f8f2d0-2464-4f09-be46-ef2de3fbfbcf.jpg/melon/resize/180x250/strip/true">
+						<div class="con_artist">10cm</div>
+						<div class="con_move" >10CM 콘서트［1＋2＋3＋4］</div>
+					</li>
+					<li>
+						<img src="http://cdnticket.melon.co.kr/resource/image/upload/product/2017/12/20171205093718409c8d97-562a-48b8-8e6f-44ae9c40940c.jpg/melon/resize/180x250/strip/true">
+						<div class="con_artist">여자친구</div>
+						<div class="con_move" >여자친구 FIRST CONCERT＇Season of GFRIEND＇</div>
+					</li>
+					<li>
+						<img src="http://cdnticket.melon.co.kr/resource/image/upload/product/2017/11/201711271139051499c0d9-23b8-4a4f-a75c-3dc6d4f0fb3a.jpg/melon/resize/180x250/strip/true">
+						<div class="con_artist">박원</div>
+						<div class="con_move" >박원 콘서트</div>
+					</li>
+				</ul>
+			</div>
+<!-- 			<iframe width="360" height="202" src="https://www.youtube.com/embed/PLb_YYOPPBI" frameborder="0"></iframe> -->
+			
+
 		</div>
 
 	</div>
@@ -170,6 +223,20 @@
  			 	 		
 		 	 		}
 		 	 	});
+		 	 	
+		 	 <%-- 공연버튼 --%>
+		 	 $(".concert_btn").on("click",function(){
+		 		 $(".concert_btn").removeClass("gold");
+		 		 $(this).addClass("gold");
+		 		 if($(this).val()=="new"){
+		 			 $("#upcomming").css("display","none");
+		 			 $("#new").css("display","block");
+		 		 }else{
+		 			 $("#new").css("display","none");
+		 			 $("#upcomming").css("display","block");
+		 		 }
+		 	 });
+		 	 	
 
 	 });
 </script>
