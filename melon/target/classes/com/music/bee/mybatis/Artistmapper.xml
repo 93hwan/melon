@@ -12,20 +12,20 @@
 
 <!-- SELECT -->
 <select id="artist_static" resultType="com.music.bee.dto.Artist_dto">
-	SELECT * FROM M_ARTIST WHERE ARTIST_NAME = #{artist_name}
+	SELECT * FROM M_ARTIST WHERE artist_no = #{artist_no}
 </select>
 
 <select id="arti_musicList" resultType="com.music.bee.dto.Music_dto">
-	SELECT * FROM M_MUSIC WHERE ARTIST_NAME = #{artist_name} ORDER BY REG DESC
+	SELECT * FROM M_MUSIC WHERE artist_no = #{artist_no} ORDER BY REG DESC
 </select>
 
 <select id="arti_albumList" resultType="com.music.bee.dto.Album_dto">
-	SELECT DISTINCT ALBUM_TITLE,IMG,ARTIST_NAME,RELEASE FROM M_ALBUM WHERE ARTIST_NAME = #{artist_name} ORDER BY RELEASE DESC
+	SELECT DISTINCT ALBUM_TITLE,IMG,ARTIST_NAME,RELEASE,ALBUM_NO FROM M_ALBUM WHERE artist_no = #{artist_no} ORDER BY RELEASE DESC
 	
 </select>
 
-<select id="arti_Comment" resultType="com.music.bee.dto.ArtistComment_dto">
-	SELECT * FROM M_REPLY_ARTIST WHERE ARTIST_NO =#{artist_no}
+<select id="arti_comment" resultType="com.music.bee.dto.ArtistComment_dto">
+	SELECT * FROM M_REPLY_ARTIST WHERE artist_no =#{artist_no}
 </select>
 
 

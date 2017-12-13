@@ -17,11 +17,11 @@
 <div style="padding-bottom: 200px;" class="container">
   <h3>곡정보</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main?artist_no=${arti_main_static.artist_no }">상세정보</a></li>
-    <li class="active"><a href="artist_music?artist_no=${arti_main_static.artist_no }">곡</a></li>
-    <li><a href="artist_album?artist_no=${arti_main_static.artist_no }">앨범</a></li>
-    <li><a href="artist_video?artist_no=${arti_main_static.artist_no }">뮤직비디오</a></li>
-    <li><a href="artist_reply?artist_no=${arti_main_static.artist_no }">가수에게 한마디</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/main/${arti_main_static.artist_no }">상세정보</a></li>
+    <li class="active"><a href="${pageContext.request.contextPath}/artist/artist_music/${arti_main_static.artist_no }">곡</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/artist_album/${arti_main_static.artist_no }">앨범</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/artist_video/${arti_main_static.artist_no }">뮤직비디오</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/artist_reply/${arti_main_static.artist_no }">가수에게 한마디</a></li>
   </ul>	
   	<br><br>
   	<table  class="table table-hover" align="center">
@@ -49,14 +49,14 @@
   				<td align="center"><input type="checkbox" value=""></td>
   				<td width="30px">&nbsp;${status.index +1}</td>
   				<td>
-  					<a href="${pageContext.request.contextPath}/album/music_info?music_no=${i.music_no }">${i.title}</a></td>
-  				<td align="center" width="100px"><a href="main?artist_no=${arti_main_static.artist_no }">${i.artist_name}</a></td>
-  				<td align="center"><a href="${pageContext.request.contextPath}/album/album_main?album_title=${i.album_title}">${i.album_title}</a></td>
+  					<a href="${pageContext.request.contextPath}/album/music_info/${i.music_no }">${i.title}</a></td>
+  				<td align="center" width="100px"><a href="${pageContext.request.contextPath}/artist/main/${i.artist_no }">${i.artist_name}</a></td>
+  				<td align="center"><a href="${pageContext.request.contextPath}/album/album_main/${i.album_no}">${i.album_title}</a></td>
   				<td width="120px" align="center">
   					<img alt="재생" title="재생" src="https://raw.githubusercontent.com/google/material-design-icons/master/av/2x_web/ic_play_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
   					&nbsp;&nbsp;<img alt="재생목록 담기" title="재생목록 담기" src="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_outline_black_48dp.png" width="20px" height="20px" onclick="">
   					&nbsp;&nbsp;<img alt="가사보기" src="https://raw.githubusercontent.com/google/material-design-icons/master/editor/2x_web/ic_format_align_justify_black_48dp.png" width="20px" height="20px" 
-  								onclick="location.href='${pageContext.request.contextPath}/album/music_info?music_no=${i.music_no }'">
+  								onclick="location.href='${pageContext.request.contextPath}/album/music_info/${i.music_no }'">
   				</td>
   				<td align="center"><img alt="좋아요" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_favorite_border_black_48dp.png" width="20px" height="20px" onclick=""></td>	<!--  이후에 추가 할지 안할지 결정해야 -->
   		</tr>

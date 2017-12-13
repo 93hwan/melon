@@ -18,21 +18,21 @@
 		<div class="container">
 		<table align="center" class="table table-hover">	
 			<tr>
-				<td rowspan="5" align="center"><img width="350px" height="350px" src="${album_main.img}" title="앨범이미지"/></td>
+				<td rowspan="4" align="center"><img width="350px" height="350px" src="${album_main.img}" title="앨범이미지"/></td>
 				<td>앨범명<br>
-				<font style="font-weight: bold; font-size: xx-large;" >${album_main.album_title}</font><br></td>
+				<font style="font-weight: bold; font-size: xx-large;"><a href="${pageContext.request.contextPath}/album/album_main/${album_main.album_no}">${album_main.album_title}</a></font><br></td>
 			</tr>
 			<tr>
-				<td colspan="5"><a href="${pageContext.request.contextPath}/artist/main?artist_no=792022"><h2>${album_main.artist_name }</h2></a></td>
+				<td colspan="4"><h2><a href="${pageContext.request.contextPath}/artist/main/${album_main.artist_no}">${album_main.artist_name }</a></h2></td>
 			</tr>
 			<tr>
-				<td colspan="5"><h4>발매일 &nbsp;&nbsp; ${album_main.release }</h4></td>
+				<td colspan="4"><h4>발매일 &nbsp;&nbsp; ${album_main.release }</h4></td>
 			</tr>
+			<tr>
 			<c:forEach items="${album_musicList }" varStatus="status" var="i" begin="4" end="4">
-			<tr>
-				<td colspan="3"><h4 style="float : left; padding-right: 50px">장르 &nbsp;&nbsp; ${i.genre } </h4></td>
-			</tr>
+				<td colspan="2"><h4 style="float : left; padding-right: 50px">장르 &nbsp;&nbsp; ${i.genre } </h4></td>
 			</c:forEach>
+			</tr>
 		</table>
 		</div>
 	</div>

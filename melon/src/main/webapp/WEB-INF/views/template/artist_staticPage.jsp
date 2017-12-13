@@ -12,13 +12,13 @@
 </head>
 <body>
 <div style="padding-top: 100px;">
-<input type="hidden" name="arti_no" value="${arti_main_static.artist_no}" />
+<input type="hidden" name="artist_no" value="${arti_main_static.artist_no}" />
 		<h2 style=" position:relative; margin-left: 370px; font-weight: bold;">아티스트 채널</h2>
 		<div class="container">
 		<table align="center" class="table table-hover" >
 			<tr>
-				<td rowspan="5" align="center"><br><img align="middle" src="${arti_main_static.img}" width="350px" height="350px" title="가수이미지"/></td>
-				<td><a href="${pageContext.request.contextPath}/artist/main?artist_no=792022"><font style="font-weight: bold; font-size: xx-large;" >${arti_main_static.artist_name}</font></a><br></td>
+				<td rowspan="5" align="center"><br><img align="middle" src="${arti_main_static.img}" width="300dp" height="300dp" title="가수이미지"/></td>
+				<td><a href="${pageContext.request.contextPath}/artist/main/${arti_main_static.artist_no}"><font style="font-weight: bold; font-size: xx-large; " >${arti_main_static.artist_name}</font></a><br></td>
 			</tr>
 			<tr>
 				<td>

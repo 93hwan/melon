@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="/WEB-INF/views/template/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -14,21 +13,18 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/views/template/artist_staticPage.jsp" %>
-	<input type="hidden" value="${artist_comment_send.artist_no }" name="artist_no">
 	
 <div class="container">
   <h3>앨범정보</h3>
   <ul class="nav nav-tabs">
-    <li><a href="main?artist_no=${artist_comment_send.artist_no }">상세정보</a></li>
-    <li><a href="artist_music?artist_no=${artist_comment_send.artist_no }">곡</a></li>
-    <li><a href="artist_album?artist_no=${artist_comment_send.artist_no }">앨범</a></li>
-    <li><a href="artist_video?artist_no=${artist_comment_send.artist_no }">뮤직비디오</a></li>
-    <li class="active"><a href="artist_reply?artist_no=${artist_comment_send.artist_no }">가수에게 한마디</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/main/${arti_main_static.artist_no }">상세정보</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/artist_music/${arti_main_static.artist_no }">곡</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/artist_album/${arti_main_static.artist_no }">앨범</a></li>
+    <li><a href="${pageContext.request.contextPath}/artist/artist_video/${arti_main_static.artist_no }">뮤직비디오</a></li>
+    <li class="active"><a href="${pageContext.request.contextPath}/artist/artist_reply/${arti_main_static.artist_no }">가수에게 한마디</a></li>
   </ul>	
   	<br>
-  <form action="${pageContext.request.contextPath}/artist_comment_send" method="post" >
-  <input type="hidden" name="artist_No" value="${artist_comment_send.artist_no}">
-  <input type="hidden" name="member_id" value="${artist_comment_send.member_id}">
+  <form action="${pageContext.request.contextPath}/artist/artist_comment_send" method="post" >
   	<br>
   <table  class="table table-hover" align="center">
   	<tr>
@@ -44,7 +40,7 @@
   		</td>
   		<td align="center">
   			<br><br>
-  			<input type="submit" onclick="location.href='${pageContext.request.contextPath}/artist_comment_send'" value="등록하기" class="btn btn-default" >
+  			<input type="submit" onclick="location.href='${pageContext.request.contextPath}/artist/artist_comment_send'" value="등록하기" class="btn btn-default" >
   		</td>
   	</tr>
   	

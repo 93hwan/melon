@@ -23,9 +23,9 @@
 			</tr>
 			<tr>
 				<td>앨범명<br>
-				<h4><a href="${pageContext.request.contextPath}/album/album_main">${music_info.album_title }</a></h4></td>
+				<h4><a href="${pageContext.request.contextPath}/album/album_main/${music_info.album_no }">${music_info.album_title }</a></h4></td>
 			</tr>
-				<td colspan="5"><h4><a href="${pageContext.request.contextPath}/artist/main?artist_no=792022">${music_info.artist_name }</a></h4></td>
+				<td colspan="5"><h4><a href="${pageContext.request.contextPath}/artist/main/${music_info.artist_no}">${music_info.artist_name }</a></h4></td>
 			<tr>
 				<td colspan="5"><h4>발매일 &nbsp;&nbsp; ${album_main.release }</h4></td>
 			</tr>
@@ -43,7 +43,6 @@
 			</tr>
 		</table>
 		</div>
-
 
 </body>
 </html>

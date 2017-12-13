@@ -8,10 +8,10 @@
 
 <!-- SELECT -->
 <select id="album_main" resultType="com.music.bee.dto.Album_dto">
-	SELECT * FROM M_ALBUM WHERE ALBUM_NO = #{album_no}
+	SELECT * FROM M_ALBUM WHERE ALBUM_NO = #{ALBUM_NO}
 </select>
 <select id="album_musicList" resultType="com.music.bee.dto.Music_dto">
-	SELECT * FROM M_MUSIC WHERE ALBUM_TITLE = #{album_title}
+	SELECT * FROM M_MUSIC WHERE ALBUM_NO = #{ALBUM_NO}
 </select>
 <select id="album_lateast" resultType="com.music.bee.dto.Music_dto" parameterType="int">
 SELECT * FROM(SELECT ROWNUM RN, B.* FROM (SELECT A.* FROM (SELECT M_ALBUM.ALBUM_TITLE,M_ALBUM.ARTIST_NAME,M_ALBUM.IMG,M_ALBUM.RELEASE FROM M_ALBUM UNION SELECT M_POP_ALBUM.ALBUM_TITLE,M_POP_ALBUM.ARTIST_NAME,M_POP_ALBUM.IMG,M_POP_ALBUM.RELEASE FROM M_POP_ALBUM)A ORDER BY RELEASE DESC)B) WHERE RN BETWEEN 1 AND #{NUM}
@@ -29,7 +29,3 @@ SELECT * FROM(SELECT ROWNUM RN, B.* FROM (SELECT A.* FROM (SELECT M_ALBUM.ALBUM_
 
 
 </mapper>
-
-
-
-
